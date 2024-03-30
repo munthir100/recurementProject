@@ -1,0 +1,215 @@
+Status:_
+    name // active and not_active
+AccountType:_
+    name // office and call_center
+user:_ // the admin that offer the office workers to the users
+    name
+    email
+    phone
+    passord
+Account:_ 
+    name
+    email
+    phone
+    passord
+    account_type_id
+Office:_ // offer the wrokers cv,s to the admins
+    location
+    account_id
+CallCenter:_
+    account_id
+worker:_
+    first_name
+    last_name
+    job
+    month_salary
+    contract_period
+    languages: json // name and precantage
+    nationality
+    age
+    type
+    tall
+    religion
+    place_of_birth
+    children
+    education
+    birtth_date
+    weight
+    has_practical_experience
+    practical_experience // json name and value
+    passport_number
+    passport_release_date
+    passport_end_date
+    passport_place_of_issue
+    work_experiance_country
+    years_of_experience
+    main_image
+    related_images
+    cv: file
+    office_id
+    status_id
+
+inquiryRequest:
+    name
+    email
+    phone
+    call_center_id
+
+
+
+
+
+
+
+
+
+pages:_ // .blade files
+    basic:_ // every entity can see it
+        home
+        about
+        services
+        help
+        contact
+        workers
+        workerDetails
+        callCenters
+        callCenterDetails
+    user:_
+        auth:_
+            login
+            forgetPassword
+            verifyEmail
+        dashboard:_
+            offices
+                index
+                create
+                edit
+                show
+            cv,s
+                index
+            workers
+                index
+                create
+                edit
+                show
+            callCenters
+                index
+                create
+                edit
+                show
+    Office:_
+        auth:_
+            login
+        CV
+            index
+    callCenter:_
+        auth:_
+            login
+        inquiryRequest:_
+            index
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+user actions:_ // admin
+    auth:_
+        login
+        logout
+        change password
+        reset password
+    main actions:_
+        manage offices // create , update , delete
+        recive cv,s from offices
+        create worker data from cv,s
+        manage wrokers // create , update , delete
+        manage support team members // create , update , delete
+
+guest actions:_
+    main_actions:_
+        view workers
+        select worker
+        download worker cv
+        view support team
+        select support team
+        contact with selected support team member about selected worker
+Office actions:_
+    auth:_
+        login
+        logout
+    main_actions:_
+        upload worker cv to the admins
+        delete cv
+callCenter:_
+    auth:_
+        login 
+        logout
+    main_actions:_
+        see the registerd users and contact with them if the user select a team member.
+        
+worker actions:_
+    do not do any thing in the platform , just he contact with the office
+
+
+
+
+
+controllers:_
+user:
+    auth:
+        LoginController
+            requests:
+                LoginRequest
+        RegisterController
+            requests:
+                RegisterRequest
+        ResetPasswordController
+            requests:
+                ResetPasswordRequest
+    OfficeController
+        requests:
+            CreateOfficeRequest
+            UpdateOfficeRequest
+    CallCenterController
+        requests:
+            CreateCallCenterRequest
+            UpdateCallCenterRequest
+    WorkerController
+        requests:
+            CreateWorkerRequest
+            UpdateWorkerRequest
+account:
+    auth:
+        LoginController
+            requests:
+                LoginRequest
+        RegisterController
+            requests:
+                RegisterRequest
+    office:
+        CvController
+    callCenter
+        inquiryRequestController
