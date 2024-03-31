@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('inquiry_requests', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('email');
+            $table->string('phone');
+            $table->foreignId('call_center_id')->constrained('call_centers')->cascadeOnDelete();
             $table->timestamps();
         });
     }

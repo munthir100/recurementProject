@@ -3,7 +3,7 @@ Status:_
 AccountType:_
     name // office and call_center
 user:_ // the admin that offer the office workers to the users
-    name
+    name 
     email
     phone
     passord
@@ -206,9 +206,6 @@ account:
         LoginController
             requests:
                 LoginRequest
-        RegisterController
-            requests:
-                RegisterRequest
     office:
         CvController
     callCenter

@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('call_centers', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('account_id')->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }
