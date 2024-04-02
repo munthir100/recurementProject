@@ -7,6 +7,9 @@ use App\Http\Controllers\MainController;
 use App\Http\Controllers\User\OfficeController;
 use Illuminate\Support\Facades\Route;
 
+
+Route::post('changeLocale', [MainController::class, 'changeLocale'])->name('changeLocale');
+
 Route::get('/', [MainController::class, 'home'])->name('home');
 Route::get('workers', [MainController::class, 'workers'])->name('workers');
 Route::get('callCenters', [MainController::class, 'callCenters'])->name('callCenters');

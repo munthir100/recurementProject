@@ -6,7 +6,9 @@ use App\Models\Worker;
 use App\Models\Account;
 use App\Models\CallCenter;
 use App\Models\AccountType;
+use Illuminate\Http\Request;
 use App\Models\InquiryRequest;
+use Illuminate\Support\Facades\App;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateInquiryRequestRequest;
 
@@ -43,5 +45,14 @@ class MainController extends Controller
     {
         InquiryRequest::create($request->validated());
         return redirect()->route('home')->with('success', 'Inquiry request created successfully.');
+    }
+
+    public function changeLocale(Request $request)
+    {
+        $request->validate(['locale' => 'string|in:ar,en']);
+        App::setLocale($request->lang);
+        session()->put('locale', $request->lang);
+
+        return redirect()->back();
     }
 }
