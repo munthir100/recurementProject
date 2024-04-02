@@ -25,16 +25,17 @@ class UpdateOfficeRequest extends FormRequest
         $office = $this->route('office');
 
         return [
-            'location' => ['required', 'string', 'max:255'],
-            'name' => ['string', 'max:255'],
+            'location' => ['sometimes', 'required', 'string', 'max:255'],
+            'name' => ['sometimes', 'string', 'max:255'],
             'email' => [
+                'sometimes',
                 'string',
                 'email',
                 'max:255',
                 Rule::unique('accounts', 'email')->ignore($office->account->id)
             ],
-            'phone' => ['string', 'max:255'],
-            'password' => ['string', 'min:8'],
+            'phone' => ['sometimes', 'string', 'max:255'],
+            // 'password' => ['sometimes', 'string', 'min:8'],
         ];
     }
 }

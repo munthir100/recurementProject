@@ -12,39 +12,39 @@ class WorkerController extends Controller
     public function index()
     {
         $workers = Worker::all();
-        return view('user.workers.index', compact('workers'));
+        return view('user.dashboard.workers.index', compact('workers'));
     }
 
     public function create()
     {
-        return view('user.workers.create');
+        return view('user.dashboard.workers.create');
     }
 
     public function store(CreateWorkerRequest $request)
     {
         $worker = Worker::create($request->validated());
-        return redirect()->route('user.workers.index')->with('success', 'Worker created successfully.');
+        return redirect()->route('user.dashboard.workers.index')->with('success', 'Worker created successfully.');
     }
 
     public function show(Worker $worker)
     {
-        return view('user.workers.show', compact('worker'));
+        return view('user.dashboard.workers.show', compact('worker'));
     }
 
     public function edit(Worker $worker)
     {
-        return view('user.workers.edit', compact('worker'));
+        return view('user.dashboard.workers.edit', compact('worker'));
     }
 
     public function update(UpdateWorkerRequest $request, Worker $worker)
     {
         $worker->update($request->validated());
-        return redirect()->route('user.workers.index')->with('success', 'Worker updated successfully.');
+        return redirect()->route('user.dashboard.workers.show')->with('success', 'Worker updated successfully.');
     }
 
     public function destroy(Worker $worker)
     {
         $worker->delete();
-        return redirect()->route('user.workers.index')->with('success', 'Worker deleted successfully.');
+        return redirect()->route('user.dashboard.workers.index')->with('success', 'Worker deleted successfully.');
     }
 }

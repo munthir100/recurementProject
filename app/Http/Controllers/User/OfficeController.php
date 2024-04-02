@@ -13,49 +13,52 @@ class OfficeController extends Controller
 {
     public function index()
     {
-        $offices = Account::whereAccountTypeId(AccountType::OFFICE)->with('office')->get();
-        return view('user.offices.index', compact('offices'));
+        $offices = Office::with('account')->get();
+        return view('user.dashboard.offices.index', compact('offices'));
     }
 
     public function create()
     {
-        return view('user.offices.create');
+        return view('user.dashboard.offices.create');
     }
 
     public function store(CreateOfficeRequest $request)
     {
-        $account = Account::create($request->validated());
+        $account = Account::create(
+            array_merge($request->validated(), ['account_type_id' => AccountType::OFFICE])
+        );
+
         $account->office()->create($request->validated());
-        return redirect()->route('offices.index')->with('success', 'Office created successfully.');
+        return redirect()->route('user.dashboard.offices.index')->with('success', 'Office created successfully.');
     }
 
     public function edit(Office $office)
     {
         $office->load('account');
-        return view('user.offices.edit', compact('office'));
+        return view('user.dashboard.offices.edit', compact('office'));
     }
 
     public function show(Office $office)
     {
         $office->load('account');
-        return view('user.offices.show', compact('office'));
+        return view('user.dashboard.offices.show', compact('office'));
     }
 
     public function update(UpdateOfficeRequest $request, Office $office)
     {
         if ($request->filled('location')) {
-            $office->update($request->validated());
+            $office->update($request->only('location'));
         }
-        if ($request->filled('name', 'email', 'phone', 'password')) {
-            $office->account()->update($request->validated());
+        if ($request->hasAny(['name', 'email', 'phone'])) {
+            $office->account()->update($request->only('name', 'email', 'phone'));
         }
 
-        return redirect()->route('offices.index')->with('success', 'Office updated successfully.');
+        return redirect()->back()->with('success', 'Office updated successfully.');
     }
 
     public function destroy(Office $office)
     {
         $office->account()->delete();
-        return redirect()->route('offices.index')->with('success', 'Office deleted successfully.');
+        return redirect()->route('user.dashboard.offices.index')->with('success', 'Office deleted successfully.');
     }
 }

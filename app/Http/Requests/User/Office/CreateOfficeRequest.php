@@ -24,16 +24,4 @@ class CreateOfficeRequest extends FormRequest
         ];
     }
 
-    public function withValidator($validator)
-    {
-        // Add additional validation logic or modify validator instance
-        $validator->after(function ($validator) {
-            $this->addUserType($validator);
-        });
-    }
-
-    protected function addUserType($validator)
-    {
-        $this->merge(['account_type_id' => AccountType::OFFICE]);
-    }
 }

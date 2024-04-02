@@ -10,8 +10,15 @@ class CvController extends Controller
 {
     public function index()
     {
-        $cvs = Worker::whereRelation('office_id', '=', request()->user('account')->office->id)->select('cv');
-        return view('office.cv.index', compact('cvs'));
+        $cvs = Worker::whereRelation('office', 'id', '=', request()->user('account')->office->id)->get()->select('cv');
+
+        return view('account.office.cv.index', compact('cvs'));
+    }
+
+    public function destroy(Worker $worker)
+    {
+        $worker->delete();
+
+        return to_route('office.cv.index');
     }
 }
-// last point

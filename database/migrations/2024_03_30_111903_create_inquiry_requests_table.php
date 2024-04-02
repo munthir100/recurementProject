@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('phone');
+            $table->foreignId('worker_id')->constrained('workers')->cascadeOnDelete();
             $table->foreignId('call_center_id')->constrained('call_centers')->cascadeOnDelete();
             $table->timestamps();
         });

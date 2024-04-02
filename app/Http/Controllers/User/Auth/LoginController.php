@@ -8,10 +8,14 @@ use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
+    public function showLoginForm()
+    {
+        return view('user.auth.login');
+    }
     public function login(LoginRequest $request)
     {
         if (auth()->attempt($request->only('email', 'password'))) {
-            return redirect()->intended('/dashboard');
+            return redirect()->route('user.dashboard.index');
         }
 
         return redirect()->back()->withErrors(['email' => 'Invalid credentials.']);

@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Account\Auth;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\Account\Auth\LoginRequest;
+use App\Models\Account;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use App\Http\Requests\Account\Auth\LoginRequest;
 
 class LoginController extends Controller
 {
@@ -22,16 +24,11 @@ class LoginController extends Controller
     public function login(LoginRequest $request)
     {
         $credentials = $request->only('email', 'password');
-
         if (Auth::guard('account')->attempt($credentials)) {
-            $request->session()->regenerate();
-
-            return redirect()->intended('/');
+            return to_route('home');
         }
 
-        return back()->withErrors([
-            'email' => 'The provided credentials do not match our records.',
-        ]);
+        return back()->withErrors(['email' => 'Invalid credentials'])->withInput();
     }
 
 

@@ -107,6 +107,7 @@ pages:_ // .blade files
             login
         inquiryRequest:_
             index
+            create
 
 
 
