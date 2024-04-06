@@ -24,13 +24,6 @@
             <div class="card-header">
                 <div class="mb-2"></div>
                 <div class="row g-4 mb-3">
-                    <div class="col-sm-auto">
-                        <div>
-                            <a data-bs-toggle="modal" data-bs-target="#addcallCenter" class="btn btn-success add-btn" id="create-btn">
-                                <i class="ri-add-line align-bottom me-1"></i> {{ __("Add") }}
-                            </a>
-                        </div>
-                    </div>
                     <div class="col-sm">
                         <div class="d-flex justify-content-sm-end">
                             <div class="search-box ms-2">
@@ -52,37 +45,39 @@
                         <thead class="table-light">
                             <tr>
                                 <th>ID</th>
-                                <th>Name</th>
+                                <th>Office</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @forelse ($callCenters as $callCenter)
-                            <form id="form{{ $callCenter->id }}" action="{{ route('user.dashboard.callCenters.destroy', $callCenter->id) }}" method="post" class="hidden">
+                            @forelse ($workersCvs as $cv)
+                            <form id="form{{ $cv->id }}" action="{{ route('user.dashboard.workers.destroy', $cv->id) }}" method="post" class="hidden">
                                 @csrf
                                 @method('delete')
                             </form>
                             <tr>
-                                <td><a href="#" class="fw-semibold">{{ $callCenter->id }}</a></td>
-                                <td>{{ $callCenter->account->name }}</td>
+                                <td><a href="#" class="fw-semibold">{{ $cv->id }}</a></td>
+
+                                <td>{{ $cv->office->account->name }}</td>
+
                                 <td>
                                     <div class="d-flex gap-2">
                                         <div class="edit">
-                                            <a href="{{ route('user.dashboard.callCenters.edit', $callCenter->id) }}" class="btn btn-sm btn-success edit-item-btn" data-bs-target="#showModal">{{ __("Edit") }}</a>
+                                            <a href="{{ route('user.dashboard.workers.edit', $cv->id) }}" class="btn btn-sm btn-success edit-item-btn" data-bs-target="#showModal">{{ __("Edit") }}</a>
                                         </div>
                                         <div class="remove">
-                                            <button class="btn btn-sm btn-danger remove-item-btn" data-id="{{ $callCenter->id }}">{{ __("Delete") }}</button>
+                                            <button class="btn btn-sm btn-danger remove-item-btn" data-id="{{ $cv->id }}">{{ __("Delete") }}</button>
                                         </div>
                                     </div>
                                 </td>
                             </tr>
 
                             <!-- Delete Modal -->
-                            <div class="modal fade" id="deleteModal{{ $callCenter->id }}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel{{ $callCenter->id }}" aria-hidden="true">
+                            <div class="modal fade" id="deleteModal{{ $cv->id }}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel{{ $cv->id }}" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="deleteModalLabel{{ $callCenter->id }}">
+                                            <h5 class="modal-title" id="deleteModalLabel{{ $cv->id }}">
                                                 {{ __("Confirm Deletion") }}
                                             </h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -92,13 +87,13 @@
                                                 <lord-icon src="https://cdn.lordicon.com/gsqxdxog.json" trigger="loop" colors="primary:#f7b84b,secondary:#f06548" style="width:100px;height:100px"></lord-icon>
                                                 <div class="mt-4 pt-2 fs-15 mx-5">
                                                     <h4>{{ __("Are you Sure ?") }}</h4>
-                                                    <p class="text-muted mx-4 mb-0">{{ __("Are you Sure You want to Delete this callCenter?") }}</p>
+                                                    <p class="text-muted mx-4 mb-0">{{ __("Are you Sure You want to Delete this Office?") }}</p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ __("Cancel") }}</button>
-                                            <button type="button" class="btn btn-danger" onclick="event.preventDefault(); document.getElementById('form{{ $callCenter->id }}').submit();">
+                                            <button type="button" class="btn btn-danger" onclick="event.preventDefault(); document.getElementById('form{{ $cv->id }}').submit();">
                                                 {{ __("Delete") }}</button>
                                         </div>
                                     </div>
@@ -115,17 +110,17 @@
                         </tbody>
                     </table>
                     <div class="d-flex justify-content-center">
-                        <x-pagination :model="$callCenters" />
+                        <x-pagination :model="$workersCvs" />
                     </div>
-                    <div class="modal fade" id="addcallCenter" tabindex="-1" aria-labelledby="addcallCenterLabel">
+                    <div class="modal fade" id="addOffice" tabindex="-1" aria-labelledby="addOfficeLabel">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="sidebar-span" id="addcallCenterLabel">{{ __("Add call center") }}</h5>
+                                    <h5 class="modal-title" id="sidebar-span" id="addOfficeLabel">{{ __("Add Office") }}</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="{{ route('user.dashboard.callCenters.store') }}" method="POST">
+                                    <form action="{{ route('user.dashboard.workers.store') }}" method="POST">
                                         @csrf
 
                                         <div class="form-group">
@@ -168,7 +163,17 @@
                                             @enderror
                                         </div>
 
-                                        <button type="submit" class="btn btn-primary mt-4">Create call center</button>
+                                        <div class="form-group">
+                                            <label for="location">Location:</label>
+                                            <input type="text" id="location" name="location" class="form-control @error('location') is-invalid @enderror" value="{{ old('location') }}" required>
+                                            @error('location')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                            @enderror
+                                        </div>
+
+                                        <button type="submit" class="btn btn-primary mt-2">Create Office</button>
                                     </form>
                                 </div>
                             </div>

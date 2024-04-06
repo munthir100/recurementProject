@@ -2,18 +2,19 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Http\Controllers\Controller;
+use App\Models\Account;
 use App\Models\CallCenter;
+use App\Models\AccountType;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\User\CallCenter\CreateCallCenterRequest;
 use App\Http\Requests\User\CallCenter\UpdateCallCenterRequest;
-use App\Models\Account;
-use App\Models\AccountType;
 
 class CallCenterController extends Controller
 {
     public function index()
     {
-        $callCenters = CallCenter::with('account')->get();
+        $callCenters = CallCenter::with('account')->dynamicPaginate();
         return view('user.dashboard.callCenters.index', compact('callCenters'));
     }
 
@@ -43,7 +44,7 @@ class CallCenterController extends Controller
         $callCenter->update($request->validated());
         $callCenter->account()->update($request->validated());
 
-        return redirect()->route('user.dashboard.callCenters.index')->with('success', 'Call center updated successfully.');
+        return back()->with('success', 'Call center updated successfully.');
     }
 
     public function show(CallCenter $callCenter)
@@ -57,5 +58,17 @@ class CallCenterController extends Controller
         $callCenter->account()->delete();
 
         return redirect()->route('user.dashboard.callCenters.index')->with('success', 'Call center deleted successfully.');
+    }
+
+    public function updatePassword(CallCenter $callCenter, Request $request)
+    {
+        $request->validate([
+            'password' => 'required|string|min:8'
+        ]);
+        $callCenter->account()->update([
+            'password' => $request->password
+        ]);
+
+        return back()->with('success', 'password updated');
     }
 }

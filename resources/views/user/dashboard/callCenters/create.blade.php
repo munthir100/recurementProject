@@ -46,16 +46,6 @@
             @enderror
         </div>
 
-        <div class="form-group">
-            <label for="location">Location:</label>
-            <input type="text" id="location" name="location" class="form-control @error('location') is-invalid @enderror" value="{{ old('location') }}" required>
-            @error('location')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-            @enderror
-        </div>
-
         <button type="submit" class="btn btn-primary">Create Office</button>
     </form>
 </div>

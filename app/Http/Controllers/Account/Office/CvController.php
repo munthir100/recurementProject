@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Account\Office;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Status;
 use App\Models\Worker;
 
 class CvController extends Controller
@@ -15,10 +16,29 @@ class CvController extends Controller
         return view('account.office.cv.index', compact('cvs'));
     }
 
-    public function destroy(Worker $worker)
+    public function store(Request $request)
     {
-        $worker->delete();
+        $request->validate([
+            'cv' => 'required|file|max:2048', // Validate file type and size
+        ]);
 
-        return to_route('office.cv.index');
+        $worker = Worker::create([
+            'office_id' => $request->user('account')->office->id
+        ]);
+
+        $worker->addMedia($request->file('cv'))->toMediaCollection('cvs');
+
+        return redirect()->back()->with('success', 'Worker created successfully.');
+    }
+
+    public function deActivate($workerId)
+    {
+        $worker = request()->user('account')->office->workers()->findOrFail(($workerId));
+
+        $worker = $worker->update([
+            'status_id' => Status::NOT_ACTIVE
+        ]);
+
+        return back()->with('success', 'worker deleted');
     }
 }

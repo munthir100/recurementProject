@@ -37,10 +37,6 @@ worker:_
     weight
     has_practical_experience
     practical_experience // json name and value
-    passport_number
-    passport_release_date
-    passport_end_date
-    passport_place_of_issue
     work_experiance_country
     years_of_experience
     main_image

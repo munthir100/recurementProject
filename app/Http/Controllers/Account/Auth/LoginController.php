@@ -25,7 +25,7 @@ class LoginController extends Controller
     {
         $credentials = $request->only('email', 'password');
         if (Auth::guard('account')->attempt($credentials)) {
-            return to_route('home');
+            return to_route('home.index');
         }
 
         return back()->withErrors(['email' => 'Invalid credentials'])->withInput();

@@ -32,13 +32,8 @@ return new class extends Migration
             $table->string('weight')->nullable();
             $table->boolean('has_practical_experience')->nullable();
             $table->json('practical_experience')->nullable();
-            $table->string('passport_number')->nullable();
-            $table->date('passport_release_date')->nullable();
-            $table->date('passport_end_date')->nullable();
-            $table->string('passport_place_of_issue')->nullable();
             $table->string('work_experience_country')->nullable();
             $table->integer('years_of_experience')->nullable();
-            $table->string('cv');
             $table->foreignId('office_id')->constrained()->cascadeOnDelete();
             $table->foreignId('status_id')->default(Status::NOT_ACTIVE)->constrained();
             $table->timestamps();

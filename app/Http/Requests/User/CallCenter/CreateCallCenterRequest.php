@@ -21,7 +21,6 @@ class CreateCallCenterRequest extends FormRequest
             'email' => ['required', 'string', 'email', 'max:255', 'unique:accounts,email'],
             'phone' => ['required', 'string', 'max:255'],
             'password' => ['required', 'string', 'min:8'],
-            'account_id' => ['required', 'exists:accounts,id'],
         ];
     }
 

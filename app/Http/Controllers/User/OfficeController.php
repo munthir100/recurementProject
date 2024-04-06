@@ -8,12 +8,13 @@ use App\Http\Requests\User\Office\CreateOfficeRequest;
 use App\Http\Requests\User\Office\UpdateOfficeRequest;
 use App\Models\Account;
 use App\Models\AccountType;
+use Illuminate\Http\Request;
 
 class OfficeController extends Controller
 {
     public function index()
     {
-        $offices = Office::with('account')->get();
+        $offices = Office::with('account')->dynamicPaginate();
         return view('user.dashboard.offices.index', compact('offices'));
     }
 
@@ -60,5 +61,17 @@ class OfficeController extends Controller
     {
         $office->account()->delete();
         return redirect()->route('user.dashboard.offices.index')->with('success', 'Office deleted successfully.');
+    }
+
+    public function updatePassword(Office $office, Request $request)
+    {
+        $request->validate([
+            'password' => 'required|string|min:8'
+        ]);
+        $office->account()->update([
+            'password' => $request->password
+        ]);
+        
+        return back()->with('success', 'password updated');
     }
 }

@@ -44,12 +44,7 @@ class WorkerFactory extends Factory
                 ['name' => 'Skill B', 'value' => $this->faker->randomElement(['Beginner', 'Intermediate', 'Advanced'])],
                 // Add more practical experiences as needed
             ]),
-            'passport_number' => $this->faker->uuid,
-            'passport_release_date' => $this->faker->dateTimeBetween('-10 years', '-1 years')->format('Y-m-d'),
-            'passport_end_date' => $this->faker->dateTimeBetween('+1 years', '+10 years')->format('Y-m-d'),
-            'passport_place_of_issue' => $this->faker->city,
             'work_experience_country' => $this->faker->country,
-            'cv' => $this->faker->imageUrl(),
             'years_of_experience' => $this->faker->numberBetween(0, 20),
             'office_id' => null, // This should be filled later when attaching workers to offices
             'status_id' => $this->faker->numberBetween(Status::ACTIVE, Status::NOT_ACTIVE), // Assuming 'active' status is id = 1

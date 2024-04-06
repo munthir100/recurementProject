@@ -2,14 +2,21 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Traits\HasUploads;
+use Spatie\MediaLibrary\HasMedia;
 use Illuminate\Database\Eloquent\Model;
+use Spatie\MediaLibrary\InteractsWithMedia;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Worker extends Model
+class Worker extends Model implements HasMedia
 {
-    use HasFactory;
-    
-    protected $fillable = ['first_name', 'last_name', 'job', 'month_salary', 'contract_period', 'languages', 'nationality', 'age', 'type', 'tall', 'religion', 'place_of_birth', 'children', 'education', 'birth_date', 'weight', 'has_practical_experience', 'practical_experience', 'passport_number', 'passport_release_date', 'passport_end_date', 'passport_place_of_issue', 'work_experience_country', 'years_of_experience', 'main_image', 'related_images', 'cv', 'office_id', 'status_id'];
+    use HasFactory, HasUploads, InteractsWithMedia, HasUploads;
+
+    protected $fillable = ['first_name', 'last_name', 'job', 'month_salary', 'contract_period', 'languages', 'nationality', 'age', 'type', 'tall', 'religion', 'place_of_birth', 'children', 'education', 'birth_date', 'weight', 'has_practical_experience', 'practical_experience', 'work_experience_country', 'years_of_experience', 'main_image', 'related_images', 'office_id', 'status_id'];
+    // my last point is delete the passport data
+    protected $uploadMedia = [
+        'cv',
+    ];
 
     public function office()
     {

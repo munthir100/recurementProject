@@ -33,27 +33,37 @@
             <ul class="navbar-nav" id="navbar-nav">
                 <li class="menu-title"><span id="sidebar-span">{{ __('Menu') }}</span></li>
                 <li class="nav-item">
-                    <a class="nav-link menu-link {{ request()->routeIs('account.home') ? 'active' : '' }}" href="#" aria-expanded="false" aria-controls="sidebarDashboard">
+                    <a class="nav-link menu-link {{ request()->routeIs('user.dashboard.index') ? 'active' : '' }}" href="{{route('user.dashboard.index')}}" aria-expanded="false" aria-controls="sidebarDashboard">
                         <i class="ri-dashboard-2-line"></i> <span id="sidebar-span">{{ __('Dashboard') }}</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-link {{ request()->routeIs('account.projects.*') ? 'active' : '' }}" href="#" aria-expanded="false" aria-controls="sidebarProjects">
-                        <i class="ri-briefcase-line"></i> <span id="sidebar-span">{{ __('Projects') }}</span>
+                    <a class="nav-link menu-link {{ request()->routeIs('user.dashboard.cvs.*') ? 'active' : '' }}" href="{{route('user.dashboard.cvs.index')}}" aria-expanded="false" aria-controls="sidebarProjects">
+                        <i class="ri-newspaper-line"></i> <span id="sidebar-span">{{ __('New Cvs') }}</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-link {{ request()->routeIs('account.tasks.*') ? 'active' : '' }}" href="#" aria-expanded="false" aria-controls="sidebarTasks">
-                        <i class="ri-task-line"></i> <span id="sidebar-span">{{ __('Tasks') }}</span>
+                    <a class="nav-link menu-link {{ request()->routeIs('user.dashboard.offices.*') ? 'active' : '' }}" href="{{route('user.dashboard.offices.index')}}" aria-expanded="false" aria-controls="sidebarProjects">
+                        <i class="ri-briefcase-line"></i> <span id="sidebar-span">{{ __('Offices') }}</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-link {{ request()->routeIs('account.security') ? 'active' : '' }}" href="#" aria-expanded="false" aria-controls="sidebarSecurity">
+                    <a class="nav-link menu-link {{ request()->routeIs('user.dashboard.workers.*') ? 'active' : '' }}" href="{{route('user.dashboard.workers.index')}}" aria-expanded="false" aria-controls="sidebarTasks">
+                        <i class="ri-user-2-line"></i> <span id="sidebar-span">{{ __('Workers') }}</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link {{ request()->routeIs('user.dashboard.callCenters.*') ? 'active' : '' }}" href="{{route('user.dashboard.callCenters.index')}}" aria-expanded="false" aria-controls="sidebarSecurity">
+                        <i class="ri-headphone-line"></i> <span id="sidebar-span">{{ __('Call centers') }}</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link {{ request()->routeIs('user.dashboard.security') ? 'active' : '' }}" href="{{ route('user.dashboard.security') }}" aria-expanded="false" aria-controls="sidebarSecurity">
                         <i class="ri-lock-password-line"></i> <span id="sidebar-span">{{ __('Security') }}</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-link {{ request()->routeIs('account.settings') ? 'active' : '' }}" href="#" aria-expanded="false" aria-controls="sidebarSettings">
+                    <a class="nav-link menu-link {{ request()->routeIs('user.dashboard.settings') ? 'active' : '' }}" href="{{ route('user.dashboard.settings') }}" aria-expanded="false" aria-controls="sidebarSettings">
                         <i class="ri-settings-3-line"></i> <span id="sidebar-span">{{ __('Settings') }}</span>
                     </a>
                 </li>

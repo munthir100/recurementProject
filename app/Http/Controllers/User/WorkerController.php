@@ -11,7 +11,7 @@ class WorkerController extends Controller
 {
     public function index()
     {
-        $workers = Worker::all();
+        $workers = Worker::with('office.account')->dynamicPaginate();
         return view('user.dashboard.workers.index', compact('workers'));
     }
 
@@ -39,7 +39,7 @@ class WorkerController extends Controller
     public function update(UpdateWorkerRequest $request, Worker $worker)
     {
         $worker->update($request->validated());
-        return redirect()->route('user.dashboard.workers.show')->with('success', 'Worker updated successfully.');
+        return back()->with('success', 'Worker updated successfully.');
     }
 
     public function destroy(Worker $worker)

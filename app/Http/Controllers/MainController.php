@@ -11,6 +11,7 @@ use App\Models\InquiryRequest;
 use Illuminate\Support\Facades\App;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateInquiryRequestRequest;
+use App\Models\Status;
 
 class MainController extends Controller
 {
@@ -21,30 +22,31 @@ class MainController extends Controller
 
     public function workers()
     {
-        $workers = Worker::all();
-        return view('workers', compact('workers'));
+        $workers = Worker::whereStatusId(Status::ACTIVE)->dynamicPaginate();
+        
+        return view('home.workers', compact('workers'));
     }
 
     public function workerDetails(Worker $worker)
     {
-        return view('workerDetails', compact('worker'));
+        return view('home.workerDetails', compact('worker'));
     }
 
     public function callCenters()
     {
-        $callCenters = CallCenter::with('account')->get();
-        return view('callCenters', compact('callCenters'));
+        $callCenters = CallCenter::with('account')->dynamicPaginate();
+        return view('home.callCenters', compact('callCenters'));
     }
 
     public function callCenterDetails(CallCenter $callCenter)
     {
-        return view('callCenterDetails', compact('callCenter'));
+        return view('home.callCenterDetails', compact('callCenter'));
     }
 
     public function createInqueryRequest(CreateInquiryRequestRequest $request)
     {
         InquiryRequest::create($request->validated());
-        return redirect()->route('home')->with('success', 'Inquiry request created successfully.');
+        return redirect()->route('home.index')->with('success', 'Inquiry request created successfully.');
     }
 
     public function changeLocale(Request $request)

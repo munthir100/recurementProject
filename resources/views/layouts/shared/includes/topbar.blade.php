@@ -95,14 +95,14 @@
                         <span class="d-flex align-items-center">
                             <img class="rounded-circle header-profile-user" src="{{asset('assets/images/users/user-dummy-img.jpg')}}" alt="{{ __('Header Avatar') }}">
                             <span class="text-start ms-xl-2">
-                                <span class="d-none d-xl-inline-block ms-1 fw-medium user-name-text">{{request()->user('account')->name}}</span>
-                                <span class="d-none d-xl-block ms-1 fs-12 user-name-sub-text">{{request()->user('account')->email}}</span>
+                                <span class="d-none d-xl-inline-block ms-1 fw-medium user-name-text">{{request()->user()->name}}</span>
+                                <span class="d-none d-xl-block ms-1 fs-12 user-name-sub-text">{{request()->user()->email}}</span>
                             </span>
                         </span>
                     </button>
                     <div class="dropdown-menu dropdown-menu-end">
                         <!-- item-->
-                        <h6 class="dropdown-header">{{request()->user('account')->name}}</h6>
+                        <h6 class="dropdown-header">{{request()->user()->name}}</h6>
                         <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle text-muted fs-16 align-middle me-1"></i> <span class="align-middle">{{ __('Profile') }}</span></a>
                         <a class="dropdown-item" href="#"><i class=" ri-briefcase-5-line text-muted fs-16 align-middle me-1"></i> <span class="align-middle">{{ __('Projects') }}</span></a>
                         <a class="dropdown-item" href="#"><i class="mdi mdi-calendar-check-outline text-muted fs-16 align-middle me-1"></i> <span class="align-middle">{{ __('Tasks') }}</span></a>

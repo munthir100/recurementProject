@@ -6,20 +6,16 @@
     @yield('styles')
 </head>
 
-<body>
-    <div id="layout-wrapper">
-        @include("layouts.shared.includes.menu")
-        <div class="main-content">
-            <div class="page-content">
-                <div class="container-fluid">
-                    @yield('page-title')
-                    @yield('content')
-                </div>
-            </div>
-            @include("layouts.shared.includes.footer")
-        </div>
+<body data-bs-spy="scroll" data-bs-target="#navbar-example">
+    <div class="layout-wrapper landing">
+        @include("layouts.shared.includes.main-page.navigation")
+        <div class="vertical-overlay" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent.show"></div>
+        @yield('content')
+        @include("layouts.shared.includes.main-page.footer")
     </div>
     @include("layouts.shared.includes.vendor-scripts")
-    <script src="{{asset('assets/js/app.js')}}"></script>
-    @yield('scripts')
+    <script src="{{asset('assets/libs/swiper/swiper-bundle.min.js')}}"></script>
+    <script src="{{asset('assets/js/pages/landing.init.js')}}"></script>
 </body>
+
+</html>
