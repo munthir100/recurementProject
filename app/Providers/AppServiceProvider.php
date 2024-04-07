@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use App\Models\Account;
-use App\Observers\AccountObserver;
+use App\Models\Worker;
+use App\Observers\WorkerObserver;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -21,6 +21,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Account::observe(AccountObserver::class);
+        Worker::observe(WorkerObserver::class);
     }
 }
