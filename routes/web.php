@@ -7,6 +7,8 @@ use App\Http\Controllers\User\OfficeController;
 use App\Http\Controllers\Account\Office\CvController;
 use App\Http\Controllers\Account\Auth\LoginController;
 use App\Http\Controllers\Account\CallCenter\InquiryRequestController;
+use App\Http\Middleware\isCallCenter;
+use App\Http\Middleware\isOffice;
 
 Route::middleware([SetLocale::class])->group(function () {
 
@@ -18,7 +20,7 @@ Route::middleware([SetLocale::class])->group(function () {
         Route::get('workers/{worker}', [MainController::class, 'workerDetails'])->name('workers.show');
         Route::get('callCenters', [MainController::class, 'callCenters'])->name('callCenters');
         Route::get('/select-call-center', [MainController::class, 'callCenters'])->name('callCenter.select');
-        Route::get('/request-call-center', [InquiryRequestController::class, 'create'])->name('inquiryRequest.create');
+        Route::get('/request-call-center', [MainController::class, 'createInqueryRequestForm'])->name('inquiryRequest.create');
         Route::post('request/{worker_id}/{call_center_id}', [MainController::class, 'createInqueryRequest'])->name('inquiryRequest.store');
     });
 
@@ -28,10 +30,10 @@ Route::middleware([SetLocale::class])->group(function () {
     });
     Route::middleware('auth:account')->name('account.')->group(function () {
         Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
-        Route::name('callCenter.')->group(function () {
+        Route::middleware(isCallCenter::class)->name('callCenter.')->group(function () {
             Route::resource('inquiryRequests', InquiryRequestController::class)->except(['edit', 'update']);
         });
-        Route::name('office.')->group(function () {
+        Route::middleware(isOffice::class)->name('office.')->group(function () {
             Route::resource('cv', CvController::class)->only(['index', 'store']);
             Route::put('deActivate/{workerId}', [CvController::class, 'deActivate'])->name('cv.deActivate');
         });

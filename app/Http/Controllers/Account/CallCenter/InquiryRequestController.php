@@ -18,20 +18,6 @@ class InquiryRequestController extends Controller
         return view('account.callCenter.inquiryRequests.index', compact('inquiryRequests'));
     }
 
-    public function create()
-    {
-        $validator = Validator::make(request()->all(), [
-            'worker_id' => 'required|integer|exists:workers,id',
-            'call_center_id' => 'required|integer|exists:call_centers,id',
-        ]);
-
-        if ($validator->fails()) {
-            return redirect('workers');
-        }
-
-        return view('InquiryRequests.create');
-    }
-
     public function store(CreateInquiryRequestRequest $request)
     {
         InquiryRequest::create($request->validated());

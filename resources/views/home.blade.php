@@ -16,14 +16,14 @@
         opacity: 0.30;
     }
 </style>
-<section class="section nft-hero" id="hero" style="background-image: url({{asset('assets/images/custom/banner.jpeg')}});">
+<section class="section nft-hero" id="hero" style="background-image: url('/assets/images/custom/banner.jpeg')">
     <div class="bg-overlay"></div>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 col-sm-10">
                 <div class="text-center">
                     <h1 class="display-4 fw-medium mb-4 lh-base text-white">{{ __('Empower Your Workforce with') }} <span class="text-success">{{ __('Efficient Recruitment') }}</span></h1>
-                    <p class="lead text-white-50 lh-base mb-4 pb-2">{{ __('Welcome to our innovative recruitment platform, where we bridge the gap between talented individuals and top-tier offices and call centers. With our streamlined process, finding the perfect fit for your team has never been easier.') }}</p>
+                    <p class="lead text-white lh-base mb-4 pb-2">{{ __('Welcome to our innovative recruitment platform, where we bridge the gap between talented individuals and top-tier offices and call centers. With our streamlined process, finding the perfect fit for your team has never been easier.') }}</p>
 
                     <div class="hstack gap-2 justify-content-center">
                         <a href="{{route('home.workers')}}" class="btn btn-primary">{{ __('Get Started') }} <i class="ri-arrow-right-line align-middle ms-1"></i></a>
@@ -63,9 +63,6 @@
                     <div class="flex-grow-1">
                         <h5 class="fs-18">{{ __('User-Friendly Interface') }}</h5>
                         <p class="text-muted my-3 ff-secondary">{{ __('Experience an intuitive and user-friendly interface designed to streamline your recruitment journey.') }}</p>
-                        <div>
-                            <a href="#" class="fs-13 fw-medium">{{ __('Learn More') }} <i class="ri-arrow-right-s-line align-bottom"></i></a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -83,9 +80,6 @@
                     <div class="flex-grow-1">
                         <h5 class="fs-18">{{ __('Efficient Communication') }}</h5>
                         <p class="text-muted my-3 ff-secondary">{{ __('Facilitate seamless communication between offices, call centers, and applicants for effective recruitment coordination.') }}</p>
-                        <div>
-                            <a href="#" class="fs-13 fw-medium">{{ __('Learn More') }} <i class="ri-arrow-right-s-line align-bottom"></i></a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -103,9 +97,6 @@
                     <div class="flex-grow-1">
                         <h5 class="fs-18">{{ __('Data-Driven Insights') }}</h5>
                         <p class="text-muted my-3 ff-secondary">{{ __('Utilize comprehensive reporting tools to gain valuable insights and optimize your recruitment strategies.') }}</p>
-                        <div>
-                            <a href="#" class="fs-13 fw-medium">{{ __('Learn More') }} <i class="ri-arrow-right-s-line align-bottom"></i></a>
-                        </div>
                     </div>
                 </div>
             </div>

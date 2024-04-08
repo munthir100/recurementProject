@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Status;
 use App\Models\Worker;
 use App\Models\Account;
 use App\Models\CallCenter;
@@ -10,8 +11,8 @@ use Illuminate\Http\Request;
 use App\Models\InquiryRequest;
 use Illuminate\Support\Facades\App;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Validator;
 use App\Http\Requests\CreateInquiryRequestRequest;
-use App\Models\Status;
 
 class MainController extends Controller
 {
@@ -42,6 +43,20 @@ class MainController extends Controller
     public function callCenterDetails(CallCenter $callCenter)
     {
         return view('home.callCenterDetails', compact('callCenter'));
+    }
+
+    public function createInqueryRequestForm()
+    {
+        $validator = Validator::make(request()->all(), [
+            'worker_id' => 'required|integer|exists:workers,id',
+            'call_center_id' => 'required|integer|exists:call_centers,id',
+        ]);
+
+        if ($validator->fails()) {
+            return redirect('workers');
+        }
+
+        return view('InquiryRequests.create');
     }
 
     public function createInqueryRequest(CreateInquiryRequestRequest $request)

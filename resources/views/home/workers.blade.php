@@ -49,27 +49,10 @@
                         <button type="button" class="btn btn-outline-danger custom-toggle remove-item-btn" data-id="{{ $worker->id }}">
                             <span><i class="ri-delete-bin-line align-bottom me-1"></i> {{ __('Delete') }}</span>
                         </button>
-                        @else
-                        @if($worker->getFirstMedia('cvs'))
-                        <a href="{{ $worker->getFirstMedia('cvs')->getUrl() }}" class="btn btn-success custom-toggle">
-                            <span><i class="ri-download-cloud-line align-bottom me-1"></i>{{ __('Download CV') }}</span>
-                        </a>
-                        @endif
-                        @endif
-                        @else
-                        @if($worker->getFirstMedia('cvs'))
-                        <a href="{{ $worker->getFirstMedia('cvs')->getUrl() }}" class="btn btn-success custom-toggle">
-                            <span><i class="ri-download-cloud-line align-bottom me-1"></i>{{ __('Download CV') }}</span>
-                        </a>
-                        @endif
                         @endif
 
-                        @else
-                        @if($worker->getFirstMedia('cvs'))
-                        <a href="{{ $worker->getFirstMedia('cvs')->getUrl() }}" class="btn btn-success custom-toggle">
-                            <span><i class="ri-download-cloud-line align-bottom me-1"></i>{{ __('Download CV') }}</span>
-                        </a>
                         @endif
+
                         @endauth
                     </div>
                 </div>

@@ -60,3 +60,10 @@
         </div>
     </div>
 </nav>
+@if(!request()->routeIs('home.index'))
+<style>
+    a.nav-link {
+        color: black !important;
+    }
+</style>
+@endif

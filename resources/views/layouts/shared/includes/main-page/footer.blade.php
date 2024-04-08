@@ -4,11 +4,11 @@
             <div class="col-lg-4 mt-4">
                 <div>
                     <div>
-                        <img src="assets/images/logo-light.png" alt="logo light" height="17">
+                        <img src="{{asset('assets/images/logo-light.png')}}" alt="{{ __('logo light') }}" height="17">
                     </div>
                     <div class="mt-4">
-                        <p>Premium Multipurpose Admin & Dashboard Template</p>
-                        <p>You can build any type of web application like eCommerce, CRM, CMS, Project management apps, Admin Panels, etc using Velzon.</p>
+                        <p>{{ __('Premium Multipurpose Admin & Dashboard Template') }}</p>
+                        <p>{{ __('You can build any type of web application like eCommerce, CRM, CMS, Project management apps, Admin Panels, etc using Velzon.') }}</p>
                     </div>
                 </div>
             </div>
@@ -16,34 +16,33 @@
             <div class="col-lg-7 ms-lg-auto">
                 <div class="row">
                     <div class="col-sm-4 mt-4">
-                        <h5 class="text-white mb-0">Company</h5>
+                        <h5 class="text-white mb-0">{{ __('Who We Are') }}</h5>
                         <div class="text-muted mt-3">
                             <ul class="list-unstyled ff-secondary footer-list">
-                                <li><a href="pages-profile.html">About Us</a></li>
-                                <li><a href="pages-gallery.html">Gallery</a></li>
-                                <li><a href="apps-projects-overview.html">Projects</a></li>
-                                <li><a href="pages-timeline.html">Timeline</a></li>
+                                <li><a href="#">{{ __('Office') }}</a></li>
+                                <li><a href="#">{{ __('Our Services') }}</a></li>
+                                <li><a href="#">{{ __('Support') }}</a></li>
+                                <li><a href="#">{{ __('Contact Us') }}</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-sm-4 mt-4">
-                        <h5 class="text-white mb-0">Apps Pages</h5>
+                        <h5 class="text-white mb-0">{{ __('Our Services') }}</h5>
                         <div class="text-muted mt-3">
                             <ul class="list-unstyled ff-secondary footer-list">
-                                <li><a href="pages-pricing.html">Calendar</a></li>
-                                <li><a href="apps-mailbox.html">Mailbox</a></li>
-                                <li><a href="apps-chat.html">Chat</a></li>
-                                <li><a href="apps-crm-deals.html">Deals</a></li>
-                                <li><a href="apps-tasks-kanban.html">Kanban Board</a></li>
+                                <li><a href="#">{{ __('Recruitment procedures') }}</a></li>
+                                <li><a href="#">{{ __('Labor selection') }}</a></li>
+                                <li><a href="#">{{ __('Recruitment contract') }}</a></li>
+                                <li><a href="#">{{ __('Recruitment policies') }}</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-sm-4 mt-4">
-                        <h5 class="text-white mb-0">Support</h5>
+                        <h5 class="text-white mb-0">{{ __('Support') }}</h5>
                         <div class="text-muted mt-3">
                             <ul class="list-unstyled ff-secondary footer-list">
-                                <li><a href="pages-faqs.html">FAQ</a></li>
-                                <li><a href="pages-faqs.html">Contact</a></li>
+                                <li><a href="#">{{ __('FAQ') }}</a></li>
+                                <li><a href="#">{{ __('Contact') }}</a></li>
                             </ul>
                         </div>
                     </div>
@@ -57,7 +56,7 @@
                     <p class="copy-rights mb-0">
                         <script>
                             document.write(new Date().getFullYear())
-                        </script> © Velzon - Themesbrand
+                        </script> © {{ __('Velzon - Themesbrand') }}
                     </p>
                 </div>
             </div>
@@ -111,16 +110,44 @@
                 <form type="hidden" class="d-inline" action="{{ route('changeLocale') }}" method="post">
                     @csrf
                     <input type="text" name="lang" value="en" required hidden />
-                    <button type="submit" class="btn btn-primary">English</button>
+                    <button type="submit" class="btn btn-primary">{{ __('English') }}</button>
                 </form>
                 @else
                 <form type="hidden" class="d-inline" action="{{ route('changeLocale') }}" method="post">
                     @csrf
                     <input type="text" name="lang" value="ar" required hidden />
-                    <button type="submit" class="btn btn-primary">العربية</button>
+                    <button type="submit" class="btn btn-primary">{{ __('العربية') }}</button>
                 </form>
                 @endif
             </div>
         </div>
+
     </div>
 </footer>
+
+<button id="contactBtn" type="button" class="btn btn-outline-danger btn-icon btn-lg">
+    <i class="ri-customer-service-2-line"></i>
+</button>
+<button id="whatsappBtn" type="button" class="btn btn-outline-success btn-icon btn-lg ri-whatsapp-line">
+</button>
+
+
+<style>
+    #contactBtn {
+        text-align: right;
+        z-index: 100;
+        position: fixed;
+        bottom: 20;
+        left: 2%;
+    }
+
+    #whatsappBtn {
+        font-size: large;
+        border-radius: 50%;
+        text-align: right;
+        z-index: 100;
+        position: fixed;
+        bottom: 20;
+        right: 2%;
+    }
+</style>
