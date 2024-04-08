@@ -8,8 +8,8 @@
         <div class="row justify-content-center">
             <div class="col-lg-7">
                 <div class="text-center mb-5">
-                    <h1 class="mb-3 ff-secondary fw-semibold text-capitalize lh-base">Find Your <span class="text-primary">Worker</span> You Deserve it</h1>
-                    <p class="text-muted">Select your worker and contact with support team about your selected worker .</p>
+                    <h1 class="mb-3 ff-secondary fw-semibold text-capitalize lh-base">{{ __('Find Your') }} <span class="text-primary">{{ __('Worker') }}</span> {{ __('You Deserve it') }}</h1>
+                    <p class="text-muted">{{ __('Select your worker and contact with support team about your selected worker.') }}</p>
                 </div>
             </div>
             <!-- end col -->
@@ -32,14 +32,12 @@
                     <h6 class="mb-1">${{$worker->month_salary}}</h6>
                     <p class="card-text text-muted">{{$worker->nationality}}</p>
                     <div class="btn-group btn-group-md" role="group" aria-label="Basic example">
-                        <a href="/select-call-center?worker_id={{$worker->id}}" class="btn btn-light">Request Worker</a>
-                        <a href="{{route('home.workers.show',$worker->id)}}" class="btn btn-primary">View Details</a>
+                        <a href="/select-call-center?worker_id={{$worker->id}}" class="btn btn-light">{{ __('Request Worker') }}</a>
+                        <a href="{{route('home.workers.show',$worker->id)}}" class="btn btn-primary">{{ __('View Details') }}</a>
                     </div>
 
                     <!-- Three dots in the top right corner -->
                     <div class="position-absolute top-0 end-0 mt-2 me-2">
-
-
 
                         @auth('account')
                         @if(request()->user('account')->is_office_account)
@@ -49,23 +47,29 @@
                             @method('put')
                         </form>
                         <button type="button" class="btn btn-outline-danger custom-toggle remove-item-btn" data-id="{{ $worker->id }}">
-                            <span><i class="ri-delete-bin-line align-bottom me-1"></i> Delete</span>
+                            <span><i class="ri-delete-bin-line align-bottom me-1"></i> {{ __('Delete') }}</span>
                         </button>
                         @else
-                        <button type="button" class="btn btn-success custom-toggle" data-bs-toggle="button">
-                            <span><i class="ri-download-cloud-line align-bottom me-1"></i>Download CV</span>
-                        </button>
+                        @if($worker->getFirstMedia('cvs'))
+                        <a href="{{ $worker->getFirstMedia('cvs')->getUrl() }}" class="btn btn-success custom-toggle">
+                            <span><i class="ri-download-cloud-line align-bottom me-1"></i>{{ __('Download CV') }}</span>
+                        </a>
+                        @endif
                         @endif
                         @else
-                        <button type="button" class="btn btn-success custom-toggle" data-bs-toggle="button">
-                            <span><i class="ri-download-cloud-line align-bottom me-1"></i>Download CV</span>
-                        </button>
+                        @if($worker->getFirstMedia('cvs'))
+                        <a href="{{ $worker->getFirstMedia('cvs')->getUrl() }}" class="btn btn-success custom-toggle">
+                            <span><i class="ri-download-cloud-line align-bottom me-1"></i>{{ __('Download CV') }}</span>
+                        </a>
+                        @endif
                         @endif
 
                         @else
-                        <button type="button" class="btn btn-success custom-toggle" data-bs-toggle="button">
-                            <span><i class="ri-download-cloud-line align-bottom me-1"></i>Download CV</span>
-                        </button>
+                        @if($worker->getFirstMedia('cvs'))
+                        <a href="{{ $worker->getFirstMedia('cvs')->getUrl() }}" class="btn btn-success custom-toggle">
+                            <span><i class="ri-download-cloud-line align-bottom me-1"></i>{{ __('Download CV') }}</span>
+                        </a>
+                        @endif
                         @endauth
                     </div>
                 </div>
@@ -75,7 +79,7 @@
             <div class="container">
 
                 <div class="alert border-0 alert-danger" role="alert">
-                    <strong> No items Found </strong>
+                    <strong> {{ __('No items Found') }} </strong>
                 </div>
             </div>
             @endforelse

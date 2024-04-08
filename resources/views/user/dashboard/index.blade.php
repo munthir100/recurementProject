@@ -36,7 +36,7 @@
                                         </span>
                                     </div>
                                     <a href="{{route('user.dashboard.callCenters.index')}}" class="card-link link-secondary">
-                                        View<i class="ri-arrow-right-s-line ms-1 align-middle lh-1"></i>
+                                        {{ __("View") }}<i class="ri-arrow-right-s-line ms-1 align-middle lh-1"></i>
                                     </a>
                                 </div>
                             </div>
@@ -61,7 +61,7 @@
                                         </span>
                                     </div>
                                     <a href="{{route('user.dashboard.offices.index')}}" class="card-link link-secondary">
-                                        View<i class="ri-arrow-right-s-line ms-1 align-middle lh-1"></i>
+                                        {{ __("View") }}<i class="ri-arrow-right-s-line ms-1 align-middle lh-1"></i>
                                     </a>
                                 </div>
                             </div>
@@ -88,7 +88,7 @@
                                         </span>
                                     </div>
                                     <a href="{{route('user.dashboard.workers.index')}}" class="card-link link-secondary">
-                                        View<i class="ri-arrow-right-s-line ms-1 align-middle lh-1"></i>
+                                        {{ __("View") }}<i class="ri-arrow-right-s-line ms-1 align-middle lh-1"></i>
                                     </a>
                                 </div>
                             </div>
@@ -113,7 +113,7 @@
                                         </span>
                                     </div>
                                     <a href="{{route('user.dashboard.cvs.index')}}" class="card-link link-secondary">
-                                        View<i class="ri-arrow-right-s-line ms-1 align-middle lh-1"></i>
+                                        {{ __("View") }}<i class="ri-arrow-right-s-line ms-1 align-middle lh-1"></i>
                                     </a>
                                 </div>
                             </div>

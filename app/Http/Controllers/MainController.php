@@ -23,12 +23,13 @@ class MainController extends Controller
     public function workers()
     {
         $workers = Worker::whereStatusId(Status::ACTIVE)->dynamicPaginate();
-        
+
         return view('home.workers', compact('workers'));
     }
 
-    public function workerDetails(Worker $worker)
+    public function workerDetails($workerId)
     {
+        $worker = Worker::where('status_id', Status::ACTIVE)->findOrFail($workerId);
         return view('home.workerDetails', compact('worker'));
     }
 

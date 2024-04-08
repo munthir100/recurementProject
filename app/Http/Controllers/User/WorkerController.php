@@ -39,6 +39,12 @@ class WorkerController extends Controller
     public function update(UpdateWorkerRequest $request, Worker $worker)
     {
         $worker->update($request->validated());
+        $request->validate(['main_image' => ['sometimes', 'image', 'max:2048']]);
+        if ($request->hasFile('main_image')) {
+            $worker->clearMediaCollection('main_images');
+            $worker->addMedia($request->file('main_image'))->toMediaCollection('main_images');
+        }
+
         return back()->with('success', 'Worker updated successfully.');
     }
 

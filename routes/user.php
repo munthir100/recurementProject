@@ -10,7 +10,7 @@ use App\Http\Controllers\User\Dashboard\MainController;
 use App\Http\Controllers\User\Dashboard\SecurityController;
 use App\Http\Controllers\User\Dashboard\SettingsController;
 
-Route::middleware('guest:account')->group(function () {
+Route::middleware('guest:web')->group(function () {
     Route::get('/', [LoginController::class, 'showLoginForm'])->name('login');
     Route::post('login', [LoginController::class, 'login'])->name('login.submit');
 });

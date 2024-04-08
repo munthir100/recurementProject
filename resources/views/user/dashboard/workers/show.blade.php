@@ -2,123 +2,123 @@
 
 @section('content')
 <div class="container">
-    <h1>Worker Details</h1>
+    <h1>{{ __('Worker Details') }}</h1>
     <table class="table">
         <tbody>
             <tr>
-                <th scope="row">First Name</th>
+                <th scope="row">{{ __('First Name') }}</th>
                 <td>{{ $worker->first_name }}</td>
             </tr>
             <tr>
-                <th scope="row">Last Name</th>
+                <th scope="row">{{ __('Last Name') }}</th>
                 <td>{{ $worker->last_name }}</td>
             </tr>
             <tr>
-                <th scope="row">Job</th>
+                <th scope="row">{{ __('Job') }}</th>
                 <td>{{ $worker->job }}</td>
             </tr>
             <tr>
-                <th scope="row">Month Salary</th>
+                <th scope="row">{{ __('Month Salary') }}</th>
                 <td>{{ $worker->month_salary }}</td>
             </tr>
             <tr>
-                <th scope="row">Contract Period</th>
+                <th scope="row">{{ __('Contract Period') }}</th>
                 <td>{{ $worker->contract_period }}</td>
             </tr>
             <tr>
-                <th scope="row">Languages</th>
+                <th scope="row">{{ __('Languages') }}</th>
                 <td>{{ $worker->languages }}</td>
             </tr>
             <tr>
-                <th scope="row">Nationality</th>
+                <th scope="row">{{ __('Nationality') }}</th>
                 <td>{{ $worker->nationality }}</td>
             </tr>
             <tr>
-                <th scope="row">Age</th>
+                <th scope="row">{{ __('Age') }}</th>
                 <td>{{ $worker->age }}</td>
             </tr>
             <tr>
-                <th scope="row">Type</th>
+                <th scope="row">{{ __('Type') }}</th>
                 <td>{{ $worker->type }}</td>
             </tr>
             <tr>
-                <th scope="row">Tall</th>
+                <th scope="row">{{ __('Tall') }}</th>
                 <td>{{ $worker->tall }}</td>
             </tr>
             <tr>
-                <th scope="row">Religion</th>
+                <th scope="row">{{ __('Religion') }}</th>
                 <td>{{ $worker->religion }}</td>
             </tr>
             <tr>
-                <th scope="row">Place of Birth</th>
+                <th scope="row">{{ __('Place of Birth') }}</th>
                 <td>{{ $worker->place_of_birth }}</td>
             </tr>
             <tr>
-                <th scope="row">Children</th>
+                <th scope="row">{{ __('Children') }}</th>
                 <td>{{ $worker->children }}</td>
             </tr>
             <tr>
-                <th scope="row">Education</th>
+                <th scope="row">{{ __('Education') }}</th>
                 <td>{{ $worker->education }}</td>
             </tr>
             <tr>
-                <th scope="row">Birth Date</th>
+                <th scope="row">{{ __('Birth Date') }}</th>
                 <td>{{ $worker->birth_date }}</td>
             </tr>
             <tr>
-                <th scope="row">Weight</th>
+                <th scope="row">{{ __('Weight') }}</th>
                 <td>{{ $worker->weight }}</td>
             </tr>
             <tr>
-                <th scope="row">Has Practical Experience</th>
+                <th scope="row">{{ __('Has Practical Experience') }}</th>
                 <td>{{ $worker->has_practical_experience }}</td>
             </tr>
             <tr>
-                <th scope="row">Practical Experience</th>
+                <th scope="row">{{ __('Practical Experience') }}</th>
                 <td>{{ $worker->practical_experience }}</td>
             </tr>
             <tr>
-                <th scope="row">Passport Number</th>
+                <th scope="row">{{ __('Passport Number') }}</th>
                 <td>{{ $worker->passport_number }}</td>
             </tr>
             <tr>
-                <th scope="row">Passport Release Date</th>
+                <th scope="row">{{ __('Passport Release Date') }}</th>
                 <td>{{ $worker->passport_release_date }}</td>
             </tr>
             <tr>
-                <th scope="row">Passport End Date</th>
+                <th scope="row">{{ __('Passport End Date') }}</th>
                 <td>{{ $worker->passport_end_date }}</td>
             </tr>
             <tr>
-                <th scope="row">Passport Place of Issue</th>
+                <th scope="row">{{ __('Passport Place of Issue') }}</th>
                 <td>{{ $worker->passport_place_of_issue }}</td>
             </tr>
             <tr>
-                <th scope="row">Work Experience Country</th>
+                <th scope="row">{{ __('Work Experience Country') }}</th>
                 <td>{{ $worker->work_experience_country }}</td>
             </tr>
             <tr>
-                <th scope="row">Years of Experience</th>
+                <th scope="row">{{ __('Years of Experience') }}</th>
                 <td>{{ $worker->years_of_experience }}</td>
             </tr>
             <tr>
-                <th scope="row">Main Image</th>
+                <th scope="row">{{ __('Main Image') }}</th>
                 <td>{{ $worker->main_image }}</td>
             </tr>
             <tr>
-                <th scope="row">Related Images</th>
+                <th scope="row">{{ __('Related Images') }}</th>
                 <td>{{ $worker->related_images }}</td>
             </tr>
             <tr>
-                <th scope="row">CV</th>
+                <th scope="row">{{ __('CV') }}</th>
                 <td>{{ $worker->cv }}</td>
             </tr>
             <tr>
-                <th scope="row">Office ID</th>
+                <th scope="row">{{ __('Office ID') }}</th>
                 <td>{{ $worker->office_id }}</td>
             </tr>
             <tr>
-                <th scope="row">Status ID</th>
+                <th scope="row">{{ __('Status ID') }}</th>
                 <td>{{ $worker->status_id }}</td>
             </tr>
         </tbody>

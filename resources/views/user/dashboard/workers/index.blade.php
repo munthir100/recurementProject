@@ -44,12 +44,12 @@
                     <table class="table table-nowrap table-striped-columns mb-3">
                         <thead class="table-light">
                             <tr>
-                                <th>ID</th>
-                                <th>Full Name</th>
-                                <th>Job</th>
-                                <th>Month Salary</th>
-                                <th>Office</th>
-                                <th>Actions</th>
+                                <th>{{__('ID')}}</th>
+                                <th>{{ __("Full Name") }}</th>
+                                <th>{{ __("Job") }}</th>
+                                <th>{{ __("Month Salary") }}</th>
+                                <th>{{ __("Office") }}</th>
+                                <th>{{ __("Actions") }}</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -61,7 +61,11 @@
                             <tr>
                                 <td><a href="#" class="fw-semibold">{{ $worker->id }}</a></td>
 
-                                <td>{{ $worker->first_name }} {{ $worker->last_name }}</td>
+                                <td>
+                                    <a href="{{route('home.workers.show',$worker->id)}}" target="_blank">
+                                        {{ $worker->first_name }} {{ $worker->last_name }}
+                                    </a>
+                                </td>
                                 <td>{{ $worker->job }}</td>
                                 <td>{{ $worker->month_salary }}</td>
                                 <td>{{ $worker->office->account->name }}</td>

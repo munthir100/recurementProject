@@ -3,44 +3,54 @@
 @include("layouts.shared.includes.title-meta", ["title" => __("Home")])
 @endsection
 @section('content')
+<style>
+    /* .nft-hero {
+        background-image: url("../images/nft/bg-home.jpg");
+        background-size: cover;
+        background-position: bottom;
+        padding: 222px 0 150px 0;
+    } */
 
-<section class="section pb-0 hero-section" id="hero">
-    <div class="bg-overlay bg-overlay-pattern"></div>
+    .nft-hero .bg-overlay {
+        background-color: #05175f;
+        opacity: 0.30;
+    }
+</style>
+<section class="section nft-hero" id="hero" style="background-image: url({{asset('assets/images/custom/banner.jpeg')}});">
+    <div class="bg-overlay"></div>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 col-sm-10">
-                <div class="text-center mt-lg-5 pt-5">
-                    <h1 class="display-6 fw-semibold mb-3 lh-base">{{ __('Effortless Project Management with') }} <span class="text-success">{{ __('Velzon') }}</span></h1>
-                    <p class="lead text-muted lh-base">{{ __('Velzon provides a seamless experience for managing your projects, tasks, and teams. A fully responsive, multipurpose, and premium platform designed to enhance your project workflow.') }}</p>
+                <div class="text-center">
+                    <h1 class="display-4 fw-medium mb-4 lh-base text-white">{{ __('Empower Your Workforce with') }} <span class="text-success">{{ __('Efficient Recruitment') }}</span></h1>
+                    <p class="lead text-white-50 lh-base mb-4 pb-2">{{ __('Welcome to our innovative recruitment platform, where we bridge the gap between talented individuals and top-tier offices and call centers. With our streamlined process, finding the perfect fit for your team has never been easier.') }}</p>
 
-                    <div class="d-flex gap-2 justify-content-center mt-4 mb-5">
-                        <a href="#" class="btn btn-primary">{{ __('Get Started') }} <i class="ri-arrow-right-line align-middle ms-1"></i></a>
+                    <div class="hstack gap-2 justify-content-center">
+                        <a href="{{route('home.workers')}}" class="btn btn-primary">{{ __('Get Started') }} <i class="ri-arrow-right-line align-middle ms-1"></i></a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
+            </div><!--end col-->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</section><!-- end hero section -->
+
 
 
 <!-- end hero section -->
 
-
-
-<!-- start services -->
 <section class="section" id="services">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="text-center mb-5">
-                    <h1 class="mb-3 ff-secondary fw-semibold lh-base">{{ __('Empowering Your Project Management Journey') }}</h1>
-                    <p class="text-muted">{{ __('Discover the key features that make Velzon the ideal platform for efficient project management.') }}</p>
+                    <h1 class="mb-3 ff-secondary fw-semibold lh-base">{{ __('Elevating Your Recruitment Experience') }}</h1>
+                    <p class="text-muted">{{ __('Discover the key features that make our platform the ideal choice for efficient recruitment processes.') }}</p>
                 </div>
             </div>
         </div>
 
         <div class="row g-3">
-            <!-- Feature: Creative Design -->
+            <!-- Feature: Intuitive Design -->
             <div class="col-lg-4">
                 <div class="d-flex p-3">
                     <div class="flex-shrink-0 me-3">
@@ -51,8 +61,8 @@
                         </div>
                     </div>
                     <div class="flex-grow-1">
-                        <h5 class="fs-18">{{ __('Intuitive Design') }}</h5>
-                        <p class="text-muted my-3 ff-secondary">{{ __('Enjoy an intuitive and user-friendly design that enhances your project management experience.') }}</p>
+                        <h5 class="fs-18">{{ __('User-Friendly Interface') }}</h5>
+                        <p class="text-muted my-3 ff-secondary">{{ __('Experience an intuitive and user-friendly interface designed to streamline your recruitment journey.') }}</p>
                         <div>
                             <a href="#" class="fs-13 fw-medium">{{ __('Learn More') }} <i class="ri-arrow-right-s-line align-bottom"></i></a>
                         </div>
@@ -60,7 +70,7 @@
                 </div>
             </div>
 
-            <!-- Feature: Efficient Task Management -->
+            <!-- Feature: Streamlined Communication -->
             <div class="col-lg-4">
                 <div class="d-flex p-3">
                     <div class="flex-shrink-0 me-3">
@@ -71,8 +81,8 @@
                         </div>
                     </div>
                     <div class="flex-grow-1">
-                        <h5 class="fs-18">{{ __('Efficient Task Management') }}</h5>
-                        <p class="text-muted my-3 ff-secondary">{{ __('Streamline your workflow with efficient task management features for better project coordination.') }}</p>
+                        <h5 class="fs-18">{{ __('Efficient Communication') }}</h5>
+                        <p class="text-muted my-3 ff-secondary">{{ __('Facilitate seamless communication between offices, call centers, and applicants for effective recruitment coordination.') }}</p>
                         <div>
                             <a href="#" class="fs-13 fw-medium">{{ __('Learn More') }} <i class="ri-arrow-right-s-line align-bottom"></i></a>
                         </div>
@@ -80,7 +90,7 @@
                 </div>
             </div>
 
-            <!-- Feature: Collaborative Team Environment -->
+            <!-- Feature: Comprehensive Reporting -->
             <div class="col-lg-4">
                 <div class="d-flex p-3">
                     <div class="flex-shrink-0 me-3">
@@ -91,8 +101,8 @@
                         </div>
                     </div>
                     <div class="flex-grow-1">
-                        <h5 class="fs-18">{{ __('Collaborative Team Environment') }}</h5>
-                        <p class="text-muted my-3 ff-secondary">{{ __('Foster collaboration within your team by providing a shared and interactive project environment.') }}</p>
+                        <h5 class="fs-18">{{ __('Data-Driven Insights') }}</h5>
+                        <p class="text-muted my-3 ff-secondary">{{ __('Utilize comprehensive reporting tools to gain valuable insights and optimize your recruitment strategies.') }}</p>
                         <div>
                             <a href="#" class="fs-13 fw-medium">{{ __('Learn More') }} <i class="ri-arrow-right-s-line align-bottom"></i></a>
                         </div>
@@ -105,16 +115,86 @@
     <!-- end container -->
 </section>
 
+
+<!-- start services -->
+<section class="section" id="process">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="text-center mb-5">
+                    <h1 class="mb-3 ff-secondary fw-semibold lh-base">{{ __('Streamline Your Recruitment Process with') }} <span class="text-primary">{{ __('Efficiency') }}</span> {{ __('and') }} <span class="text-primary">{{ __('Ease') }}</span></h1>
+                    <p class="text-muted">{{ __('Our platform simplifies the journey for both recruiters and job seekers, ensuring a seamless experience from start to finish.') }}</p>
+                </div>
+            </div>
+            <!-- end col -->
+        </div>
+        <!--end row-->
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="card shadow-lg">
+                    <div class="card-body p-4">
+                        <h1 class="fw-bold display-5 ff-secondary mb-4 text-success position-relative">
+                            <div class="job-icon-effect"></div>
+                            <span>1</span>
+                        </h1>
+                        <h6 class="fs-17 mb-2">{{ __('Explore Workers') }}</h6>
+                        <p class="text-muted mb-0 fs-15">{{ __('Browse through our database of skilled workers to find the perfect match for your needs.') }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card shadow-none">
+                    <div class="card-body p-4">
+                        <h1 class="fw-bold display-5 ff-secondary mb-4 text-success position-relative">
+                            <div class="job-icon-effect"></div>
+                            <span>2</span>
+                        </h1>
+                        <h6 class="fs-17 mb-2">{{ __('Select Your Worker') }}</h6>
+                        <p class="text-muted mb-0 fs-15">{{ __('Choose the worker that best fits your requirements and preferences.') }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card shadow-none">
+                    <div class="card-body p-4">
+                        <h1 class="fw-bold display-5 ff-secondary mb-4 text-success position-relative">
+                            <div class="job-icon-effect"></div>
+                            <span>3</span>
+                        </h1>
+
+                        <h6 class="fs-17 mb-2">{{ __('Select Call Center') }}</h6>
+                        <p class="text-muted mb-0 fs-15">{{ __('Choose a call center from our network to handle your inquiries and requests.') }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card shadow-none">
+                    <div class="card-body p-4">
+                        <h1 class="fw-bold display-5 ff-secondary mb-4 text-success position-relative">
+                            <div class="job-icon-effect"></div>
+                            <span>4</span>
+                        </h1>
+                        <h6 class="fs-17 mb-2">{{ __('Enter Your Contact Information') }}</h6>
+                        <p class="text-muted mb-0 fs-15">{{ __('Provide your contact details to the selected call center for further assistance and communication.') }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end container-->
+</section>
+
+
+
 <!-- end services -->
 
 
-<!-- start features -->
-<section class="section bg-light py-5" id="features">
+<section class="section bg-light py-5" id="aboutUs">
     <div class="container">
         <div class="row align-items-center gy-4">
             <div class="col-lg-6 col-sm-7 mx-auto">
                 <div>
-                    <img src="{{asset('assets/images/landing/features/img-1.png')}}" alt="" class="img-fluid mx-auto">
+                    <img style="height:400px; border-radius:10px" src="{{asset('assets/images/custom/office-home-page.jpeg')}}" alt="" class="img-fluid mx-auto">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -124,26 +204,25 @@
                             <i class="ri-collage-line fs-36"></i>
                         </div>
                     </div>
-                    <h3 class="mb-3 fs-20">{{ __('Comprehensive Project Widgets') }}</h3>
-                    <p class="mb-4 ff-secondary fs-16">{{ __('Explore a wide range of project-specific widgets designed to enhance your project management experience. These widgets specialize in displaying essential project elements, such as tasks, timelines, and progress.') }}</p>
-
+                    <h3 class="mb-3 fs-20">{{ __('Explore Our Office') }}</h3>
+                    <p class="mb-4 ff-secondary fs-16">{{ __('Explore the features and functionalities of our recruitment office space. We offer a comprehensive environment tailored to streamline the recruitment process. From receiving CVs from recruitment offices to creating workers and facilitating communication between users and call centers, our platform is designed to enhance productivity and collaboration throughout the recruitment journey.') }}</p>
                     <div class="row pt-3">
                         <div class="col-3">
                             <div class="text-center">
                                 <h4>5</h4>
-                                <p>{{ __('Project Dashboards') }}</p>
+                                <p>{{ __('Workers') }}</p>
                             </div>
                         </div>
                         <div class="col-3">
                             <div class="text-center">
                                 <h4>150+</h4>
-                                <p>{{ __('Project Pages') }}</p>
+                                <p>{{ __('External Office') }}</p>
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="text-center">
                                 <h4>7+</h4>
-                                <p>{{ __('Functional Project Apps') }}</p>
+                                <p>{{ __('Call Center') }}</p>
                             </div>
                         </div>
                     </div>
@@ -156,7 +235,6 @@
     <!-- end container -->
 </section>
 
-<!-- end features -->
 
 
 
@@ -167,7 +245,7 @@
             <div class="col-lg-8">
                 <div class="text-center mb-5">
                     <h3 class="mb-3 fw-semibold">{{ __('Frequently Asked Questions') }}</h3>
-                    <p class="text-muted mb-4 ff-secondary">{{ __('If you cannot find the answer to your question in our FAQ, you can always contact us or email us. We will answer you shortly!') }}</p>
+                    <p class="text-muted mb-4 ff-secondary">{{ __('The highest international standards in recruiting domestic workers') }}</p>
 
                     <div class="hstack gap-2 justify-content-center">
                         <button type="button" class="btn btn-primary btn-label rounded-pill"><i class="ri-mail-line label-icon align-middle rounded-pill fs-16 me-2"></i>{{ __('Email Us') }}</button>
@@ -185,18 +263,18 @@
                         <i class="ri-question-line fs-24 align-middle text-success me-1"></i>
                     </div>
                     <div class="flex-grow-1">
-                        <h5 class="mb-0 fw-semibold">{{ __('Project Setup') }}</h5>
+                        <h5 class="mb-0 fw-semibold">{{ __('Recruiting domestic workers') }}</h5>
                     </div>
                 </div>
                 <div class="accordion accordion-flush" id="project-setup-accordion">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="project-setup-headingOne">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#project-setup-collapseOne" aria-expanded="false" aria-controls="project-setup-collapseOne">
-                                {{ __('How do I set up my project plan?') }}
+                                {{ __('What are the documents required to recruit domestic workers?') }}
                             </button>
                         </h2>
                         <div id="project-setup-collapseOne" class="accordion-collapse collapse show" aria-labelledby="project-setup-headingOne" data-bs-parent="#project-setup-accordion">
-                            <div class="accordion-body ff-secondary">{{ __('To set up your project plan, follow the steps outlined in your project documentation. It includes details on defining project goals, milestones, tasks, and assigning responsibilities.') }}</div>
+                            <div class="accordion-body ff-secondary">{{ __('Original visa,Signing a recruitment contract, A copy of the national ID or residence permit for residents and Identification of salary from the employer or bank statement') }}</div>
                         </div>
                     </div>
                     <!-- Include other project setup questions here -->
@@ -217,13 +295,13 @@
 
                 <div class="accordion accordion-flush" id="task-management-accordion">
                     <div class="accordion-item">
-                        <h2 class="accordion-header" id="task-management-headingOne">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#task-management-collapseOne" aria-expanded="false" aria-controls="task-management-collapseOne">
-                                {{ __('How can I manage tasks within my project plan?') }}
+                        <h2 class="accordion-header" id="project-setup-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#project-setup-collapseOne" aria-expanded="false" aria-controls="project-setup-collapseOne">
+                                {{ __('What are the documents required to recruit domestic workers?') }}
                             </button>
                         </h2>
-                        <div id="task-management-collapseOne" class="accordion-collapse collapse" aria-labelledby="task-management-headingOne" data-bs-parent="#task-management-accordion">
-                            <div class="accordion-body ff-secondary">{{ __('Task management involves creating, assigning, and tracking tasks to ensure the successful execution of your project plan. Utilize project management tools and regularly update task progress.') }}</div>
+                        <div id="project-setup-collapseOne" class="accordion-collapse collapse show" aria-labelledby="project-setup-headingOne" data-bs-parent="#project-setup-accordion">
+                            <div class="accordion-body ff-secondary">{{ __('Original visa,Signing a recruitment contract, A copy of the national ID or residence permit for residents and Identification of salary from the employer or bank statement') }}</div>
                         </div>
                     </div>
                     <!-- Include other task management questions here -->
@@ -246,7 +324,7 @@
             <div class="col-lg-3 col-6">
                 <div>
                     <h2 class="mb-2"><span class="counter-value" data-target="100">0</span>+</h2>
-                    <div class="text-muted">{{ __('Projects Completed') }}</div>
+                    <div class="text-muted">{{ __('Worker') }}</div>
                 </div>
             </div>
             <!-- end col -->
@@ -254,7 +332,7 @@
             <div class="col-lg-3 col-6">
                 <div>
                     <h2 class="mb-2"><span class="counter-value" data-target="24">0</span></h2>
-                    <div class="text-muted">{{ __('Win Awards') }}</div>
+                    <div class="text-muted">{{ __('External Office') }}</div>
                 </div>
             </div>
             <!-- end col -->
@@ -262,7 +340,7 @@
             <div class="col-lg-3 col-6">
                 <div>
                     <h2 class="mb-2"><span class="counter-value" data-target="20.3">0</span>k</h2>
-                    <div class="text-muted">{{ __('Satisfied Clients') }}</div>
+                    <div class="text-muted">{{ __('CV') }}</div>
                 </div>
             </div>
             <!-- end col -->
@@ -270,7 +348,7 @@
             <div class="col-lg-3 col-6">
                 <div>
                     <h2 class="mb-2"><span class="counter-value" data-target="50">0</span></h2>
-                    <div class="text-muted">{{ __('Employees') }}</div>
+                    <div class="text-muted">{{ __('Call Center') }}</div>
                 </div>
             </div>
             <!-- end col -->
@@ -282,74 +360,6 @@
 
 <!-- end counter -->
 
-<!-- start Work Process -->
-<!-- start work process -->
-<!-- start project workflow -->
-<section class="section">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="text-center mb-5">
-                    <h3 class="mb-3 fw-semibold">{{ __('Our Project Workflow') }}</h3>
-                    <p class="text-muted mb-4 ff-secondary">{{ __('In an ideal project scenario, understanding your requirements is key. The process begins before the design starts to ensure a seamless project experience.') }}</p>
-                </div>
-            </div>
-        </div>
-        <!-- end row -->
-
-        <div class="row text-center">
-            <div class="col-lg-4">
-                <div class="process-card mt-4">
-                    <div class="process-arrow-img d-none d-lg-block">
-                        <img src="{{asset('assets/images/landing/process-arrow-img.png')}}" alt="" class="img-fluid">
-                    </div>
-                    <div class="avatar-sm icon-effect mx-auto mb-4">
-                        <div class="avatar-title bg-transparent text-success rounded-circle h1">
-                            <i class="ri-pencil-line"></i>
-                        </div>
-                    </div>
-
-                    <h5>{{ __('Define Your Project') }}</h5>
-                    <p class="text-muted ff-secondary">{{ __('Share details about your project, including goals and requirements, to kickstart the development process.') }}</p>
-                </div>
-            </div>
-            <!-- end col -->
-            <div class="col-lg-4">
-                <div class="process-card mt-4">
-                    <div class="process-arrow-img d-none d-lg-block">
-                        <img src="{{asset('assets/images/landing/process-arrow-img.png')}}" alt="" class="img-fluid">
-                    </div>
-                    <div class="avatar-sm icon-effect mx-auto mb-4">
-                        <div class="avatar-title bg-transparent text-success rounded-circle h1">
-                            <i class="ri-user-line"></i>
-                        </div>
-                    </div>
-
-                    <h5>{{ __('Request a Quote') }}</h5>
-                    <p class="text-muted ff-secondary">{{ __('Receive free quotes based on your project specifications. Explore options before making informed decisions.') }}</p>
-                </div>
-            </div>
-            <!-- end col -->
-            <div class="col-lg-4">
-                <div class="process-card mt-4">
-                    <div class="avatar-sm icon-effect mx-auto mb-4">
-                        <div class="avatar-title bg-transparent text-success rounded-circle h1">
-                            <i class="ri-checkbox-circle-line"></i>
-                        </div>
-                    </div>
-
-                    <h5>{{ __('Delivery Excellence') }}</h5>
-                    <p class="text-muted ff-secondary">{{ __('We ensure the delivery of high-quality products that meet your expectations and project requirements.') }}</p>
-                </div>
-            </div>
-            <!-- end col -->
-        </div>
-        <!-- end row -->
-    </div>
-    <!-- end container -->
-</section>
-
-<!-- end project workflow -->
 
 
 <!-- start contact -->
@@ -436,7 +446,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="uploadCVModalLabel">Upload Customer CV</h5>
+                <h5 class="modal-title" id="uploadCVModalLabel">{{ __('Upload Customer CV')}}</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -455,8 +465,8 @@
 
                         <div class="col-lg-12 align-items-center">
                             <div class="hstack gap-2 justify-content-end">
-                                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="button" class="btn btn-light" data-bs-dismiss="modal">{{ __('Close')}}</button>
+                                <button type="submit" class="btn btn-primary">{{ __('Submit')}}</button>
                             </div>
                         </div>
                         <!--end col-->

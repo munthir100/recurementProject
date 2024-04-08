@@ -8,25 +8,25 @@
         <div class="row justify-content-center">
             <div class="col-lg-7">
                 <div class="text-center mb-5">
-                    <h1 class="mb-3 ff-secondary fw-semibold text-capitalize lh-base">Find Your <span class="text-primary">Worker</span> You Deserve it</h1>
-                    <p class="text-muted">Select your support team member and enter your data to contact with you</p>
+                    <h1 class="mb-3 ff-secondary fw-semibold text-capitalize lh-base">{{__('Find Your')}} <span class="text-primary">{{__('Worker')}}</span> {{__('You Deserve it')}}</h1>
+                    <p class="text-muted">{{__('Select your support team member and enter your data to contact with you')}}</p>
                 </div>
             </div>
         </div>
         <div class="row">
             @forelse ($callCenters as $callCenter)
-            <div class="col-xl-4">
+            <div class="col-md-3">
                 <div class="card">
                     <div class="card-body p-4 text-center">
                         <div class="mx-auto avatar-md mb-3">
-                            <img src="assets/images/users/avatar-8.jpg" alt="" class="img-fluid rounded-circle">
+                            <img src="https://images.vexels.com/media/users/3/135569/isolated/preview/f472ef7985f67b21212d321fdc6dbd0f-call-icon.png" alt="" class="img-fluid rounded-circle">
                         </div>
                         <h5 class="card-title mb-1">{{$callCenter->account->name}}</h5>
                         <p class="text-muted mb-0">{{$callCenter->account->email}}</p>
                         <p class="text-muted mb-0">{{$callCenter->account->phone}}</p>
                     </div>
                     <div class="card-footer text-center">
-                        <a href="/request-call-center?worker_id={{request()->worker_id}}&call_center_id={{$callCenter->id}}" class="btn btn-outline-primary">Request Now</a>
+                        <a href="/request-call-center?worker_id={{request()->worker_id}}&call_center_id={{$callCenter->id}}" class="btn btn-outline-primary">{{__('Request Now')}}</a>
                     </div>
                 </div>
             </div>

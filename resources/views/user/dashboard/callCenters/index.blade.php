@@ -51,9 +51,9 @@
                     <table class="table table-nowrap table-striped-columns mb-3">
                         <thead class="table-light">
                             <tr>
-                                <th>ID</th>
-                                <th>Name</th>
-                                <th>Actions</th>
+                                <th>{{ __("ID") }}</th>
+                                <th>{{ __("Name") }}</th>
+                                <th>{{ __("Actions") }}</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -129,7 +129,7 @@
                                         @csrf
 
                                         <div class="form-group">
-                                            <label for="name">Name:</label>
+                                            <label for="name">{{ __("Name") }}:</label>
                                             <input type="text" id="name" name="name" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}" required autofocus>
                                             @error('name')
                                             <span class="invalid-feedback" role="alert">
@@ -139,7 +139,7 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="email">Email:</label>
+                                            <label for="email">{{ __("Email") }}:</label>
                                             <input type="email" id="email" name="email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email') }}" required>
                                             @error('email')
                                             <span class="invalid-feedback" role="alert">
@@ -149,7 +149,7 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="phone">Phone:</label>
+                                            <label for="phone">{{ __("Phone") }}:</label>
                                             <input type="text" id="phone" name="phone" class="form-control @error('phone') is-invalid @enderror" value="{{ old('phone') }}" required>
                                             @error('phone')
                                             <span class="invalid-feedback" role="alert">
@@ -159,7 +159,7 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="password">Password:</label>
+                                            <label for="password">{{ __("Password") }}:</label>
                                             <input type="password" id="password" name="password" class="form-control @error('password') is-invalid @enderror" required>
                                             @error('password')
                                             <span class="invalid-feedback" role="alert">
@@ -168,7 +168,7 @@
                                             @enderror
                                         </div>
 
-                                        <button type="submit" class="btn btn-primary mt-4">Create call center</button>
+                                        <button type="submit" class="btn btn-primary mt-4">{{ __("Create call center") }}</button>
                                     </form>
                                 </div>
                             </div>

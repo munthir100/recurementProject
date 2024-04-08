@@ -13,7 +13,7 @@ class InquiryRequestController extends Controller
 {
     public function index()
     {
-        $inquiryRequests = InquiryRequest::whereRelation('callCenter', 'id', '=', request()->user('account')->callCenter->id)->get();
+        $inquiryRequests = InquiryRequest::whereRelation('callCenter', 'id', '=', request()->user('account')->callCenter->id)->with('worker')->get();
 
         return view('account.callCenter.inquiryRequests.index', compact('inquiryRequests'));
     }

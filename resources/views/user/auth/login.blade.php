@@ -63,7 +63,7 @@
                                     <div class="p-lg-5 p-4">
                                         <div>
                                             <h5 class="text-primary">{{ __('Welcome Back !') }}</h5>
-                                            <p class="text-muted">{{ __('Sign in to continue to Velzon.') }}</p>
+                                            <p class="text-muted">{{ __('Sign in to continue .') }}</p>
                                         </div>
 
                                         <div class="mt-4">
@@ -79,9 +79,6 @@
                                                 </div>
 
                                                 <div class="mb-3">
-                                                    <div class="float-end">
-                                                        <a href="#" class="text-muted">{{ __('Forgot password?') }}</a>
-                                                    </div>
                                                     <label class="form-label" for="password">{{ __('Password') }}</label>
                                                     <div class="position-relative auth-pass-inputgroup mb-3">
                                                         <input type="password" class="form-control pe-5 password-input" name="password" placeholder="{{ __('Enter password') }}" id="password">

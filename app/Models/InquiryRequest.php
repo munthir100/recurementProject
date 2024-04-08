@@ -15,4 +15,9 @@ class InquiryRequest extends Model
     {
         return $this->belongsTo(CallCenter::class);
     }
+
+    public function worker()
+    {
+        return $this->belongsTo(Worker::class);
+    }
 }

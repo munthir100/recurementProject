@@ -21,7 +21,7 @@ class CvController extends Controller
         $request->validate([
             'cv' => 'required|file|max:2048', // Validate file type and size
         ]);
-
+        
         $worker = Worker::create([
             'office_id' => $request->user('account')->office->id
         ]);

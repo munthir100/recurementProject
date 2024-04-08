@@ -66,7 +66,7 @@
                         @else
                         <!-- item - Arabic -->
                         <a href="#" onclick="document.getElementById('arForm').submit()" class="dropdown-item notify-item language" data-lang="ar" title="{{ __('Arabic') }}">
-                            <img src="{{ asset('assets/images/flags/ae.svg') }}" alt="user-image" class="me-2 rounded" height="18">
+                            <img src="{{ asset('assets/images/flags/sa.svg') }}" alt="user-image" class="me-2 rounded" height="18">
                             <span class="align-middle">{{ __('Arabic') }}</span>
                         </a>
                         @endif
