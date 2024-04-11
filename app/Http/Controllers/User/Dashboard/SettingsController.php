@@ -11,7 +11,7 @@ class SettingsController extends Controller
     public function showSettings()
     {
         $user = request()->user();
-        return view('user.dashboard.settings', compact('user'));
+        return view('dashboard.settings', compact('user'));
     }
 
     public function updateSettings(UpdateSettingsRequest $request)

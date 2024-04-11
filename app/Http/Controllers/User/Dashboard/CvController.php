@@ -11,6 +11,6 @@ class CvController extends Controller
     {
         $workersCvs = Worker::WhereNull('first_name')->with('office.account')->dynamicPaginate();
 
-        return view('user.dashboard.cvs.index', compact('workersCvs'));
+        return view('dashboard.cvs.index', compact('workersCvs'));
     }
 }

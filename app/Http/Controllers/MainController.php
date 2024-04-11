@@ -18,31 +18,31 @@ class MainController extends Controller
 {
     public function home()
     {
-        return view('home');
+        return view('main-site.home');
     }
 
     public function workers()
     {
         $workers = Worker::whereStatusId(Status::ACTIVE)->dynamicPaginate();
 
-        return view('home.workers', compact('workers'));
+        return view('main-site.home.workers', compact('workers'));
     }
 
     public function workerDetails($workerId)
     {
         $worker = Worker::where('status_id', Status::ACTIVE)->findOrFail($workerId);
-        return view('home.workerDetails', compact('worker'));
+        return view('main-site.home.workerDetails', compact('worker'));
     }
 
     public function callCenters()
     {
         $callCenters = CallCenter::with('account')->dynamicPaginate();
-        return view('home.callCenters', compact('callCenters'));
+        return view('main-site.home.callCenters', compact('callCenters'));
     }
 
     public function callCenterDetails(CallCenter $callCenter)
     {
-        return view('home.callCenterDetails', compact('callCenter'));
+        return view('main-site.home.callCenterDetails', compact('callCenter'));
     }
 
     public function createInqueryRequestForm()
@@ -56,7 +56,7 @@ class MainController extends Controller
             return redirect('workers');
         }
 
-        return view('InquiryRequests.create');
+        return view('main-site.InquiryRequests.create');
     }
 
     public function createInqueryRequest(CreateInquiryRequestRequest $request)

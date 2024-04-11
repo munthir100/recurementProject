@@ -1,1 +1,0 @@
-<td><span class="badge bg-success">{{__($status->name)}}</span></td>

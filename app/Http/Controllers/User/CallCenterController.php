@@ -15,12 +15,12 @@ class CallCenterController extends Controller
     public function index()
     {
         $callCenters = CallCenter::with('account')->dynamicPaginate();
-        return view('user.dashboard.callCenters.index', compact('callCenters'));
+        return view('dashboard.callCenters.index', compact('callCenters'));
     }
 
     public function create()
     {
-        return view('user.dashboard.callCenters.create');
+        return view('dashboard.callCenters.create');
     }
 
     public function store(CreateCallCenterRequest $request)
@@ -36,7 +36,7 @@ class CallCenterController extends Controller
     public function edit(CallCenter $callCenter)
     {
         $callCenter->load('account');
-        return view('user.dashboard.callCenters.edit', compact('callCenter'));
+        return view('dashboard.callCenters.edit', compact('callCenter'));
     }
 
     public function update(UpdateCallCenterRequest $request, CallCenter $callCenter)
@@ -50,7 +50,7 @@ class CallCenterController extends Controller
     public function show(CallCenter $callCenter)
     {
         $callCenter->load('account');
-        return view('user.dashboard.callCenters.show', compact('callCenter'));
+        return view('dashboard.callCenters.show', compact('callCenter'));
     }
 
     public function destroy(CallCenter $callCenter)

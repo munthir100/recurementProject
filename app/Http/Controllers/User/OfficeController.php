@@ -15,12 +15,12 @@ class OfficeController extends Controller
     public function index()
     {
         $offices = Office::with('account')->dynamicPaginate();
-        return view('user.dashboard.offices.index', compact('offices'));
+        return view('dashboard.offices.index', compact('offices'));
     }
 
     public function create()
     {
-        return view('user.dashboard.offices.create');
+        return view('dashboard.offices.create');
     }
 
     public function store(CreateOfficeRequest $request)
@@ -36,13 +36,13 @@ class OfficeController extends Controller
     public function edit(Office $office)
     {
         $office->load('account');
-        return view('user.dashboard.offices.edit', compact('office'));
+        return view('dashboard.offices.edit', compact('office'));
     }
 
     public function show(Office $office)
     {
         $office->load('account');
-        return view('user.dashboard.offices.show', compact('office'));
+        return view('dashboard.offices.show', compact('office'));
     }
 
     public function update(UpdateOfficeRequest $request, Office $office)

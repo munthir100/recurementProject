@@ -12,12 +12,12 @@ class WorkerController extends Controller
     public function index()
     {
         $workers = Worker::with('office.account')->dynamicPaginate();
-        return view('user.dashboard.workers.index', compact('workers'));
+        return view('dashboard.workers.index', compact('workers'));
     }
 
     public function create()
     {
-        return view('user.dashboard.workers.create');
+        return view('dashboard.workers.create');
     }
 
     public function store(CreateWorkerRequest $request)
@@ -28,12 +28,12 @@ class WorkerController extends Controller
 
     public function show(Worker $worker)
     {
-        return view('user.dashboard.workers.show', compact('worker'));
+        return view('dashboard.workers.show', compact('worker'));
     }
 
     public function edit(Worker $worker)
     {
-        return view('user.dashboard.workers.edit', compact('worker'));
+        return view('dashboard.workers.edit', compact('worker'));
     }
 
     public function update(UpdateWorkerRequest $request, Worker $worker)

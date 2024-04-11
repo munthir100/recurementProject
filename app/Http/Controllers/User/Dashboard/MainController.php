@@ -17,7 +17,7 @@ class MainController extends Controller
         $workersCount = Worker::count();
         $cvsCount = Worker::whereNull('first_name')->count();
 
-        return view('user.dashboard.index', compact(
+        return view('dashboard.index', compact(
             'callCentersCount',
             'officesCount',
             'workersCount',

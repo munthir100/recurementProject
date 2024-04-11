@@ -11,7 +11,7 @@ class SecurityController extends Controller
 {
     function showSecurity()
     {
-        return view('user.dashboard.security');
+        return view('dashboard.security');
     }
 
     public function updateSecurity(UpdateSecurityRequest $request)
