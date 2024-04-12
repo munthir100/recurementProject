@@ -1,423 +1,664 @@
 @extends('main-site.layouts.shared.app-layout')
 @section('title')
-@include("main-site.layouts.shared.includes.title-meta", ["title" => __("Dashboard")])
+@include("main-site.layouts.shared.includes.title-meta", ["title" => __("Home")])
 @endsection
 @section('content')
-
-<section class="section nft-hero" id="hero" style="background-image: url('/assets/images/custom/banner.jpeg')">
-    <div class="bg-overlay"></div>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 col-sm-10">
-                <div class="text-center">
-                    <h1 class="display-4 fw-medium mb-4 lh-base text-white">{{ __('Empower Your Workforce with') }} <span class="text-success">{{ __('Efficient Recruitment') }}</span></h1>
-                    <p class="lead text-white lh-base mb-4 pb-2">{{ __('Welcome to our innovative recruitment platform, where we bridge the gap between talented individuals and top-tier offices and call centers. With our streamlined process, finding the perfect fit for your team has never been easier.') }}</p>
-
-                    <div class="hstack gap-2 justify-content-center">
-                        <a href="{{route('home.workers')}}" class="btn btn-primary">{{ __('Get Started') }} <i class="ri-arrow-right-line align-middle ms-1"></i></a>
-                    </div>
-                </div>
-            </div><!--end col-->
-        </div><!-- end row -->
-    </div><!-- end container -->
-</section><!-- end hero section -->
-
-
-
-<!-- end hero section -->
-
-<section class="section" id="services">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="text-center mb-5">
-                    <h1 class="mb-3 ff-secondary fw-semibold lh-base">{{ __('Elevating Your Recruitment Experience') }}</h1>
-                    <p class="text-muted">{{ __('Discover the key features that make our platform the ideal choice for efficient recruitment processes.') }}</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row g-3">
-            <!-- Feature: Intuitive Design -->
-            <div class="col-lg-4">
-                <div class="d-flex p-3">
-                    <div class="flex-shrink-0 me-3">
-                        <div class="avatar-sm icon-effect">
-                            <div class="avatar-title bg-transparent text-success rounded-circle">
-                                <i class="ri-pencil-ruler-2-line fs-36"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex-grow-1">
-                        <h5 class="fs-18">{{ __('User-Friendly Interface') }}</h5>
-                        <p class="text-muted my-3 ff-secondary">{{ __('Experience an intuitive and user-friendly interface designed to streamline your recruitment journey.') }}</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Feature: Streamlined Communication -->
-            <div class="col-lg-4">
-                <div class="d-flex p-3">
-                    <div class="flex-shrink-0 me-3">
-                        <div class="avatar-sm icon-effect">
-                            <div class="avatar-title bg-transparent text-success rounded-circle">
-                                <i class="ri-check-line fs-36"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex-grow-1">
-                        <h5 class="fs-18">{{ __('Efficient Communication') }}</h5>
-                        <p class="text-muted my-3 ff-secondary">{{ __('Facilitate seamless communication between offices, call centers, and applicants for effective recruitment coordination.') }}</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Feature: Comprehensive Reporting -->
-            <div class="col-lg-4">
-                <div class="d-flex p-3">
-                    <div class="flex-shrink-0 me-3">
-                        <div class="avatar-sm icon-effect">
-                            <div class="avatar-title bg-transparent text-success rounded-circle">
-                                <i class="ri-group-line fs-36"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex-grow-1">
-                        <h5 class="fs-18">{{ __('Data-Driven Insights') }}</h5>
-                        <p class="text-muted my-3 ff-secondary">{{ __('Utilize comprehensive reporting tools to gain valuable insights and optimize your recruitment strategies.') }}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- end row -->
-    </div>
-    <!-- end container -->
-</section>
-
-
-<!-- start services -->
-<section class="section" id="process">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="text-center mb-5">
-                    <h1 class="mb-3 ff-secondary fw-semibold lh-base">{{ __('Streamline Your Recruitment Process with') }} <span class="text-primary">{{ __('Efficiency') }}</span> {{ __('and') }} <span class="text-primary">{{ __('Ease') }}</span></h1>
-                    <p class="text-muted">{{ __('Our platform simplifies the journey for both recruiters and job seekers, ensuring a seamless experience from start to finish.') }}</p>
-                </div>
-            </div>
-            <!-- end col -->
-        </div>
-        <!--end row-->
-        <div class="row">
-            <div class="col-lg-3 col-md-6">
-                <div class="card shadow-lg">
-                    <div class="card-body p-4">
-                        <h1 class="fw-bold display-5 ff-secondary mb-4 text-success position-relative">
-                            <div class="job-icon-effect"></div>
-                            <span>1</span>
-                        </h1>
-                        <h6 class="fs-17 mb-2">{{ __('Explore Workers') }}</h6>
-                        <p class="text-muted mb-0 fs-15">{{ __('Browse through our database of skilled workers to find the perfect match for your needs.') }}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="card shadow-none">
-                    <div class="card-body p-4">
-                        <h1 class="fw-bold display-5 ff-secondary mb-4 text-success position-relative">
-                            <div class="job-icon-effect"></div>
-                            <span>2</span>
-                        </h1>
-                        <h6 class="fs-17 mb-2">{{ __('Select Your Worker') }}</h6>
-                        <p class="text-muted mb-0 fs-15">{{ __('Choose the worker that best fits your requirements and preferences.') }}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="card shadow-none">
-                    <div class="card-body p-4">
-                        <h1 class="fw-bold display-5 ff-secondary mb-4 text-success position-relative">
-                            <div class="job-icon-effect"></div>
-                            <span>3</span>
-                        </h1>
-
-                        <h6 class="fs-17 mb-2">{{ __('Select Call Center') }}</h6>
-                        <p class="text-muted mb-0 fs-15">{{ __('Choose a call center from our network to handle your inquiries and requests.') }}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="card shadow-none">
-                    <div class="card-body p-4">
-                        <h1 class="fw-bold display-5 ff-secondary mb-4 text-success position-relative">
-                            <div class="job-icon-effect"></div>
-                            <span>4</span>
-                        </h1>
-                        <h6 class="fs-17 mb-2">{{ __('Enter Your Contact Information') }}</h6>
-                        <p class="text-muted mb-0 fs-15">{{ __('Provide your contact details to the selected call center for further assistance and communication.') }}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--end container-->
-</section>
-
-
-
-<!-- end services -->
-
-
-<section class="section bg-light py-5" id="aboutUs">
-    <div class="container">
-        <div class="row align-items-center gy-4">
-            <div class="col-lg-6 col-sm-7 mx-auto">
+<header class="header-with-topbar">
+    @include('main-site.layouts.shared.includes.header')
+</header>
+<!-- start banner -->
+<section class="top-space-margin p-0 full-screen md-h-600px sm-h-500px section-dark" data-parallax-background-ratio="0.8" style="background-image: url('/images/custom/backround.jpeg')">
+    <div class="container h-100">
+        <div class="row align-items-center h-100">
+            <div class="col-xl-7 col-md-9 col-sm-9 position-relative text-white" data-anime='{ "el": "childs", "opacity": [0, 1], "translateY": [30, 0], "staggervalue": 200, "easing": "easeInOutSine" }'>
+                <div class="fs-80 lh-75 sm-fs-65 fw-600 mb-20px text-shadow-large ls-minus-2px">وجهتك الاولى في
+                    الاستقدام باسعار تنافسية</div>
                 <div>
-                    <img style="height:400px; border-radius:10px" src="{{asset('dashboard/assets/images/custom/office-home-page.jpeg')}}" alt="" class="img-fluid mx-auto">
+                    <span class="opacity-5 fs-20 w-70 md-w-85 mb-25px fw-300 d-inline-block">نلبي احتياجك من العمالة
+                        المنزلية بأفضل الاسعار</span>
                 </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="text-muted">
-                    <div class="avatar-sm icon-effect mb-4">
-                        <div class="avatar-title bg-transparent rounded-circle text-success h1">
-                            <i class="ri-collage-line fs-36"></i>
-                        </div>
-                    </div>
-                    <h3 class="mb-3 fs-20">{{ __('Explore Our Office') }}</h3>
-                    <p class="mb-4 ff-secondary fs-16">{{ __('Explore the features and functionalities of our recruitment office space. We offer a comprehensive environment tailored to streamline the recruitment process. From receiving CVs from recruitment offices to creating workers and facilitating communication between users and call centers, our platform is designed to enhance productivity and collaboration throughout the recruitment journey.') }}</p>
-                    <div class="row pt-3">
-                        <div class="col-3">
-                            <div class="text-center">
-                                <h4>5</h4>
-                                <p>{{ __('Workers') }}</p>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="text-center">
-                                <h4>150+</h4>
-                                <p>{{ __('External Office') }}</p>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="text-center">
-                                <h4>7+</h4>
-                                <p>{{ __('Call Center') }}</p>
-                            </div>
+                <div class="icon-with-text-style-08">
+                    <div class="feature-box feature-box-left-icon-middle">
+                        <div class="feature-box-icon feature-box-icon-rounded w-65px h-65px rounded-circle bg-yellow me-15px rounded-box">
+                            <i class="feather icon-feather-arrow-right text-dark-gray icon-extra-medium"></i>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- end col -->
         </div>
-        <!-- end row -->
     </div>
-    <!-- end container -->
 </section>
-
-
-
-
-<!-- start faqs -->
-<section class="section" id="FAQ">
+<!-- end banner -->
+<!-- start section -->
+<section>
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="text-center mb-5">
-                    <h3 class="mb-3 fw-semibold">{{ __('Frequently Asked Questions') }}</h3>
-                    <p class="text-muted mb-4 ff-secondary">{{ __('The highest international standards in recruiting domestic workers') }}</p>
+        <div class="row justify-content-center mb-3">
+            <div class="col-lg-7 col-md-8 col-sm-9 text-center" data-anime='{ "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                <h3 class="text-dark-gray fw-700 ls-minus-2px">مميزاتنا </h3>
+                <span>تعرف اكثر علي المميزات التي ننفرد بها عن الاخرين ...
+                </span>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 justify-content-center mb-5" data-anime='{ "el": "childs", "translateX": [-30, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+            <!-- start features box item -->
+            <div class="col icon-with-text-style-07 transition-inner-all md-mb-30px">
+                <div class="bg-very-light-gray h-100 justify-content-end feature-box flex-column-reverse p-15 md-p-13 border-radius-8px">
+                    <div class="feature-box-icon">
+                        <a href="#"><img src="/images/demo-accounting-company-icon01.svg" class="h-95px" alt=""></a>
+                    </div>
+                    <div class="feature-box-content">
+                        <a href="#" class="d-inline-block fw-600 text-dark-gray mb-5px fs-20 ls-minus-05px">خدمة
+                            عملاء متميزة
+                        </a>
+                        <p class="mb-30px">نهتم في مكتب ترف الاعمال بخدمتكم عن طريق قنوات تواصل متعددة ونضمن لكم
+                            خدمة متكاملة وتجربة عميل مميزة
 
-                    <div class="hstack gap-2 justify-content-center">
-                        <button type="button" class="btn btn-primary btn-label rounded-pill"><i class="ri-mail-line label-icon align-middle rounded-pill fs-16 me-2"></i>{{ __('Email Us') }}</button>
-                        <button type="button" class="btn btn-info btn-label rounded-pill"><i class="ri-twitter-line label-icon align-middle rounded-pill fs-16 me-2"></i>{{ __('Send Us Tweet') }}</button>
+                        </p>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- end row -->
-
-        <div class="row g-lg-5 g-4">
-            <div class="col-lg-6">
-                <div class="d-flex align-items-center mb-2">
-                    <div class="flex-shrink-0 me-1">
-                        <i class="ri-question-line fs-24 align-middle text-success me-1"></i>
+            <!-- end features box item -->
+            <!-- start features box item -->
+            <div class="col icon-with-text-style-07 transition-inner-all md-mb-30px">
+                <div class="bg-very-light-gray h-100 justify-content-end feature-box flex-column-reverse p-15 md-p-13 border-radius-8px">
+                    <div class="feature-box-icon">
+                        <a href="#"><img src="/images/demo-accounting-company-icon02.svg" class="h-95px" alt=""></a>
                     </div>
-                    <div class="flex-grow-1">
-                        <h5 class="mb-0 fw-semibold">{{ __('Recruiting domestic workers') }}</h5>
+                    <div class="feature-box-content">
+                        <a href="#" class="d-inline-block fw-600 text-dark-gray mb-5px fs-20 ls-minus-05px">خدمات
+                            رقمية متكاملة
+                        </a>
+                        <p class="mb-30px">ابدأ حجزك واتمم دفعك من خلال الموقع الالكتروني او التواصل معنا بوقت وجيز
+                            وبخطوات مختصرة
+
+                        </p>
+                    </div>
+                    <span class="position-absolute box-shadow-large top-25px lg-top-15px right-25px lg-right-15px bg-white border-radius-18px text-dark-gray fs-11 fw-700 text-uppercase ps-15px pe-15px lh-26 ls-minus-05px">New</span>
+                </div>
+            </div>
+            <!-- end features box item -->
+            <!-- start features box item -->
+            <div class="col icon-with-text-style-07 transition-inner-all">
+                <div class="bg-very-light-gray h-100 justify-content-end feature-box flex-column-reverse p-15 md-p-13 border-radius-8px">
+                    <div class="feature-box-icon">
+                        <a href="#"><img src="/images/demo-accounting-company-icon03.svg" class="h-95px" alt=""></a>
+                    </div>
+                    <div class="feature-box-content">
+                        <a href="#" class="d-inline-block fw-600 text-dark-gray mb-5px fs-20 ls-minus-05px">مقدمي
+                            الخدمة
+                        </a>
+                        <p class="mb-30px">يخضع مقدمي الخدمة في مكتب ترف الاعمال للفحص باستمرار من أجل خدمتكم
+                            وراحتكم
+
+
+                        </p>
                     </div>
                 </div>
-                <div class="accordion accordion-flush" id="project-setup-accordion">
+            </div>
+            <!-- end features box item -->
+        </div>
+    </div>
+</section>
+<!-- end section -->
+<!-- start section -->
+<section class="pt-0 big-section">
+    <div class="container">
+        <div class="row align-items-center" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+            <div class="col-lg-6 position-relative md-mb-14 sm-mb-17 xs-mb-23">
+                <div class="w-70 md-w-75 xs-w-90" data-animation-delay="50" data-shadow-animation="true">
+                    <img src="/images/custom/side.jpeg" alt="" class="border-radius-8px w-100">
+                </div>
+                <div class="w-55 overflow-hidden position-absolute right-15px xs-w-60 bottom-minus-20px" data-shadow-animation="true" data-animation-delay="250" data-bottom-top="transform: translateY(50px)" data-top-bottom="transform: translateY(-50px)">
+                    <img src="#" alt="" class="border-radius-8px w-100 box-shadow-quadruple-large" />
+                </div>
+            </div>
+            <div class="col-xl-5 offset-xl-1 col-lg-6 text-center text-lg-start">
+                <h3 class="fw-700 text-dark-gray ls-minus-2px" style="text-align: right !important;">مع مكتبنا</h3>
+                <p class="mb-40px xs-mb-30px w-90 lg-w-95 md-w-100" style="text-align: right !important;">هناك
+                    العديد من الاختلافات في المقاطع المتاحة ولكن الأغلبية عانت من التغيير بشكل ما من خلال كلمات
+                    مضحكة لا تبدو قابلة للتصديق.</p>
+                <div class="row align-items-center mb-30px xs-mb-25px justify-content-center justify-content-lg-start" style="text-align: right !important;">
+                    <!-- start counter item -->
+                    <div class="col-lg-5 col-md-4 col-sm-5 last-paragraph-no-margin counter-style-04 xs-mb-25px">
+                        <h3 class="vertical-counter d-inline-flex fw-700 text-dark-gray mb-0 ls-minus-2px xl-ls-minus-1px" data-text="+" data-to="280"><sup class="text-yellow top-0px me-5px"><i class="feather icon-feather-users icon-very-medium"></i></sup></h3>
+                        <span class="fw-500 text-dark-gray mb-10px d-block ls-minus-05px">فريق العمل</span>
+                    </div>
+                    <!-- end counter item -->
+                    <!-- start counter item -->
+                    <div class="col-lg-6 col-md-4 col-sm-5 last-paragraph-no-margin counter-style-04">
+                        <h3 class="vertical-counter d-inline-flex fw-700 text-dark-gray mb-0 ls-minus-2px xl-ls-minus-1px" data-text="+" data-to="465"><sup class="text-yellow top-0px me-5px"><i class="feather icon-feather-briefcase icon-very-medium"></i></sup></h3>
+                        <span class="fw-500 text-dark-gray mb-10px d-block ls-minus-05px">عمالة مستقدمة</span>
+                    </div>
+                    <!-- end counter item -->
+                </div>
+                <a href="#" class="btn btn-large btn-rounded with-rounded btn-base-color btn-round-edge btn-box-shadow">دعنا
+                    نتحدث<span class="bg-orient-blue text-white"><i class="feather icon-feather-arrow-right icon-small"></i></span></a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end section -->
+
+<!-- start section -->
+<section class="bg-very-light-gray">
+    <div class="container">
+        <div class="row justify-content-center mb-3">
+            <div class="col-xl-7 col-lg-8 col-md-9 text-center" data-anime='{ "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                <h3 class="fw-700 text-dark-gray ls-minus-2px sm-ls-minus-1px">خدماتنا</h3>
+                <p>الخدمات التي نقدمها للمجتمع ...
+
+                </p>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 justify-content-center" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+            <!-- start features box item -->
+            <div class="col icon-with-text-style-07 transition-inner-all mb-30px">
+                <div class="bg-white h-100 justify-content-end box-shadow-quadruple-large-hover feature-box flex-column-reverse p-15 md-p-13 border-radius-8px">
+                    <div class="feature-box-icon">
+                        <a href="demo-accounting-services-details.html"><img src="/images/demo-accounting-company-icon01.svg" class="h-95px" alt=""></a>
+                    </div>
+                    <div class="feature-box-content">
+                        <a href="demo-accounting-services-details.html" class="d-inline-block fw-600 text-dark-gray mb-5px fs-20 ls-minus-05px">اجراءات
+                            الاستقدام</a>
+                        <p class="mb-30px">نهتم في مكتب ترف الاعمال بخدمتكم عن طريق قنوات تواصل متعددة ونضمن لكم
+                            خدمة متكاملة وتجربة عميل مميزة</p>
+                    </div>
+                </div>
+            </div>
+            <!-- end features box item -->
+            <!-- start features box item -->
+            <div class="col icon-with-text-style-07 transition-inner-all mb-30px">
+                <div class="bg-white h-100 justify-content-end box-shadow-quadruple-large-hover feature-box flex-column-reverse p-15 md-p-13 border-radius-8px">
+                    <div class="feature-box-icon">
+                        <a href="demo-accounting-services-details.html"><img src="/images/demo-accounting-company-icon02.svg" class="h-95px" alt=""></a>
+                    </div>
+                    <div class="feature-box-content">
+                        <a href="demo-accounting-services-details.html" class="d-inline-block fw-600 text-dark-gray mb-5px fs-20 ls-minus-05px">اختيار
+                            العمالة</a>
+                        <p class="mb-30px">نهتم في مكتب ترف الاعمال بخدمتكم عن طريق قنوات تواصل متعددة ونضمن لكم
+                            خدمة متكاملة وتجربة عميل مميزة</p>
+                    </div>
+                    <span class="position-absolute box-shadow-large top-25px lg-top-15px right-25px lg-right-15px bg-base-color border-radius-18px text-white fs-11 fw-600 text-uppercase ps-15px pe-15px lh-26 ls-minus-05px">New</span>
+                </div>
+            </div>
+            <!-- end features box item -->
+            <!-- start features box item -->
+            <div class="col icon-with-text-style-07 transition-inner-all mb-30px">
+                <div class="bg-white h-100 justify-content-end box-shadow-quadruple-large-hover feature-box flex-column-reverse p-15 md-p-13 border-radius-8px">
+                    <div class="feature-box-icon">
+                        <a href="demo-accounting-services-details.html"><img src="/images/demo-accounting-company-icon03.svg" class="h-95px" alt=""></a>
+                    </div>
+                    <div class="feature-box-content">
+                        <a href="demo-accounting-services-details.html" class="d-inline-block fw-600 text-dark-gray mb-5px fs-20 ls-minus-05px">تعاقد
+                            الاستقدام</a>
+                        <p class="mb-30px">نهتم في مكتب ترف الاعمال بخدمتكم عن طريق قنوات تواصل متعددة ونضمن لكم
+                            خدمة متكاملة وتجربة عميل مميزة</p>
+                    </div>
+                </div>
+            </div>
+            <!-- end features box item -->
+            <!-- start features box item -->
+            <div class="col icon-with-text-style-07 transition-inner-all md-mb-30px">
+                <div class="bg-white h-100 justify-content-end box-shadow-quadruple-large-hover feature-box flex-column-reverse p-15 md-p-13 border-radius-8px">
+                    <div class="feature-box-icon">
+                        <a href="demo-accounting-services-details.html"><img src="/images/demo-accounting-company-icon-04.svg" class="h-95px" alt=""></a>
+                    </div>
+                    <div class="feature-box-content">
+                        <a href="demo-accounting-services-details.html" class="d-inline-block fw-600 text-dark-gray mb-5px fs-20 ls-minus-05px">سياسات
+                            الاستقدام</a>
+                        <p class="mb-30px">نهتم في مكتب ترف الاعمال بخدمتكم عن طريق قنوات تواصل متعددة ونضمن لكم
+                            خدمة متكاملة وتجربة عميل مميزة</p>
+                    </div>
+                </div>
+            </div>
+            <!-- end features box item -->
+            <!-- start features box item -->
+            <div class="col icon-with-text-style-07 transition-inner-all sm-mb-30px">
+                <div class="bg-white h-100 justify-content-end box-shadow-quadruple-large-hover feature-box flex-column-reverse p-15 md-p-13 border-radius-8px">
+                    <div class="feature-box-icon">
+                        <a href="demo-accounting-services-details.html"><img src="/images/demo-accounting-company-icon-05.svg" class="h-95px" alt=""></a>
+                    </div>
+                    <div class="feature-box-content">
+                        <a href="demo-accounting-services-details.html" class="d-inline-block fw-600 text-dark-gray mb-5px fs-20 ls-minus-05px">استقدام
+                            المنزلية</a>
+                        <p class="mb-30px">نهتم في مكتب ترف الاعمال بخدمتكم عن طريق قنوات تواصل متعددة ونضمن لكم
+                            خدمة متكاملة وتجربة عميل مميزة</p>
+                    </div>
+                </div>
+            </div>
+            <!-- end features box item -->
+            <!-- start features box item -->
+            <div class="col icon-with-text-style-07 transition-inner-all">
+                <div class="bg-white h-100 justify-content-end box-shadow-quadruple-large-hover feature-box flex-column-reverse p-15 md-p-13 border-radius-8px">
+                    <div class="feature-box-icon">
+                        <a href="demo-accounting-services-details.html"><img src="/images/demo-accounting-company-icon-06.svg" class="h-95px" alt=""></a>
+                    </div>
+                    <div class="feature-box-content">
+                        <a href="demo-accounting-services-details.html" class="d-inline-block fw-600 text-dark-gray mb-5px fs-20 ls-minus-05px">استقدام
+                            العمالة</a>
+                        <p class="mb-30px">نهتم في مكتب ترف الاعمال بخدمتكم عن طريق قنوات تواصل متعددة ونضمن لكم
+                            خدمة متكاملة وتجربة عميل مميزة</p>
+                    </div>
+                </div>
+            </div>
+            <!-- end features box item -->
+        </div>
+    </div>
+</section>
+<!-- end section -->
+<!-- start section -->
+<section class="p-0 bg-base-color">
+    <div class="container">
+        <div class="row align-items-center justify-content-center g-0">
+            <div class="col-auto d-flex align-items-center" data-anime='{ "translateY": [0, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                <img src="/images/custom/demo-accounting-img-05.jpg" alt="" />
+                <div class="fs-19 lh-28 last-paragraph-no-margin text-white pt-15px pb-15px">
+                    <p>وفر وقتك الثمين وجهدك المبذول لإيجاد حل. <a href="#" class="text-decoration-line-bottom fw-500 text-white">تواصل معنا الأن</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end section -->
+
+<!-- start section -->
+<section class="bg-very-light-gray overflow-hidden cover-background position-relative overlap-height" style="background-image: url(/images/custom/demo-accounting-company-04.jpg)">
+    <div class="container overlap-gap-section">
+        <div class="row align-items-center">
+            <div class="col-lg-6 md-mb-50px" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                <h3 class="fw-700 text-dark-gray ls-minus-2px">اعلي المعايير الدولية في استقدام العمالة المنزلية
+                </h3>
+                <p class="w-90 lg-w-100">الاساله الاكثر شيوعا</p>
+                <div class="accordion accordion-style-02 w-90 lg-w-100" id="accordion-style-02" data-active-icon="fa-chevron-up" data-inactive-icon="fa-chevron-down">
+                    <!-- start accordion item -->
+                    <div class="accordion-item active-accordion">
+                        <div class="accordion-header border-bottom border-color-transparent-dark-very-light">
+                            <a href="#" data-bs-toggle="collapse" data-bs-target="#accordion-style-02-01" aria-expanded="true" data-bs-parent="#accordion-style-02">
+                                <div class="accordion-title mb-0 position-relative text-dark-gray">
+                                    <i class="fa-solid fa-chevron-up fs-15"></i><span class="fs-19 fw-600 ls-minus-05px">ما هي الوثائق المطلوبة لإستقدام العماله
+                                        المنزلية؟
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                        <div id="accordion-style-02-01" class="accordion-collapse collapse show" data-bs-parent="#accordion-style-02">
+                            <div class="accordion-body last-paragraph-no-margin border-bottom border-color-transparent-dark-very-light">
+                                <p>التأشيرة الأصل</p>
+                                <p>توقيع عقد إستقدام
+                                </p>
+                                <p>صورة الهوية الوطنية او الاقامة للمقيمين
+                                </p>
+                                <p>تعريف بالراتب من جهة العمل أو كشف حساب البنك
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end accordion item -->
+                    <!-- start accordion item -->
                     <div class="accordion-item">
-                        <h2 class="accordion-header" id="project-setup-headingOne">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#project-setup-collapseOne" aria-expanded="false" aria-controls="project-setup-collapseOne">
-                                {{ __('What are the documents required to recruit domestic workers?') }}
-                            </button>
-                        </h2>
-                        <div id="project-setup-collapseOne" class="accordion-collapse collapse show" aria-labelledby="project-setup-headingOne" data-bs-parent="#project-setup-accordion">
-                            <div class="accordion-body ff-secondary">{{ __('Original visa,Signing a recruitment contract, A copy of the national ID or residence permit for residents and Identification of salary from the employer or bank statement') }}</div>
+                        <div class="accordion-header border-bottom border-color-transparent-dark-very-light">
+                            <a href="#" data-bs-toggle="collapse" data-bs-target="#accordion-style-02-02" aria-expanded="false" data-bs-parent="#accordion-style-02">
+                                <div class="accordion-title mb-0 position-relative text-dark-gray">
+                                    <i class="fa-solid fa-chevron-down fs-15"></i><span class="fs-19 fw-600 ls-minus-05px">ما هي الوثائق لاجراءات الاستقدام؟ </span>
+                                </div>
+                            </a>
+                        </div>
+                        <div id="accordion-style-02-02" class="accordion-collapse collapse" data-bs-parent="#accordion-style-02">
+                            <div class="accordion-body last-paragraph-no-margin border-bottom border-color-transparent-dark-very-light">
+                                <p>التأشيرة الأصل
+                                </p>
+                                <p>توقيع عقد إستقدام
+                                </p>
+                                <p>صورة الهوية الوطنية او الاقامة للمقيمين
+                                </p>
+                                <p>تعريف بالراتب من جهة العمل أو كشف حساب البنك
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <!-- Include other project setup questions here -->
-                </div>
-                <!--end accordion-->
-            </div>
-            <!-- end col -->
-
-            <div class="col-lg-6">
-                <div class="d-flex align-items-center mb-2">
-                    <div class="flex-shrink-0 me-1">
-                        <i class="ri-shield-keyhole-line fs-24 align-middle text-success me-1"></i>
-                    </div>
-                    <div class="flex-grow-1">
-                        <h5 class="mb-0 fw-semibold">{{ __('Task Management') }}</h5>
-                    </div>
-                </div>
-
-                <div class="accordion accordion-flush" id="task-management-accordion">
+                    <!-- end accordion item -->
+                    <!-- start accordion item -->
                     <div class="accordion-item">
-                        <h2 class="accordion-header" id="project-setup-headingOne">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#project-setup-collapseOne" aria-expanded="false" aria-controls="project-setup-collapseOne">
-                                {{ __('What are the documents required to recruit domestic workers?') }}
-                            </button>
-                        </h2>
-                        <div id="project-setup-collapseOne" class="accordion-collapse collapse show" aria-labelledby="project-setup-headingOne" data-bs-parent="#project-setup-accordion">
-                            <div class="accordion-body ff-secondary">{{ __('Original visa,Signing a recruitment contract, A copy of the national ID or residence permit for residents and Identification of salary from the employer or bank statement') }}</div>
+                        <div class="accordion-header border-bottom border-color-transparent">
+                            <a href="#" data-bs-toggle="collapse" data-bs-target="#accordion-style-02-03" aria-expanded="false" data-bs-parent="#accordion-style-02">
+                                <div class="accordion-title mb-0 position-relative text-dark-gray">
+                                    <i class="fa-solid fa-chevron-down fs-15"></i><span class="fs-19 fw-600 ls-minus-05px">هل لدينا خدمة عملاء مميزة؟</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div id="accordion-style-02-03" class="accordion-collapse collapse" data-bs-parent="#accordion-style-02">
+                            <div class="accordion-body last-paragraph-no-margin border-bottom border-color-transparent">
+                                <p>نعم نقدم خدمة عملاء 24/7 طوال اليوم والاسبوع من خلال فريق عمل متميز</p>
+                            </div>
                         </div>
                     </div>
-                    <!-- Include other task management questions here -->
+                    <!-- end accordion item -->
                 </div>
-                <!--end accordion-->
             </div>
-            <!-- end col -->
+            <div class="col-xl-5 offset-xl-1 col-lg-6" data-anime='{ "translateY": [0, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                <!-- start map -->
+                <div class="outside-box-right-30 position-relative">
+                    <img src="/images/custom/demo-accounting-company-03.png" alt="" />
+                    <div class="bg-base-color video-icon-box video-icon-medium feature-box-icon-rounded position-absolute top-100px left-100px mt-10 ms-15 w-40px h-40px rounded-circle d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title="">
+                        <span>
+                            <span class="video-icon">
+                                <span class="bg-base-color w-100 h-100 border-radius-100 text-center d-flex align-items-center justify-content-center">
+                                    <i class="fa-solid fa-location-dot m-0 text-white icon-small"></i>
+                                </span>
+                                <span class="video-icon-sonar">
+                                    <span class="video-icon-sonar-bfr bg-red"></span>
+                                    <span class="video-icon-sonar-bfr bg-yellow"></span>
+                                </span>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="bg-base-color video-icon-box video-icon-medium feature-box-icon-rounded position-absolute bottom-100px start-50 mb-10 ms-7 w-40px h-40px rounded-circle d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title="">
+                        <span>
+                            <span class="video-icon">
+                                <span class="w-100 h-100 bg-base-color border-radius-100 d-flex align-items-center justify-content-center">
+                                    <i class="fa-solid fa-location-dot m-0 text-white icon-small"></i>
+                                </span>
+                                <span class="video-icon-sonar">
+                                    <span class="video-icon-sonar-bfr bg-red"></span>
+                                    <span class="video-icon-sonar-bfr bg-yellow"></span>
+                                </span>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <!-- end map -->
+            </div>
         </div>
-        <!-- end row -->
     </div>
-    <!-- end container -->
 </section>
-
-<!-- end faqs -->
-
-<!-- start counter -->
-<section class="py-5 position-relative bg-light">
-    <div class="container">
-        <div class="row text-center gy-4">
-            <div class="col-lg-3 col-6">
-                <div>
-                    <h2 class="mb-2"><span class="counter-value" data-target="100">0</span>+</h2>
-                    <div class="text-muted">{{ __('Worker') }}</div>
+<!-- end section -->
+<!-- start section -->
+<section class="pt-md-0">
+    <div class="container overlap-section">
+        <div class="row m-0 align-items-center justify-content-center bg-white border-radius-100px md-border-radius-6px ps-10px pe-10px box-shadow-quadruple-large appear anime-complete" data-anime='{ "scale": [1.1, 1], "opacity": [0,1], "duration": 800, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+            <div class="col-lg-10">
+                <div class="swiper slider-one-slide testimonials-style-09" data-slider-options='{ "slidesPerView": 1, "loop": true, "autoplay": { "delay": 4000, "disableOnInteraction": false }, "navigation": { "nextEl": ".slider-one-slide-next-1", "prevEl": ".slider-one-slide-prev-1" }, "keyboard": { "enabled": true, "onlyInViewport": true }, "effect": "slide" }'>
+                    <div class="swiper-wrapper">
+                        <!-- start text slider item -->
+                        <div class="swiper-slide">
+                            <div class="row align-items-center pt-25px pb-25px">
+                                <div class="col-lg-8 d-lg-flex align-items-center text-center text-lg-start">
+                                    <img src="/images/custom/avtar-30.jpg" class="rounded-circle w-100px h-100px md-mb-35px" alt="">
+                                    <span class="d-block ps-40px md-ps-0 md-mx-auto position-relative"><img src="/images/demo-accounting-home-quote-img.png" class="position-absolute left-minus-25px top-minus-15px lg-top-minus-5px md-top-minus-50px w-40px md-left-0px md-right-0px md-mx-auto" alt="">لوريم إيبسوم(Lorem Ipsum) هي الشكل وليس المحتوى) ويُستخدم في
+                                        صناعات المطابع ودور النشر.</span>
+                                </div>
+                                <div class="col-lg-1 d-none d-lg-inline-block">
+                                    <div class="separator-line w-1px md-w-100 h-60px md-h-1px bg-extra-medium-gray mx-auto">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 text-center text-lg-start md-mt-15px">
+                                    <span class="fs-19 ls-minus-05px fw-600 text-dark-gray d-block lh-28" style="text-align: right;">ثامر الخضيري</span>
+                                    <div style="text-align: right;">استاذ</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end text slider item -->
+                        <!-- start text slider item -->
+                        <div class="swiper-slide">
+                            <div class="row align-items-center pt-25px pb-25px">
+                                <div class="col-lg-8 d-lg-flex align-items-center text-center text-lg-start">
+                                    <img src="/images/custom/avtar-30.jpg" class="rounded-circle w-100px h-100px md-mb-35px" alt="">
+                                    <span class="d-block ps-40px md-ps-0 md-mx-auto position-relative"><img src="/images/demo-accounting-home-quote-img.png" class="position-absolute left-minus-25px top-minus-15px lg-top-minus-5px md-top-minus-50px w-40px md-left-0px md-right-0px md-mx-auto" alt="">لوريم إيبسوم(Lorem Ipsum) هي الشكل وليس المحتوى) ويُستخدم في
+                                        صناعات المطابع ودور النشر.</span>
+                                </div>
+                                <div class="col-lg-1 d-none d-lg-inline-block">
+                                    <div class="separator-line w-1px md-w-100 h-60px md-h-1px bg-extra-medium-gray mx-auto">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 text-center text-lg-start md-mt-15px">
+                                    <span class="fs-19 ls-minus-05px fw-600 text-dark-gray d-block lh-28" style="text-align: right;">ثامر الخضيري</span>
+                                    <div style="text-align: right;">دكتور</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end text slider item -->
+                        <!-- start text slider item -->
+                        <div class="swiper-slide">
+                            <div class="row align-items-center pt-25px pb-25px">
+                                <div class="col-lg-8 d-lg-flex align-items-center text-center text-lg-start">
+                                    <img src="/images/custom/avtar-30.jpg" class="rounded-circle w-100px h-100px md-mb-35px" alt="">
+                                    <span class="d-block ps-40px md-ps-0 md-mx-auto position-relative"><img src="/images/demo-accounting-home-quote-img.png" class="position-absolute left-minus-25px top-minus-15px lg-top-minus-5px md-top-minus-50px w-40px md-left-0px md-right-0px md-mx-auto" alt="">لوريم إيبسوم(Lorem Ipsum) هي الشكل وليس المحتوى) ويُستخدم في
+                                        صناعات المطابع ودور النشر.</span>
+                                </div>
+                                <div class="col-lg-1 d-none d-lg-inline-block">
+                                    <div class="separator-line w-1px md-w-100 h-60px md-h-1px bg-extra-medium-gray mx-auto">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 text-center text-lg-start md-mt-15px">
+                                    <span class="fs-19 ls-minus-05px fw-600 text-dark-gray d-block lh-28" style="text-align: right;">ثامر الخضيري</span>
+                                    <div style="text-align: right;">مهندس</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end text slider item -->
+                    </div>
                 </div>
             </div>
-            <!-- end col -->
-
-            <div class="col-lg-3 col-6">
-                <div>
-                    <h2 class="mb-2"><span class="counter-value" data-target="24">0</span></h2>
-                    <div class="text-muted">{{ __('External Office') }}</div>
+            <div class="col-lg-2 md-mb-25px">
+                <div class="d-flex justify-content-center">
+                    <!-- start slider navigation -->
+                    <div class="slider-one-slide-prev-1 swiper-button-prev slider-navigation-style-04 bg-very-light-gray">
+                        <i class="fa-solid fa-arrow-left icon-small text-dark-gray"></i>
+                    </div>
+                    <div class="slider-one-slide-next-1 swiper-button-next slider-navigation-style-04 bg-very-light-gray">
+                        <i class="fa-solid fa-arrow-right icon-small text-dark-gray"></i>
+                    </div>
+                    <!-- end slider navigation -->
                 </div>
             </div>
-            <!-- end col -->
-
-            <div class="col-lg-3 col-6">
-                <div>
-                    <h2 class="mb-2"><span class="counter-value" data-target="20.3">0</span>k</h2>
-                    <div class="text-muted">{{ __('CV') }}</div>
-                </div>
-            </div>
-            <!-- end col -->
-
-            <div class="col-lg-3 col-6">
-                <div>
-                    <h2 class="mb-2"><span class="counter-value" data-target="50">0</span></h2>
-                    <div class="text-muted">{{ __('Call Center') }}</div>
-                </div>
-            </div>
-            <!-- end col -->
         </div>
-        <!-- end row -->
     </div>
-    <!-- end container -->
 </section>
-
-<!-- end counter -->
-
-
-
-<!-- start contact -->
-<section class="section" id="contact">
+<!-- end section -->
+<!-- start section -->
+<section class="py-0">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="text-center mb-5">
-                    <h3 class="mb-3 fw-semibold">{{ __('Get In Touch') }}</h3>
-                    <p class="text-muted mb-4 ff-secondary">{{ __('We thrive when coming up with innovative ideas but also understand that a smart concept should be supported with measurable results.') }}</p>
-                </div>
+        <div class="row justify-content-center mb-3">
+            <div class="col-lg-6 col-md-7 col-sm-8 text-center" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                <h3 class="fw-700 text-dark-gray ls-minus-2px">الدول المتاحة</h3>
             </div>
         </div>
-        <!-- end row -->
-
-        <div class="row gy-4">
-            <div class="col-lg-4">
-                <div>
-                    <div class="mt-4">
-                        <h5 class="fs-13 text-muted text-uppercase">{{ __('Office Address 1') }}:</h5>
-                        <div class="ff-secondary fw-semibold">{{ __('4461 Cedar Street Moro,') }} <br />{{ __('AR 72368') }}</div>
-                    </div>
-                    <div class="mt-4">
-                        <h5 class="fs-13 text-muted text-uppercase">{{ __('Office Address 2') }}:</h5>
-                        <div class="ff-secondary fw-semibold">{{ __('2467 Swick Hill Street') }} <br />{{ __('New Orleans, LA') }}</div>
-                    </div>
-                    <div class="mt-4">
-                        <h5 class="fs-13 text-muted text-uppercase">{{ __('Working Hours') }}:</h5>
-                        <div class="ff-secondary fw-semibold">{{ __('9:00am to 6:00pm') }}</div>
-                    </div>
-                </div>
+        <div class="row row-cols-1 row-cols-lg-4 row-cols-sm-2" data-anime='{ "el": "childs", "translateX": [-50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+            <!-- start team member item -->
+            <div class="col text-center team-style-01 md-mb-30px">
+                <figure class="mb-0 hover-box box-hover position-relative">
+                    <img src="/images/custom/india.png" alt="" class="border-radius-6px" />
+                    <figcaption class="w-100 p-30px lg-p-25px bg-white">
+                        <div class="position-relative z-index-1 overflow-hidden lg-pb-5px">
+                        </div>
+                        <div class="box-overlay bg-white box-shadow-quadruple-large border-radius-6px"></div>
+                    </figcaption>
+                </figure>
             </div>
-            <!-- end col -->
-            <div class="col-lg-8">
-                <div>
-                    <form>
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="mb-4">
-                                    <label for="name" class="form-label fs-13">{{ __('Name') }}</label>
-                                    <input name="name" id="name" type="text" class="form-control bg-light border-light" placeholder="{{ __('Your name*') }}">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="mb-4">
-                                    <label for="email" class="form-label fs-13">{{ __('Email') }}</label>
-                                    <input name="email" id="email" type="email" class="form-control bg-light border-light" placeholder="{{ __('Your email*') }}">
-                                </div>
-                            </div>
+            <!-- end team member item -->
+            <!-- start team member item -->
+            <div class="col text-center team-style-01 md-mb-30px">
+                <figure class="mb-0 hover-box box-hover position-relative">
+                    <img src="/images/custom/gana.png" alt="" class="border-radius-6px" />
+                    <figcaption class="w-100 p-30px lg-p-25px bg-white">
+                        <div class="position-relative z-index-1 overflow-hidden lg-pb-5px">
                         </div>
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="mb-4">
-                                    <label for="subject" class="form-label fs-13">{{ __('Subject') }}</label>
-                                    <input type="text" class="form-control bg-light border-light" id="subject" name="subject" placeholder="{{ __('Your Subject..') }}" />
-                                </div>
-                            </div>
+                        <div class="box-overlay bg-white box-shadow-quadruple-large border-radius-6px"></div>
+                    </figcaption>
+                </figure>
+            </div>
+            <!-- end team member item -->
+            <!-- start team member item -->
+            <div class="col text-center team-style-01 xs-mb-30px">
+                <figure class="mb-0 hover-box box-hover position-relative">
+                    <img src="/images/custom/Philippines.jpg" alt="" class="border-radius-6px" />
+                    <figcaption class="w-100 p-30px lg-p-25px bg-white">
+                        <div class="box-overlay bg-white box-shadow-quadruple-large border-radius-6px"></div>
+                    </figcaption>
+                </figure>
+            </div>
+            <!-- end team member item -->
+            <!-- start team member item -->
+            <div class="col text-center team-style-01">
+                <figure class="mb-0 hover-box box-hover position-relative">
+                    <img src="/images/custom/Morocco.png" alt="" class="border-radius-6px" />
+                    <figcaption class="w-100 p-30px lg-p-25px bg-white">
+                        <div class="position-relative z-index-1 overflow-hidden lg-pb-5px">
                         </div>
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="mb-3">
-                                    <label for="comments" class="form-label fs-13">{{ __('Message') }}</label>
-                                    <textarea name="comments" id="comments" rows="3" class="form-control bg-light border-light" placeholder="{{ __('Your message...') }}"></textarea>
-                                </div>
-                            </div>
+                        <div class="box-overlay bg-white box-shadow-quadruple-large border-radius-6px"></div>
+                    </figcaption>
+                </figure>
+            </div>
+            <!-- end team member item -->
+        </div>
+    </div>
+</section>
+<!-- end section -->
+<!-- start section -->
+<section class="p-0 h-280px sm-h-350px overlap-height" id="location">
+    <div class="container-fluid h-100 overlap-gap-section">
+        <div class="row justify-content-center h-100">
+        </div>
+    </div>
+</section>
+<!-- end section -->
+<!-- start section -->
+<section>
+    <div class="container overlap-section overlap-section-three-fourth" data-anime='{"el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 800, "delay": 500, "staggervalue": 150, "easing": "easeOutQuad" }'>
+        <div class="row row-cols-md-1 justify-content-center">
+            <div class="col-xl-10">
+                <div class="bg-white p-8 border-radius-6px box-shadow-double-large">
+                    <div class="row">
+                        <div class="col-9">
+                            <h3 class="alt-font text-dark-gray fw-700 ls-minus-2px mb-50px xs-mb-35px">كيف يمكننا
+                                مساعدتك؟</h3>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-12 text-end">
-                                <input type="submit" id="submit" name="send" class="submitBnt btn btn-primary" value="{{ __('Send Message') }}">
-                            </div>
+                        <div class="col-3 text-end" data-anime='{ "translateY": [30, 0], "translateX": [-30, 0], "opacity": [0,1], "duration": 600, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <i class="bi bi-send icon-large text-dark-gray animation-zoom"></i>
+                        </div>
+                    </div>
+                    <!-- start contact form -->
+                    <form action="email-templates/contact-form.php" method="post" class="row contact-form-style-02">
+                        <div class="col-md-6 mb-30px">
+                            <input class="input-name form-control required" type="text" name="name" placeholder="الاسم" />
+                        </div>
+                        <div class="col-md-6 mb-30px">
+                            <input class="form-control required" type="email" name="email" placeholder="عنوان البريد الالكتروني" />
+                        </div>
+                        <div class="col-md-6 mb-30px">
+                            <input class="form-control" type="tel" name="phone" placeholder="رقم الجوال" />
+                        </div>
+                        <div class="col-md-6 mb-30px">
+                            <input class="form-control" type="text" name="subject" placeholder="الموضوع" />
+                        </div>
+                        <div class="col-md-12 mb-30px">
+                            <textarea class="form-control" cols="40" rows="4" name="message" placeholder="رسالتك"></textarea>
+                        </div>
+                        <div class="col-xl-7 col-md-7 last-paragraph-no-margin">
+                            <p class="text-center text-md-end fs-15 lh-26">ونحن ملتزمون بحماية خصوصيتك. لن نقوم
+                                أبدًا بجمع معلومات عنك دون موافقتك الصريحة.</p>
+                        </div>
+                        <div class="col-xl-5 col-md-5 text-center text-md-end sm-mt-20px">
+                            <input type="hidden" name="redirect" value="">
+                            <button class="btn btn-base-color btn-medium btn-rounded btn-box-shadow submit" type="submit">ارسل الرسالة</button>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-results mt-20px d-none"></div>
                         </div>
                     </form>
+                    <!-- end contact form -->
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-center mt-8">
+                <div class="col-md-auto text-center text-md-end sm-mb-20px">
+                    <h6 class="text-dark-gray fw-600 mb-0 ls-minus-1px">تواصل معنا عبر وسائل التواصل الاجتماعي </h6>
+                </div>
+                <div class="col-2 d-none d-lg-inline-block">
+                    <span class="w-100 h-1px bg-dark-gray opacity-2 d-flex mx-auto"></span>
+                </div>
+                <!-- start social icon -->
+                <div class="col-md-auto elements-social social-icon-style-04 text-center text-md-start ps-lg-0">
+                    <ul class="large-icon dark">
+                        <li class="m-0"><a class="facebook" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i><span></span></a></li>
+                        <li class="m-0"><a class="dribbble" href="http://www.dribbble.com" target="_blank"><i class="fa-brands fa-dribbble"></i><span></span></a></li>
+                        <li class="m-0"><a class="twitter" href="http://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i><span></span></a></li>
+                        <li class="m-0"><a class="instagram" href="http://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i><span></span></a></li>
+                    </ul>
+                </div>
+                <!-- end social icon -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end section -->
+<!-- start section -->
+<section class="half-section">
+    <div class="container">
+        <div class="row justify-content-center mb-30px" data-anime='{ "translateX": [-50, 0], "opacity": [0,1], "duration": 800, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+            <div class="col-lg-5 text-center mb-15px">
+                <span class="text-dark-gray fw-600 fs-16 ls-minus-05px text-uppercase border-1 pb-5px border-bottom border-color-extra-medium-gray text-dark-gray">انضم
+                    إلى أكثر من 10000 عميل يستخدمون مكتبنا</span>
+            </div>
+        </div>
+        <div class="row position-relative clients-style-08 mb-35px" data-anime='{"translateY": [0, 0], "opacity": [0,1], "duration": 800, "delay": 50, "staggervalue": 150, "easing": "easeOutQuad" }'>
+            <div class="col swiper text-center feather-shadow" data-slider-options='{ "slidesPerView": 2, "spaceBetween":0, "speed": 6000, "loop": true, "pagination": { "el": ".slider-four-slide-pagination-2", "clickable": false }, "allowTouchMove": false, "autoplay": { "delay":0, "disableOnInteraction": false }, "navigation": { "nextEl": ".slider-four-slide-next-2", "prevEl": ".slider-four-slide-prev-2" }, "keyboard": { "enabled": true, "onlyInViewport": true }, "breakpoints": { "1200": { "slidesPerView": 5 }, "992": { "slidesPerView": 4 }, "768": { "slidesPerView": 3 } }, "effect": "slide" }'>
+                <div class="swiper-wrapper marquee-slide">
+                    <!-- start client item -->
+                    <div class="swiper-slide">
+                        <a href="#"><img src="/images/logo-netflix-oxford-blue.svg" class="h-40px xs-h-30px" alt="" /></a>
+                    </div>
+                    <!-- end client item -->
+                    <!-- start client item -->
+                    <div class="swiper-slide">
+                        <a href="#"><img src="/images/logo-invision-oxford-blue.svg" class="h-40px xs-h-30px" alt="" /></a>
+                    </div>
+                    <!-- end client item -->
+                    <!-- start client item -->
+                    <div class="swiper-slide">
+                        <a href="#"><img src="/images/logo-yahoo-oxford-blue.svg" class="h-40px xs-h-30px" alt="" /></a>
+                    </div>
+                    <!-- end client item -->
+                    <!-- start client item -->
+                    <div class="swiper-slide">
+                        <a href="#"><img src="/images/logo-walmart-oxford-blue.svg" class="h-40px xs-h-30px" alt="" /></a>
+                    </div>
+                    <!-- end client item -->
+                    <!-- start client item -->
+                    <div class="swiper-slide">
+                        <a href="#"><img src="/images/logo-logitech-oxford-blue.svg" class="h-40px xs-h-30px" alt="" /></a>
+                    </div>
+                    <!-- end client item -->
+                    <!-- start client item -->
+                    <div class="swiper-slide">
+                        <a href="#"><img src="/images/logo-netflix-oxford-blue.svg" class="h-40px xs-h-30px" alt="" /></a>
+                    </div>
+                    <!-- end client item -->
+                    <!-- start client item -->
+                    <div class="swiper-slide">
+                        <a href="#"><img src="/images/logo-invision-oxford-blue.svg" class="h-40px xs-h-30px" alt="" /></a>
+                    </div>
+                    <!-- end client item -->
+                    <!-- start client item -->
+                    <div class="swiper-slide">
+                        <a href="#"><img src="/images/logo-yahoo-oxford-blue.svg" class="h-40px xs-h-30px" alt="" /></a>
+                    </div>
+                    <!-- end client item -->
+                    <!-- start client item -->
+                    <div class="swiper-slide">
+                        <a href="#"><img src="/images/logo-walmart-oxford-blue.svg" class="h-40px xs-h-30px" alt="" /></a>
+                    </div>
+                    <!-- end client item -->
+                    <!-- start client item -->
+                    <div class="swiper-slide">
+                        <a href="#"><img src="/images/logo-logitech-oxford-blue.svg" class="h-40px xs-h-30px" alt="" /></a>
+                    </div>
+                    <!-- end client item -->
                 </div>
             </div>
         </div>
-        <!-- end row -->
     </div>
-    <!-- end container -->
 </section>
+<!-- end section -->
 
 
 

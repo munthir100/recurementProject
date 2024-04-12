@@ -21,6 +21,16 @@ class MainController extends Controller
         return view('main-site.home');
     }
 
+    public function contact()
+    {
+        return view('main-site.contact');
+    }
+
+    public function blog()
+    {
+        return view('main-site.blog');
+    }
+
     public function workers()
     {
         $workers = Worker::whereStatusId(Status::ACTIVE)->dynamicPaginate();

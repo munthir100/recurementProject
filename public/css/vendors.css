@@ -11186,7 +11186,7 @@ textarea.form-control-lg {
     column-gap: 3rem !important;
   }
   .text-lg-start {
-    text-align: left !important;
+    text-align: right !important;
   }
   .text-lg-end {
     text-align: right !important;

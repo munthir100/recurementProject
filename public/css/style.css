@@ -1288,6 +1288,7 @@ input, select, textarea, .form-control, .form-select {
   word-break: normal;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  text-align:right !important;
 }
 .form-select {
   color: var(--medium-gray);
@@ -4794,7 +4795,8 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
   padding-left: 35px !important;
 }
 .ps-40px {
-  padding-left: 40px !important;
+  padding-right: 40px !important;
+  text-align: right;
 }
 .ps-45px {
   padding-left: 45px !important;
@@ -5187,7 +5189,7 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
   margin-right: 30px !important;
 }
 .me-35px {
-  margin-right: 35px !important;
+  margin-left: 35px !important;
 }
 .me-40px {
   margin-right: 40px !important;
@@ -5740,7 +5742,7 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
   right: 14px;
 }
 .right-15px {
-  right: 15px;
+  left: 15px;
 }
 .right-16px {
   right: 16px;
@@ -7033,7 +7035,7 @@ header .header-top-bar .widget {
   display: inline-block;
 }
 header .header-top-bar .widget i {
-  padding-right: 5px;
+  padding-left: 5px;
 }
 header .header-top-bar .header-icon .header-social-icon {
   top: 0;
@@ -10734,8 +10736,8 @@ blockquote footer {
 }
 /* Button icon position */
 .left-icon i {
-  margin-right: 6px;
-  margin-left: 0;
+  margin-right: 0px;
+  margin-left: 6px;
 }
 [class*=btn-transparent], [class*=" btn-transparent"] {
   font-weight: 600;
@@ -19162,7 +19164,7 @@ footer ul li {
   margin-bottom: 5px;
 }
 footer .elements-social.social-icon-style-01 li, footer .elements-social.social-icon-style-02 li, footer .elements-social.social-icon-style-05 li, footer .elements-social.social-icon-style-08 li {
-  margin: 0 15px 0 0;
+  margin: 0 0 0 15px;
 }
 footer .elements-social.social-icon-style-01 li a, footer .elements-social.social-icon-style-02 li a, footer .elements-social.social-icon-style-05 li a, footer .elements-social.social-icon-style-08 li a {
   width: auto;

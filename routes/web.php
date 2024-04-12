@@ -16,6 +16,8 @@ Route::middleware([SetLocale::class])->group(function () {
 
     Route::name('home.')->group(function () {
         Route::get('/', [MainController::class, 'home'])->name('index');
+        Route::get('/contact', [MainController::class, 'contact'])->name('contact');
+        Route::get('/blog', [MainController::class, 'blog'])->name('blog');
         Route::get('workers', [MainController::class, 'workers'])->name('workers');
         Route::get('workers/{worker}', [MainController::class, 'workerDetails'])->name('workers.show');
         Route::get('callCenters', [MainController::class, 'callCenters'])->name('callCenters');
