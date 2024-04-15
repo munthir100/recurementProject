@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Blog;
 use App\Models\User;
 use App\Models\Office;
 use App\Models\Worker;
@@ -55,5 +56,6 @@ class MainSeeder extends Seeder
                 'call_center_id' => $callCenterId,
             ]);
         }
+        Blog::factory(30)->create();
     }
 }

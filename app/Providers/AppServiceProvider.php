@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Models\Blog;
 use App\Models\Worker;
+use App\Observers\BlogObserver;
 use App\Observers\WorkerObserver;
 use Illuminate\Support\ServiceProvider;
 
@@ -22,5 +24,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Worker::observe(WorkerObserver::class);
+        Blog::observe(BlogObserver::class);
     }
 }

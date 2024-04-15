@@ -13,9 +13,9 @@ class InquiryRequestController extends Controller
 {
     public function index()
     {
-        $inquiryRequests = InquiryRequest::whereRelation('callCenter', 'id', '=', request()->user('account')->callCenter->id)->with('worker')->get();
+        $inquiryRequests = InquiryRequest::whereRelation('callCenter', 'id', '=', request()->user('account')->callCenter->id)->with('worker')->dynamicPaginate();
 
-        return view('account.callCenter.inquiryRequests.index', compact('inquiryRequests'));
+        return view('main-site.account.callCenter.inquiryRequests.index', compact('inquiryRequests'));
     }
 
     public function store(CreateInquiryRequestRequest $request)

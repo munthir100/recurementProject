@@ -3,7 +3,6 @@
 use App\Http\Middleware\SetLocale;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
-use App\Http\Controllers\User\OfficeController;
 use App\Http\Controllers\Account\Office\CvController;
 use App\Http\Controllers\Account\Auth\LoginController;
 use App\Http\Controllers\Account\CallCenter\InquiryRequestController;
@@ -18,6 +17,8 @@ Route::middleware([SetLocale::class])->group(function () {
         Route::get('/', [MainController::class, 'home'])->name('index');
         Route::get('/contact', [MainController::class, 'contact'])->name('contact');
         Route::get('/blog', [MainController::class, 'blog'])->name('blog');
+        Route::get('/blog/{blog}/details', [MainController::class, 'blogDetails'])->name('blog.details');
+        Route::get('/about', [MainController::class, 'about'])->name('about');
         Route::get('workers', [MainController::class, 'workers'])->name('workers');
         Route::get('workers/{worker}', [MainController::class, 'workerDetails'])->name('workers.show');
         Route::get('callCenters', [MainController::class, 'callCenters'])->name('callCenters');

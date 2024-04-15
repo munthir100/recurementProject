@@ -1,63 +1,55 @@
-@extends('dashboard.layouts.shared.app-layout')
+@extends('main-site.layouts.shared.app-layout')
 @section('title')
-@include("dashboard.layouts.shared.includes.title-meta", ["title" => __("Home")])
+@include("main-site.layouts.shared.includes.title-meta", ["title" => __("Home")])
 @endsection
 @section('content')
-<section class="section bg-light" id="findJob">
-    <div class="container-fluid bg-grey">
-        <div class="row justify-content-center">
-            <div class="col-lg-7">
-                <div class="text-center mb-5">
-                    <h1 class="mb-3 ff-secondary fw-semibold text-capitalize lh-base">{{ __('Find Your') }} <span class="text-primary">{{ __('Worker') }}</span> {{ __('You Deserve it') }}</h1>
-                    <p class="text-muted">{{ __('Select your worker and contact with support team about your selected worker.') }}</p>
-                </div>
+<header class="header-with-topbar">
+    @include('main-site.layouts.shared.includes.header')
+</header>
+<!-- start page title -->
+<section class="top-space-margin half-section bg-gradient-very-light-gray">
+    <div class="container">
+        <div class="row align-items-center justify-content-center" data-anime='{ "el": "childs", "translateY": [-15, 0], "opacity": [0,1], "duration": 300, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+            <div class="col-12 col-xl-8 col-lg-10 text-center position-relative page-title-extra-large">
+                <h1 class="alt-font fw-600 text-dark-gray mb-10px">Workers</h1>
             </div>
-            <!-- end col -->
+            <div class="col-12 breadcrumb breadcrumb-style-01 d-flex justify-content-center">
+                <ul>
+                    <li><a href="demo-fashion-store.html">Home</a></li>
+                    <li>Workers</li>
+                </ul>
+            </div>
         </div>
-        <!-- end row -->
-
+    </div>
+</section>
+<!-- end page title -->
+<section class="section" id="findJob">
+    <div class="container-fluid bg-grey">
         <div class="row">
             @forelse($workers as $worker)
-            <div class="col-lg-4">
-                <div class="card card-body position-relative">
-                    <div class="d-flex mb-4 align-items-center">
-                        <div class="flex-shrink-0">
-                            <img src="assets/images/users/avatar-1.jpg" alt="" class="avatar-sm rounded-circle" />
-                        </div>
-                        <div class="flex-grow-1 ms-2">
-                            <h5 class="card-title mb-1">{{$worker->first_name}} {{$worker->last_name}}</h5>
-                            <p class="text-muted mb-0">{{$worker->job}}</p>
-                        </div>
+            <div class="col-md-4 mb-2">
+                <div class="row g-0 box-shadow-extra-large box-shadow-quadruple-large-hover border-radius-6px overflow-hidden">
+                    <div class="col-5 cover-background" style="background-image: url(dashboard/assets/images/users/avatar-1.jpg)">
                     </div>
-                    <h6 class="mb-1">${{$worker->month_salary}}</h6>
-                    <p class="card-text text-muted">{{$worker->nationality}}</p>
-                    <div class="btn-group btn-group-md" role="group" aria-label="Basic example">
-                        <a href="/select-call-center?worker_id={{$worker->id}}" class="btn btn-light">{{ __('Request Worker') }}</a>
-                        <a href="{{route('home.workers.show',$worker->id)}}" class="btn btn-primary">{{ __('View Details') }}</a>
-                    </div>
+                    <div class="col-7 bg-white ps-35px pt-30px pb-30px xs-ps-20px">
+                        <a href="{{route('home.workers.show',$worker->id)}}">
+                            <span class="primary-font fs-18 fw-600 text-dark-gray d-block">
+                                {{$worker->first_name}} {{$worker->last_name}}
+                            </span>
+                        </a>
+                        <span class="fs-16 lh-22 d-block">{{$worker->job}}</span>
+                        <div class="h-1px w-100 bg-extra-medium-gray mt-15px mb-10px"></div>
+                        <div class="row">
 
-                    <!-- Three dots in the top right corner -->
-                    <div class="position-absolute top-0 end-0 mt-2 me-2">
-
-                        @auth('account')
-                        @if(request()->user('account')->is_office_account)
-                        @if($worker->office_id == request()->user('account')->office->id)
-                        <form id="form{{ $worker->id }}" action="{{route('account.office.cv.deActivate',$worker->id)}}" id="form{{$worker->id}}" method="post">
-                            @csrf
-                            @method('put')
-                        </form>
-                        <button type="button" class="btn btn-outline-danger custom-toggle remove-item-btn" data-id="{{ $worker->id }}">
-                            <span><i class="ri-delete-bin-line align-bottom me-1"></i> {{ __('Delete') }}</span>
-                        </button>
-                        @endif
-
-                        @endif
-
-                        @endauth
+                            <div class="col-12">
+                                <i class="far fa-calendar-check"></i>&nbsp;
+                                 &nbsp;
+                                {{date("F j, Y", strtotime($worker->created_at)) }}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
             @empty
             <div class="container">
 
@@ -68,7 +60,7 @@
             @endforelse
 
             <div class="d-flex justify-content-center">
-                <x-dashboard.pagination :model="$workers" />
+                <x-main-site.pagination :model="$workers" />
             </div>
         </div>
     </div>

@@ -58,6 +58,11 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link menu-link {{ request()->routeIs('user.dashboard.blogs.*') ? 'active' : '' }}" href="{{route('user.dashboard.blogs.index')}}" aria-expanded="false" aria-controls="sidebarSecurity">
+                        <i class="ri-headphone-line"></i> <span id="sidebar-span">{{ __('Blogs') }}</span>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link menu-link {{ request()->routeIs('user.dashboard.security') ? 'active' : '' }}" href="{{ route('user.dashboard.security') }}" aria-expanded="false" aria-controls="sidebarSecurity">
                         <i class="ri-lock-password-line"></i> <span id="sidebar-span">{{ __('Security') }}</span>
                     </a>

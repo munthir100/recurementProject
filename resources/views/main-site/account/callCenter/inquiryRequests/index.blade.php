@@ -1,89 +1,111 @@
-@extends('dashboard.layouts.shared.app-layout')
+@extends('main-site.layouts.shared.app-layout')
 @section('title')
-@include("dashboard.layouts.shared.includes.title-meta", ["title" => __("Home")])
+@include("main-site.layouts.shared.includes.title-meta", ["title" => __("Contact Us")])
 @endsection
 @section('content')
-<section class="section">
+<header class="header-with-topbar">
+    @include('main-site.layouts.shared.includes.header')
+</header>
+<!-- Start page title -->
+<section class="page-title-center-alignment cover-background top-space-padding">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-7">
-                <div class="text-center mb-5">
-                    <h1 class="mb-3 ff-secondary fw-semibold text-capitalize lh-base">{{ __('Contact Users With Via There Emails Or Phone Numbers') }}</h1>
-                    <p class="text-muted">{{ __('After contact with user and deal with him you can delete the inquiry requests from here.') }}</p>
-                </div>
-            </div>
-            <!-- end col -->
-        </div>
-        <!-- end row -->
         <div class="row">
-
-            <div class="card">
-                <div class="card-body">
-
-                    <div class="table-responsive table-card">
-                        <table class="table table-nowrap table-striped-columns mb-0">
-                            <thead class="table-light">
-                                <tr>
-                                    <th scope="col">{{ __('ID') }}</th>
-                                    <th scope="col">{{ __('Name') }}</th>
-                                    <th scope="col">{{ __('Email') }}</th>
-                                    <th scope="col">{{ __('Phone') }}</th>
-                                    <th scope="col">{{ __('Worker') }}</th>
-                                    <th scope="col">{{ __('Created At') }}</th>
-                                    <th scope="col">{{ __('Actions') }}</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @forelse ($inquiryRequests as $inquiryRequest)
-                                <form id="form{{ $inquiryRequest->id }}" action="{{ route('account.callCenter.inquiryRequests.destroy', $inquiryRequest->id) }}" method="post" class="hidden">
-                                    @csrf
-                                    @method('delete')
-                                </form>
-                                <tr>
-                                    <td>
-                                        <a href="#" class="fw-semibold">{{ $inquiryRequest->id }}</a>
-                                    </td>
-                                    <td>{{ $inquiryRequest->name }}</td>
-                                    <td>
-                                        <a href="mailTo:{{ $inquiryRequest->email }}">
-                                            {{ $inquiryRequest->email }}
-                                        </a>
-
-                                    </td>
-                                    <td>{{ $inquiryRequest->phone }}</td>
-
-                                    <td>
-                                        <a href="{{route('home.workers.show',$inquiryRequest->worker->id)}}" target="__blank">
-                                            {{ $inquiryRequest->worker->first_name }} {{ $inquiryRequest->worker->first_name }}
-                                        </a>
-                                    </td>
-                                    <td>{{ $inquiryRequest->created_at->diffForHumans() }}</td>
-                                    <td>
-                                        <button type="button" class="btn btn-danger remove-item-btn" data-id="{{ $inquiryRequest->id }}">
-                                            <i class="ri-delete-bin-5-line"></i> {{ __('Delete') }}
-                                        </button>
-                                    </td>
-                                </tr>
-                                @empty
-                            </tbody>
-
-                            <tr>
-                                <th colspan="7" class="text-center">{{ __("No items found!") }}</th>
-                            </tr>
-                            @endforelse
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+            <div class="col-12 text-center position-relative page-title-extra-large">
+                <h1 class="alt-font d-inline-block fw-700 ls-minus-05px text-base-color mb-10px mt-3 md-mt-50px">Inquiry Requests</h1>
+            </div>
+            <div class="col-12 breadcrumb breadcrumb-style-01 d-flex justify-content-center">
+                <ul>
+                    <li><a href="demo-decor-store.html">Home</a></li>
+                    <li>Inquiry Requests</li>
+                </ul>
             </div>
         </div>
     </div>
-
 </section>
+<!-- End page title -->
+
+<section class="big-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-10" data-anime='{ "el": "childs", "translateY": [15, 0], "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                @forelse ($inquiryRequests as $inquiryRequest)
+                <div class="row border-bottom border-2 border-color-dark-gray pb-50px mb-50px sm-pb-35px sm-mb-35px align-items-center">
+                    <div class="col-md-2 text-center text-md-end">
+                        <span class="fw-600 text-uppercase">ID:</span> {{ $inquiryRequest->id }}
+                    </div>
+                    <div class="col-md-2">
+                        <span class="fw-600 text-uppercase">Name:</span> {{ $inquiryRequest->name }}
+                    </div>
+                    <div class="col-md-2">
+                        <span class="fw-600 text-uppercase">Email:</span> {{ $inquiryRequest->email }}
+                    </div>
+                    <div class="col-md-2">
+                        <span class="fw-600 text-uppercase">Phone:</span> {{ $inquiryRequest->phone }}
+                    </div>
+                    <div class="col-md-2">
+                        <span class="fw-600 text-uppercase">Worker:</span>
+                        <a class="text-base-color" href="{{route('home.workers.show',$inquiryRequest->worker->id)}}">
+                            {{ $inquiryRequest->worker->first_name }} {{ $inquiryRequest->worker->last_name }}
+                        </a>
+
+                    </div>
+                    <div class="col-md-2 text-center text-md-end">
+                        <span class="fs-12 text-muted">{{ $inquiryRequest->created_at->diffForHumans() }}</span><br>
+                        <td>
+                            <button type="button" class="btn btn-base-color btn-rounded remove-item-btn" data-id="{{ $inquiryRequest->id }}">
+                                <i class="bi bi-trash"></i> {{ __('Delete') }}
+                            </button>
+                        </td>
+                    </div>
+                </div>
+                <form id="form{{ $inquiryRequest->id }}" action="{{ route('account.callCenter.inquiryRequests.destroy', $inquiryRequest->id) }}" method="post" class="hidden">
+                    @csrf
+                    @method('delete')
+                </form>
+                @empty
+                <div class="col-12 text-center">
+                    <p>No inquiry requests available at the moment.</p>
+                </div>
+                @endforelse
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Delete confirmation modal -->
+<div id="modal-popup3" class="zoom-anim-dialog mfp-hide col-xl-3 col-lg-6 col-md-7 col-11 mx-auto bg-white text-center modal-popup-main p-50px">
+    <span class="text-dark-gray fw-600 fs-24 mb-10px d-block">Confirm Deletion</span>
+    <p>Are you sure you want to delete this inquiry request?</p>
+    <a class="btn btn-small btn-rounded btn-dark-gray popup-modal-dismiss mt-10px" href="#">Cancel</a>
+    <button type="button" class="btn btn-danger btn-small btn-rounded mt-10px" id="confirm-delete">Confirm</button>
+</div>
+
 @endsection
+<!-- JavaScript to handle modal and deletion -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const deleteButtons = document.querySelectorAll('.remove-item-btn');
+        const modal = document.getElementById('modal-popup3');
+        let currentForm;
 
+        deleteButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const inquiryId = this.getAttribute('data-id');
+                currentForm = document.getElementById(`form${inquiryId}`);
+                // Open modal
+                $.magnificPopup.open({
+                    items: {
+                        src: '#modal-popup3',
+                        type: 'inline'
+                    }
+                });
+            });
+        });
 
-<script src="{{ asset('dashboard/assets/libs/prismjs/prism.js') }}"></script>
-
-<script src="{{ asset('dashboard/assets/libs/sweetalert2/sweetalert2.min.js') }}"></script>
-<script src="{{asset('dashboard/assets/js/actions/delete-items.js')}}"></script>
+        document.getElementById('confirm-delete').addEventListener('click', function() {
+            // Submit the current form for deletion
+            currentForm.submit();
+        });
+    });
+</script>

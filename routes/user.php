@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\User\OfficeController;
 use App\Http\Controllers\User\WorkerController;
 use App\Http\Controllers\User\Auth\LoginController;
+use App\Http\Controllers\User\BlogController;
 use App\Http\Controllers\User\CallCenterController;
 use App\Http\Controllers\User\Dashboard\CvController;
 use App\Http\Controllers\User\Dashboard\MainController;
@@ -21,6 +22,7 @@ Route::middleware('auth:web')->group(function () {
         Route::resource('offices', OfficeController::class);
         Route::resource('workers', WorkerController::class);
         Route::resource('callCenters', CallCenterController::class);
+        Route::resource('blogs', BlogController::class);
         Route::put('offices/{office}/password/update', [OfficeController::class,'updatePassword'])->name('offices.update.password');
         Route::put('callCenters/{callCenter}/password/update', [CallCenterController::class,'updatePassword'])->name('callCenters.update.password');
 

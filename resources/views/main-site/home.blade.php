@@ -11,11 +11,9 @@
     <div class="container h-100">
         <div class="row align-items-center h-100">
             <div class="col-xl-7 col-md-9 col-sm-9 position-relative text-white" data-anime='{ "el": "childs", "opacity": [0, 1], "translateY": [30, 0], "staggervalue": 200, "easing": "easeInOutSine" }'>
-                <div class="fs-80 lh-75 sm-fs-65 fw-600 mb-20px text-shadow-large ls-minus-2px">وجهتك الاولى في
-                    الاستقدام باسعار تنافسية</div>
+                <div class="fs-80 lh-75 sm-fs-65 fw-600 mb-20px text-shadow-large ls-minus-2px">Your first destination for competitive recruitment prices</div>
                 <div>
-                    <span class="opacity-5 fs-20 w-70 md-w-85 mb-25px fw-300 d-inline-block">نلبي احتياجك من العمالة
-                        المنزلية بأفضل الاسعار</span>
+                    <span class="opacity-5 fs-20 w-70 md-w-85 mb-25px fw-300 d-inline-block">We meet your domestic labor needs at the best prices</span>
                 </div>
                 <div class="icon-with-text-style-08">
                     <div class="feature-box feature-box-left-icon-middle">
@@ -28,15 +26,15 @@
         </div>
     </div>
 </section>
+
 <!-- end banner -->
 <!-- start section -->
 <section>
     <div class="container">
         <div class="row justify-content-center mb-3">
             <div class="col-lg-7 col-md-8 col-sm-9 text-center" data-anime='{ "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
-                <h3 class="text-dark-gray fw-700 ls-minus-2px">مميزاتنا </h3>
-                <span>تعرف اكثر علي المميزات التي ننفرد بها عن الاخرين ...
-                </span>
+                <h3 class="text-dark-gray fw-700 ls-minus-2px">Our Features</h3>
+                <span>Learn more about the features that set us apart from others...</span>
             </div>
         </div>
         <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 justify-content-center mb-5" data-anime='{ "el": "childs", "translateX": [-30, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
@@ -47,13 +45,8 @@
                         <a href="#"><img src="/images/demo-accounting-company-icon01.svg" class="h-95px" alt=""></a>
                     </div>
                     <div class="feature-box-content">
-                        <a href="#" class="d-inline-block fw-600 text-dark-gray mb-5px fs-20 ls-minus-05px">خدمة
-                            عملاء متميزة
-                        </a>
-                        <p class="mb-30px">نهتم في مكتب ترف الاعمال بخدمتكم عن طريق قنوات تواصل متعددة ونضمن لكم
-                            خدمة متكاملة وتجربة عميل مميزة
-
-                        </p>
+                        <a href="#" class="d-inline-block fw-600 text-dark-gray mb-5px fs-20 ls-minus-05px">Exceptional Customer Service</a>
+                        <p class="mb-30px">At Terf Al-Amaal Office, we serve you through various communication channels and guarantee you complete service and an exceptional customer experience.</p>
                     </div>
                 </div>
             </div>
@@ -65,13 +58,8 @@
                         <a href="#"><img src="/images/demo-accounting-company-icon02.svg" class="h-95px" alt=""></a>
                     </div>
                     <div class="feature-box-content">
-                        <a href="#" class="d-inline-block fw-600 text-dark-gray mb-5px fs-20 ls-minus-05px">خدمات
-                            رقمية متكاملة
-                        </a>
-                        <p class="mb-30px">ابدأ حجزك واتمم دفعك من خلال الموقع الالكتروني او التواصل معنا بوقت وجيز
-                            وبخطوات مختصرة
-
-                        </p>
+                        <a href="#" class="d-inline-block fw-600 text-dark-gray mb-5px fs-20 ls-minus-05px">Complete Digital Services</a>
+                        <p class="mb-30px">Start your booking and complete your payment through the website or get in touch with us quickly with a few simple steps.</p>
                     </div>
                     <span class="position-absolute box-shadow-large top-25px lg-top-15px right-25px lg-right-15px bg-white border-radius-18px text-dark-gray fs-11 fw-700 text-uppercase ps-15px pe-15px lh-26 ls-minus-05px">New</span>
                 </div>
@@ -84,14 +72,8 @@
                         <a href="#"><img src="/images/demo-accounting-company-icon03.svg" class="h-95px" alt=""></a>
                     </div>
                     <div class="feature-box-content">
-                        <a href="#" class="d-inline-block fw-600 text-dark-gray mb-5px fs-20 ls-minus-05px">مقدمي
-                            الخدمة
-                        </a>
-                        <p class="mb-30px">يخضع مقدمي الخدمة في مكتب ترف الاعمال للفحص باستمرار من أجل خدمتكم
-                            وراحتكم
-
-
-                        </p>
+                        <a href="#" class="d-inline-block fw-600 text-dark-gray mb-5px fs-20 ls-minus-05px">Service Providers</a>
+                        <p class="mb-30px">The service providers at Terf Al-Amaal Office are continuously screened for your service and comfort.</p>
                     </div>
                 </div>
             </div>
@@ -99,6 +81,7 @@
         </div>
     </div>
 </section>
+
 <!-- end section -->
 <!-- start section -->
 <section class="pt-0 big-section">
@@ -113,30 +96,28 @@
                 </div>
             </div>
             <div class="col-xl-5 offset-xl-1 col-lg-6 text-center text-lg-start">
-                <h3 class="fw-700 text-dark-gray ls-minus-2px" style="text-align: right !important;">مع مكتبنا</h3>
-                <p class="mb-40px xs-mb-30px w-90 lg-w-95 md-w-100" style="text-align: right !important;">هناك
-                    العديد من الاختلافات في المقاطع المتاحة ولكن الأغلبية عانت من التغيير بشكل ما من خلال كلمات
-                    مضحكة لا تبدو قابلة للتصديق.</p>
+                <h3 class="fw-700 text-dark-gray ls-minus-2px" style="text-align: right !important;">With Our Office</h3>
+                <p class="mb-40px xs-mb-30px w-90 lg-w-95 md-w-100" style="text-align: right !important;">There are many variations of passages available, but the majority have suffered alteration in some form, by injected humor or random words which don't look even slightly believable.</p>
                 <div class="row align-items-center mb-30px xs-mb-25px justify-content-center justify-content-lg-start" style="text-align: right !important;">
                     <!-- start counter item -->
                     <div class="col-lg-5 col-md-4 col-sm-5 last-paragraph-no-margin counter-style-04 xs-mb-25px">
                         <h3 class="vertical-counter d-inline-flex fw-700 text-dark-gray mb-0 ls-minus-2px xl-ls-minus-1px" data-text="+" data-to="280"><sup class="text-yellow top-0px me-5px"><i class="feather icon-feather-users icon-very-medium"></i></sup></h3>
-                        <span class="fw-500 text-dark-gray mb-10px d-block ls-minus-05px">فريق العمل</span>
+                        <span class="fw-500 text-dark-gray mb-10px d-block ls-minus-05px">Work Team</span>
                     </div>
                     <!-- end counter item -->
                     <!-- start counter item -->
                     <div class="col-lg-6 col-md-4 col-sm-5 last-paragraph-no-margin counter-style-04">
                         <h3 class="vertical-counter d-inline-flex fw-700 text-dark-gray mb-0 ls-minus-2px xl-ls-minus-1px" data-text="+" data-to="465"><sup class="text-yellow top-0px me-5px"><i class="feather icon-feather-briefcase icon-very-medium"></i></sup></h3>
-                        <span class="fw-500 text-dark-gray mb-10px d-block ls-minus-05px">عمالة مستقدمة</span>
+                        <span class="fw-500 text-dark-gray mb-10px d-block ls-minus-05px">Recruited Workers</span>
                     </div>
                     <!-- end counter item -->
                 </div>
-                <a href="#" class="btn btn-large btn-rounded with-rounded btn-base-color btn-round-edge btn-box-shadow">دعنا
-                    نتحدث<span class="bg-orient-blue text-white"><i class="feather icon-feather-arrow-right icon-small"></i></span></a>
+                <a href="#" class="btn btn-large btn-rounded with-rounded btn-base-color btn-round-edge btn-box-shadow">Let's Talk<span class="bg-orient-blue text-white"><i class="feather icon-feather-arrow-right icon-small"></i></span></a>
             </div>
         </div>
     </div>
 </section>
+
 <!-- end section -->
 
 <!-- start section -->
@@ -144,10 +125,8 @@
     <div class="container">
         <div class="row justify-content-center mb-3">
             <div class="col-xl-7 col-lg-8 col-md-9 text-center" data-anime='{ "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
-                <h3 class="fw-700 text-dark-gray ls-minus-2px sm-ls-minus-1px">خدماتنا</h3>
-                <p>الخدمات التي نقدمها للمجتمع ...
-
-                </p>
+                <h3 class="fw-700 text-dark-gray ls-minus-2px sm-ls-minus-1px">Our Services</h3>
+                <p>The services we provide to the community...</p>
             </div>
         </div>
         <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 justify-content-center" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
@@ -158,10 +137,8 @@
                         <a href="demo-accounting-services-details.html"><img src="/images/demo-accounting-company-icon01.svg" class="h-95px" alt=""></a>
                     </div>
                     <div class="feature-box-content">
-                        <a href="demo-accounting-services-details.html" class="d-inline-block fw-600 text-dark-gray mb-5px fs-20 ls-minus-05px">اجراءات
-                            الاستقدام</a>
-                        <p class="mb-30px">نهتم في مكتب ترف الاعمال بخدمتكم عن طريق قنوات تواصل متعددة ونضمن لكم
-                            خدمة متكاملة وتجربة عميل مميزة</p>
+                        <a href="demo-accounting-services-details.html" class="d-inline-block fw-600 text-dark-gray mb-5px fs-20 ls-minus-05px">Recruitment Procedures</a>
+                        <p class="mb-30px">We at Taraf Al-A'mal Office care for your service through multiple communication channels and ensure a complete service and an exceptional customer experience.</p>
                     </div>
                 </div>
             </div>
@@ -173,10 +150,8 @@
                         <a href="demo-accounting-services-details.html"><img src="/images/demo-accounting-company-icon02.svg" class="h-95px" alt=""></a>
                     </div>
                     <div class="feature-box-content">
-                        <a href="demo-accounting-services-details.html" class="d-inline-block fw-600 text-dark-gray mb-5px fs-20 ls-minus-05px">اختيار
-                            العمالة</a>
-                        <p class="mb-30px">نهتم في مكتب ترف الاعمال بخدمتكم عن طريق قنوات تواصل متعددة ونضمن لكم
-                            خدمة متكاملة وتجربة عميل مميزة</p>
+                        <a href="demo-accounting-services-details.html" class="d-inline-block fw-600 text-dark-gray mb-5px fs-20 ls-minus-05px">Labor Selection</a>
+                        <p class="mb-30px">We at Taraf Al-A'mal Office care for your service through multiple communication channels and ensure a complete service and an exceptional customer experience.</p>
                     </div>
                     <span class="position-absolute box-shadow-large top-25px lg-top-15px right-25px lg-right-15px bg-base-color border-radius-18px text-white fs-11 fw-600 text-uppercase ps-15px pe-15px lh-26 ls-minus-05px">New</span>
                 </div>
@@ -189,10 +164,8 @@
                         <a href="demo-accounting-services-details.html"><img src="/images/demo-accounting-company-icon03.svg" class="h-95px" alt=""></a>
                     </div>
                     <div class="feature-box-content">
-                        <a href="demo-accounting-services-details.html" class="d-inline-block fw-600 text-dark-gray mb-5px fs-20 ls-minus-05px">تعاقد
-                            الاستقدام</a>
-                        <p class="mb-30px">نهتم في مكتب ترف الاعمال بخدمتكم عن طريق قنوات تواصل متعددة ونضمن لكم
-                            خدمة متكاملة وتجربة عميل مميزة</p>
+                        <a href="demo-accounting-services-details.html" class="d-inline-block fw-600 text-dark-gray mb-5px fs-20 ls-minus-05px">Recruitment Contracts</a>
+                        <p class="mb-30px">We at Taraf Al-A'mal Office care for your service through multiple communication channels and ensure a complete service and an exceptional customer experience.</p>
                     </div>
                 </div>
             </div>
@@ -204,10 +177,8 @@
                         <a href="demo-accounting-services-details.html"><img src="/images/demo-accounting-company-icon-04.svg" class="h-95px" alt=""></a>
                     </div>
                     <div class="feature-box-content">
-                        <a href="demo-accounting-services-details.html" class="d-inline-block fw-600 text-dark-gray mb-5px fs-20 ls-minus-05px">سياسات
-                            الاستقدام</a>
-                        <p class="mb-30px">نهتم في مكتب ترف الاعمال بخدمتكم عن طريق قنوات تواصل متعددة ونضمن لكم
-                            خدمة متكاملة وتجربة عميل مميزة</p>
+                        <a href="demo-accounting-services-details.html" class="d-inline-block fw-600 text-dark-gray mb-5px fs-20 ls-minus-05px">Recruitment Policies</a>
+                        <p class="mb-30px">We at Taraf Al-A'mal Office care for your service through multiple communication channels and ensure a complete service and an exceptional customer experience.</p>
                     </div>
                 </div>
             </div>
@@ -219,10 +190,8 @@
                         <a href="demo-accounting-services-details.html"><img src="/images/demo-accounting-company-icon-05.svg" class="h-95px" alt=""></a>
                     </div>
                     <div class="feature-box-content">
-                        <a href="demo-accounting-services-details.html" class="d-inline-block fw-600 text-dark-gray mb-5px fs-20 ls-minus-05px">استقدام
-                            المنزلية</a>
-                        <p class="mb-30px">نهتم في مكتب ترف الاعمال بخدمتكم عن طريق قنوات تواصل متعددة ونضمن لكم
-                            خدمة متكاملة وتجربة عميل مميزة</p>
+                        <a href="demo-accounting-services-details.html" class="d-inline-block fw-600 text-dark-gray mb-5px fs-20 ls-minus-05px">Domestic Recruitment</a>
+                        <p class="mb-30px">We at Taraf Al-A'mal Office care for your service through multiple communication channels and ensure a complete service and an exceptional customer experience.</p>
                     </div>
                 </div>
             </div>
@@ -234,10 +203,8 @@
                         <a href="demo-accounting-services-details.html"><img src="/images/demo-accounting-company-icon-06.svg" class="h-95px" alt=""></a>
                     </div>
                     <div class="feature-box-content">
-                        <a href="demo-accounting-services-details.html" class="d-inline-block fw-600 text-dark-gray mb-5px fs-20 ls-minus-05px">استقدام
-                            العمالة</a>
-                        <p class="mb-30px">نهتم في مكتب ترف الاعمال بخدمتكم عن طريق قنوات تواصل متعددة ونضمن لكم
-                            خدمة متكاملة وتجربة عميل مميزة</p>
+                        <a href="demo-accounting-services-details.html" class="d-inline-block fw-600 text-dark-gray mb-5px fs-20 ls-minus-05px">Labor Recruitment</a>
+                        <p class="mb-30px">We at Taraf Al-A'mal Office care for your service through multiple communication channels and ensure a complete service and an exceptional customer experience.</p>
                     </div>
                 </div>
             </div>
@@ -245,6 +212,7 @@
         </div>
     </div>
 </section>
+
 <!-- end section -->
 <!-- start section -->
 <section class="p-0 bg-base-color">
@@ -253,12 +221,13 @@
             <div class="col-auto d-flex align-items-center" data-anime='{ "translateY": [0, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
                 <img src="/images/custom/demo-accounting-img-05.jpg" alt="" />
                 <div class="fs-19 lh-28 last-paragraph-no-margin text-white pt-15px pb-15px">
-                    <p>وفر وقتك الثمين وجهدك المبذول لإيجاد حل. <a href="#" class="text-decoration-line-bottom fw-500 text-white">تواصل معنا الأن</a></p>
+                    <p>Save your valuable time and effort to find a solution. <a href="#" class="text-decoration-line-bottom fw-500 text-white">Contact us now</a></p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 <!-- end section -->
 
 <!-- start section -->
@@ -266,29 +235,28 @@
     <div class="container overlap-gap-section">
         <div class="row align-items-center">
             <div class="col-lg-6 md-mb-50px" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
-                <h3 class="fw-700 text-dark-gray ls-minus-2px">اعلي المعايير الدولية في استقدام العمالة المنزلية
+                <h3 class="fw-700 text-dark-gray ls-minus-2px">The highest international standards in hiring domestic workers
                 </h3>
-                <p class="w-90 lg-w-100">الاساله الاكثر شيوعا</p>
+                <p class="w-90 lg-w-100">Frequently Asked Questions</p>
                 <div class="accordion accordion-style-02 w-90 lg-w-100" id="accordion-style-02" data-active-icon="fa-chevron-up" data-inactive-icon="fa-chevron-down">
                     <!-- start accordion item -->
                     <div class="accordion-item active-accordion">
                         <div class="accordion-header border-bottom border-color-transparent-dark-very-light">
                             <a href="#" data-bs-toggle="collapse" data-bs-target="#accordion-style-02-01" aria-expanded="true" data-bs-parent="#accordion-style-02">
                                 <div class="accordion-title mb-0 position-relative text-dark-gray">
-                                    <i class="fa-solid fa-chevron-up fs-15"></i><span class="fs-19 fw-600 ls-minus-05px">ما هي الوثائق المطلوبة لإستقدام العماله
-                                        المنزلية؟
+                                    <i class="fa-solid fa-chevron-up fs-15"></i><span class="fs-19 fw-600 ls-minus-05px">What documents are required to hire domestic workers?
                                     </span>
                                 </div>
                             </a>
                         </div>
                         <div id="accordion-style-02-01" class="accordion-collapse collapse show" data-bs-parent="#accordion-style-02">
                             <div class="accordion-body last-paragraph-no-margin border-bottom border-color-transparent-dark-very-light">
-                                <p>التأشيرة الأصل</p>
-                                <p>توقيع عقد إستقدام
+                                <p>Original visa</p>
+                                <p>Signature of the hiring contract
                                 </p>
-                                <p>صورة الهوية الوطنية او الاقامة للمقيمين
+                                <p>Copy of national ID or residency permit for residents
                                 </p>
-                                <p>تعريف بالراتب من جهة العمل أو كشف حساب البنك
+                                <p>Salary certificate from the workplace or bank account statement
                                 </p>
                             </div>
                         </div>
@@ -299,19 +267,20 @@
                         <div class="accordion-header border-bottom border-color-transparent-dark-very-light">
                             <a href="#" data-bs-toggle="collapse" data-bs-target="#accordion-style-02-02" aria-expanded="false" data-bs-parent="#accordion-style-02">
                                 <div class="accordion-title mb-0 position-relative text-dark-gray">
-                                    <i class="fa-solid fa-chevron-down fs-15"></i><span class="fs-19 fw-600 ls-minus-05px">ما هي الوثائق لاجراءات الاستقدام؟ </span>
+                                    <i class="fa-solid fa-chevron-down fs-15"></i><span class="fs-19 fw-600 ls-minus-05px">What documents are needed for the hiring process?
+                                    </span>
                                 </div>
                             </a>
                         </div>
                         <div id="accordion-style-02-02" class="accordion-collapse collapse" data-bs-parent="#accordion-style-02">
                             <div class="accordion-body last-paragraph-no-margin border-bottom border-color-transparent-dark-very-light">
-                                <p>التأشيرة الأصل
+                                <p>Original visa
                                 </p>
-                                <p>توقيع عقد إستقدام
+                                <p>Signature of the hiring contract
                                 </p>
-                                <p>صورة الهوية الوطنية او الاقامة للمقيمين
+                                <p>Copy of national ID or residency permit for residents
                                 </p>
-                                <p>تعريف بالراتب من جهة العمل أو كشف حساب البنك
+                                <p>Salary certificate from the workplace or bank account statement
                                 </p>
                             </div>
                         </div>
@@ -322,13 +291,15 @@
                         <div class="accordion-header border-bottom border-color-transparent">
                             <a href="#" data-bs-toggle="collapse" data-bs-target="#accordion-style-02-03" aria-expanded="false" data-bs-parent="#accordion-style-02">
                                 <div class="accordion-title mb-0 position-relative text-dark-gray">
-                                    <i class="fa-solid fa-chevron-down fs-15"></i><span class="fs-19 fw-600 ls-minus-05px">هل لدينا خدمة عملاء مميزة؟</span>
+                                    <i class="fa-solid fa-chevron-down fs-15"></i><span class="fs-19 fw-600 ls-minus-05px">Do we offer excellent customer service?
+                                    </span>
                                 </div>
                             </a>
                         </div>
                         <div id="accordion-style-02-03" class="accordion-collapse collapse" data-bs-parent="#accordion-style-02">
                             <div class="accordion-body last-paragraph-no-margin border-bottom border-color-transparent">
-                                <p>نعم نقدم خدمة عملاء 24/7 طوال اليوم والاسبوع من خلال فريق عمل متميز</p>
+                                <p>Yes, we offer 24/7 customer service throughout the day and week through an excellent team
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -371,6 +342,7 @@
         </div>
     </div>
 </section>
+
 <!-- end section -->
 <!-- start section -->
 <section class="pt-md-0">
@@ -384,16 +356,15 @@
                             <div class="row align-items-center pt-25px pb-25px">
                                 <div class="col-lg-8 d-lg-flex align-items-center text-center text-lg-start">
                                     <img src="/images/custom/avtar-30.jpg" class="rounded-circle w-100px h-100px md-mb-35px" alt="">
-                                    <span class="d-block ps-40px md-ps-0 md-mx-auto position-relative"><img src="/images/demo-accounting-home-quote-img.png" class="position-absolute left-minus-25px top-minus-15px lg-top-minus-5px md-top-minus-50px w-40px md-left-0px md-right-0px md-mx-auto" alt="">لوريم إيبسوم(Lorem Ipsum) هي الشكل وليس المحتوى) ويُستخدم في
-                                        صناعات المطابع ودور النشر.</span>
+                                    <span class="d-block ps-40px md-ps-0 md-mx-auto position-relative"><img src="/images/demo-accounting-home-quote-img.png" class="position-absolute left-minus-25px top-minus-15px lg-top-minus-5px md-top-minus-50px w-40px md-left-0px md-right-0px md-mx-auto" alt="">Lorem Ipsum (Lorem Ipsum is the shape and not the content) and is used in printing and publishing industries.</span>
                                 </div>
                                 <div class="col-lg-1 d-none d-lg-inline-block">
                                     <div class="separator-line w-1px md-w-100 h-60px md-h-1px bg-extra-medium-gray mx-auto">
                                     </div>
                                 </div>
                                 <div class="col-lg-3 text-center text-lg-start md-mt-15px">
-                                    <span class="fs-19 ls-minus-05px fw-600 text-dark-gray d-block lh-28" style="text-align: right;">ثامر الخضيري</span>
-                                    <div style="text-align: right;">استاذ</div>
+                                    <span class="fs-19 ls-minus-05px fw-600 text-dark-gray d-block lh-28" style="text-align: right;">Thamer Al Khudairi</span>
+                                    <div style="text-align: right;">Professor</div>
                                 </div>
                             </div>
                         </div>
@@ -403,16 +374,15 @@
                             <div class="row align-items-center pt-25px pb-25px">
                                 <div class="col-lg-8 d-lg-flex align-items-center text-center text-lg-start">
                                     <img src="/images/custom/avtar-30.jpg" class="rounded-circle w-100px h-100px md-mb-35px" alt="">
-                                    <span class="d-block ps-40px md-ps-0 md-mx-auto position-relative"><img src="/images/demo-accounting-home-quote-img.png" class="position-absolute left-minus-25px top-minus-15px lg-top-minus-5px md-top-minus-50px w-40px md-left-0px md-right-0px md-mx-auto" alt="">لوريم إيبسوم(Lorem Ipsum) هي الشكل وليس المحتوى) ويُستخدم في
-                                        صناعات المطابع ودور النشر.</span>
+                                    <span class="d-block ps-40px md-ps-0 md-mx-auto position-relative"><img src="/images/demo-accounting-home-quote-img.png" class="position-absolute left-minus-25px top-minus-15px lg-top-minus-5px md-top-minus-50px w-40px md-left-0px md-right-0px md-mx-auto" alt="">Lorem Ipsum (Lorem Ipsum is the shape and not the content) and is used in printing and publishing industries.</span>
                                 </div>
                                 <div class="col-lg-1 d-none d-lg-inline-block">
                                     <div class="separator-line w-1px md-w-100 h-60px md-h-1px bg-extra-medium-gray mx-auto">
                                     </div>
                                 </div>
                                 <div class="col-lg-3 text-center text-lg-start md-mt-15px">
-                                    <span class="fs-19 ls-minus-05px fw-600 text-dark-gray d-block lh-28" style="text-align: right;">ثامر الخضيري</span>
-                                    <div style="text-align: right;">دكتور</div>
+                                    <span class="fs-19 ls-minus-05px fw-600 text-dark-gray d-block lh-28" style="text-align: right;">Thamer Al Khudairi</span>
+                                    <div style="text-align: right;">Doctor</div>
                                 </div>
                             </div>
                         </div>
@@ -422,16 +392,15 @@
                             <div class="row align-items-center pt-25px pb-25px">
                                 <div class="col-lg-8 d-lg-flex align-items-center text-center text-lg-start">
                                     <img src="/images/custom/avtar-30.jpg" class="rounded-circle w-100px h-100px md-mb-35px" alt="">
-                                    <span class="d-block ps-40px md-ps-0 md-mx-auto position-relative"><img src="/images/demo-accounting-home-quote-img.png" class="position-absolute left-minus-25px top-minus-15px lg-top-minus-5px md-top-minus-50px w-40px md-left-0px md-right-0px md-mx-auto" alt="">لوريم إيبسوم(Lorem Ipsum) هي الشكل وليس المحتوى) ويُستخدم في
-                                        صناعات المطابع ودور النشر.</span>
+                                    <span class="d-block ps-40px md-ps-0 md-mx-auto position-relative"><img src="/images/demo-accounting-home-quote-img.png" class="position-absolute left-minus-25px top-minus-15px lg-top-minus-5px md-top-minus-50px w-40px md-left-0px md-right-0px md-mx-auto" alt="">Lorem Ipsum (Lorem Ipsum is the shape and not the content) and is used in printing and publishing industries.</span>
                                 </div>
                                 <div class="col-lg-1 d-none d-lg-inline-block">
                                     <div class="separator-line w-1px md-w-100 h-60px md-h-1px bg-extra-medium-gray mx-auto">
                                     </div>
                                 </div>
                                 <div class="col-lg-3 text-center text-lg-start md-mt-15px">
-                                    <span class="fs-19 ls-minus-05px fw-600 text-dark-gray d-block lh-28" style="text-align: right;">ثامر الخضيري</span>
-                                    <div style="text-align: right;">مهندس</div>
+                                    <span class="fs-19 ls-minus-05px fw-600 text-dark-gray d-block lh-28" style="text-align: right;">Thamer Al Khudairi</span>
+                                    <div style="text-align: right;">Engineer</div>
                                 </div>
                             </div>
                         </div>
@@ -454,13 +423,14 @@
         </div>
     </div>
 </section>
+
 <!-- end section -->
 <!-- start section -->
 <section class="py-0">
     <div class="container">
         <div class="row justify-content-center mb-3">
             <div class="col-lg-6 col-md-7 col-sm-8 text-center" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
-                <h3 class="fw-700 text-dark-gray ls-minus-2px">الدول المتاحة</h3>
+                <h3 class="fw-700 text-dark-gray ls-minus-2px">Available Countries</h3>
             </div>
         </div>
         <div class="row row-cols-1 row-cols-lg-4 row-cols-sm-2" data-anime='{ "el": "childs", "translateX": [-50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
@@ -513,6 +483,7 @@
         </div>
     </div>
 </section>
+
 <!-- end section -->
 <!-- start section -->
 <section class="p-0 h-280px sm-h-350px overlap-height" id="location">
@@ -530,8 +501,7 @@
                 <div class="bg-white p-8 border-radius-6px box-shadow-double-large">
                     <div class="row">
                         <div class="col-9">
-                            <h3 class="alt-font text-dark-gray fw-700 ls-minus-2px mb-50px xs-mb-35px">كيف يمكننا
-                                مساعدتك؟</h3>
+                            <h3 class="alt-font text-dark-gray fw-700 ls-minus-2px mb-50px xs-mb-35px">How can we help you?</h3>
                         </div>
                         <div class="col-3 text-end" data-anime='{ "translateY": [30, 0], "translateX": [-30, 0], "opacity": [0,1], "duration": 600, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'>
                             <i class="bi bi-send icon-large text-dark-gray animation-zoom"></i>
@@ -540,27 +510,26 @@
                     <!-- start contact form -->
                     <form action="email-templates/contact-form.php" method="post" class="row contact-form-style-02">
                         <div class="col-md-6 mb-30px">
-                            <input class="input-name form-control required" type="text" name="name" placeholder="الاسم" />
+                            <input class="input-name form-control required" type="text" name="name" placeholder="Name" />
                         </div>
                         <div class="col-md-6 mb-30px">
-                            <input class="form-control required" type="email" name="email" placeholder="عنوان البريد الالكتروني" />
+                            <input class="form-control required" type="email" name="email" placeholder="Email Address" />
                         </div>
                         <div class="col-md-6 mb-30px">
-                            <input class="form-control" type="tel" name="phone" placeholder="رقم الجوال" />
+                            <input class="form-control" type="tel" name="phone" placeholder="Phone Number" />
                         </div>
                         <div class="col-md-6 mb-30px">
-                            <input class="form-control" type="text" name="subject" placeholder="الموضوع" />
+                            <input class="form-control" type="text" name="subject" placeholder="Subject" />
                         </div>
                         <div class="col-md-12 mb-30px">
-                            <textarea class="form-control" cols="40" rows="4" name="message" placeholder="رسالتك"></textarea>
+                            <textarea class="form-control" cols="40" rows="4" name="message" placeholder="Your Message"></textarea>
                         </div>
                         <div class="col-xl-7 col-md-7 last-paragraph-no-margin">
-                            <p class="text-center text-md-end fs-15 lh-26">ونحن ملتزمون بحماية خصوصيتك. لن نقوم
-                                أبدًا بجمع معلومات عنك دون موافقتك الصريحة.</p>
+                            <p class="text-center text-md-end fs-15 lh-26">We are committed to protecting your privacy. We will never collect information about you without your explicit consent.</p>
                         </div>
                         <div class="col-xl-5 col-md-5 text-center text-md-end sm-mt-20px">
                             <input type="hidden" name="redirect" value="">
-                            <button class="btn btn-base-color btn-medium btn-rounded btn-box-shadow submit" type="submit">ارسل الرسالة</button>
+                            <button class="btn btn-base-color btn-medium btn-rounded btn-box-shadow submit" type="submit">Send Message</button>
                         </div>
                         <div class="col-12">
                             <div class="form-results mt-20px d-none"></div>
@@ -571,7 +540,7 @@
             </div>
             <div class="row align-items-center justify-content-center mt-8">
                 <div class="col-md-auto text-center text-md-end sm-mb-20px">
-                    <h6 class="text-dark-gray fw-600 mb-0 ls-minus-1px">تواصل معنا عبر وسائل التواصل الاجتماعي </h6>
+                    <h6 class="text-dark-gray fw-600 mb-0 ls-minus-1px">Contact us via social media</h6>
                 </div>
                 <div class="col-2 d-none d-lg-inline-block">
                     <span class="w-100 h-1px bg-dark-gray opacity-2 d-flex mx-auto"></span>
@@ -590,14 +559,14 @@
         </div>
     </div>
 </section>
+
 <!-- end section -->
 <!-- start section -->
 <section class="half-section">
     <div class="container">
         <div class="row justify-content-center mb-30px" data-anime='{ "translateX": [-50, 0], "opacity": [0,1], "duration": 800, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
             <div class="col-lg-5 text-center mb-15px">
-                <span class="text-dark-gray fw-600 fs-16 ls-minus-05px text-uppercase border-1 pb-5px border-bottom border-color-extra-medium-gray text-dark-gray">انضم
-                    إلى أكثر من 10000 عميل يستخدمون مكتبنا</span>
+                <span class="text-dark-gray fw-600 fs-16 ls-minus-05px text-uppercase border-1 pb-5px border-bottom border-color-extra-medium-gray text-dark-gray">Join more than 10,000 clients using our office</span>
             </div>
         </div>
         <div class="row position-relative clients-style-08 mb-35px" data-anime='{"translateY": [0, 0], "opacity": [0,1], "duration": 800, "delay": 50, "staggervalue": 150, "easing": "easeOutQuad" }'>
@@ -658,6 +627,7 @@
         </div>
     </div>
 </section>
+
 <!-- end section -->
 
 

@@ -6,43 +6,70 @@
 <header class="header-with-topbar">
     @include('main-site.layouts.shared.includes.header')
 </header>
-
-<!-- start section -->
-<section class="top-space-margin page-title-big-typography cover-background magic-cursor round-cursor">
+<section class="top-space-margin half-section bg-gradient-very-light-gray">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-5 md-mb-50px" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                <h3 class="text-dark-gray fw-700 ls-minus-2px w-90 md-w-100">Have a project in mind? Get in touch!</h3>
-                <p class="w-95 md-w-100">Give us a call or drop by anytime, we try to answer all enquiries within 24 hours on business days.</p>
-                <div class="row row-cols-1 justify-content-center mt-30px">
-                    <!-- start features box item -->
-                    <div class="col icon-with-text-style-08">
-                        <div class="feature-box feature-box-left-icon-middle overflow-hidden">
-                            <div class="feature-box-icon feature-box-icon-rounded bg-yellow w-80px h-80px rounded-circle me-20px">
-                                <i class="bi bi-envelope text-white icon-very-medium"></i>
-                            </div>
-                            <div class="feature-box-content last-paragraph-no-margin">
-                                <span class="d-block ls-minus-05px">Join our growing team?</span>
-                                <span class="d-block fs-22 text-dark-gray ls-minus-05px fw-600"><a href="mailto:careers@domain.com" class="text-dark-gray text-decoration-line-bottom">careers@domain.com</a></span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end features box item -->
-                </div>
+        <div class="row align-items-center justify-content-center" data-anime='{ "el": "childs", "translateY": [-15, 0], "opacity": [0,1], "duration": 300, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+            <div class="col-12 col-xl-8 col-lg-10 text-center position-relative page-title-extra-large">
+                <h1 class="alt-font fw-600 text-dark-gray mb-10px">Contact Us</h1>
             </div>
-            <div class="col-lg-7 ps-50px lg-ps-15px">
-                <div class="row row-cols-1 row-cols-sm-2 justify-content-center">
-
-                    <div class="col-md-12" data-anime='{ "translateY": [-50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <div class="bg-very-light-gray h-100 fs-17 lh-30 p-35px lg-p-25px border-radius-5px">
-                            <span class="alt-font text-dark-gray fs-19 fw-600 d-inline-block">Crafto - Canada</span>
-                            <p class="mb-15px">2839 lalemant view road, Niagara falls, Canada</p>
-                            <span class="d-block"><span class="text-dark-gray fw-600">T:</span> <a href="tel:12345678910">123 456 7890</a></span>
-                            <span class="d-block"><span class="text-dark-gray fw-600">E:</span> <a href="mailto:info@domain.com" class="text-decoration-line-bottom">info@domain.com</a></span>
-                        </div>
+            <div class="col-12 breadcrumb breadcrumb-style-01 d-flex justify-content-center">
+                <ul>
+                    <li><a href="demo-fashion-store.html">Home</a></li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- start section -->
+<section id="down-section">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 row-cols-sm-2 justify-content-center" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+            <!-- start features box item -->
+            <div class="col icon-with-text-style-04 sm-mb-40px">
+                <div class="feature-box last-paragraph-no-margin">
+                    <div class="feature-box-icon">
+                        <i class="line-icon-Geo2-Love icon-extra-large text-base-color mb-25px"></i>
+                    </div>
+                    <div class="feature-box-content last-paragraph-no-margin">
+                        <span class="d-inline-block alt-font fw-600 text-dark-gray mb-5px fs-20">Crafto office</span>
+                        <p>401 Broadway, 24th Floor,<br> Orchard View, London, UK</p>
                     </div>
                 </div>
             </div>
+            <!-- end features box item -->
+            <!-- start features box item -->
+            <div class="col icon-with-text-style-04 sm-mb-40px">
+                <div class="feature-box last-paragraph-no-margin">
+                    <div class="feature-box-icon">
+                        <i class="line-icon-Headset icon-extra-large text-base-color mb-25px"></i>
+                    </div>
+                    <div class="feature-box-content last-paragraph-no-margin">
+                        <span class="d-inline-block alt-font fw-600 text-dark-gray mb-5px fs-20">Call us directly</span>
+                        <div class="w-100 d-block">
+                            <span class="d-block">Phone: <a href="tel:1800222000" class="text-base-color-hover">1-800-222-000</a></span>
+                            <span class="d-block">Fax: 1-800-222-002</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end features box item -->
+            <!-- start features box item -->
+            <div class="col icon-with-text-style-04">
+                <div class="feature-box last-paragraph-no-margin">
+                    <div class="feature-box-icon">
+                        <i class="line-icon-Mail-Read icon-extra-large text-base-color mb-25px"></i>
+                    </div>
+                    <div class="feature-box-content last-paragraph-no-margin">
+                        <span class="d-inline-block alt-font fw-600 text-dark-gray mb-5px fs-20">E-mail us</span>
+                        <div class="w-100 d-block">
+                            <a href="mailto:info@yourdomain.com" class="d-block">info@yourdomain.com</a>
+                            <a href="mailto:hr@yourdomain.com" class="d-block">hr@yourdomain.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end features box item -->
         </div>
     </div>
 </section>
